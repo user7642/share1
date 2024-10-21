@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher Interface</title>
+    <style>
+        /* CSS hiện tại của bạn */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        textarea,
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        pre#output {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* CSS cho trạng thái mở rộng */
+        .expanded {
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            z-index: 1000;
+            background: white;
+            border: 2px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .output {
+            margin-top:12px
+        }
+
+        /* CSS cho nút sao chép */
+        .copy-btn {
+            /* position: absolute; */
+            top: -66px;
+            right: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Regex Matcher Interface</h2>
+
+    <label for="regex">Regular Expression:</label>
+    <input type="text" id="regex" value="^(.+?)\n" />
+
+    <label for="testString">Test String:</label>
+    <textarea id="testString" rows="6"></textarea>
+
+    <label for="format">Output Format:</label>
+    <input type="text" id="format" value="$n" />
+
+    <button onclick="generateMatches()">Run Regex</button>
+    <div class="output">
+    <b> Matches Output:</b>
+    <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+    <div class="notification"></div>
+    
+    </div>
+        <pre id="output"></pre>
+    
+
+    <script>
+        function generateMatches() {
+            // Get user inputs
+            const regexInput = document.getElementById("regex").value;
+            const testString = document.getElementById("testString").value;
+            let format = document.getElementById("format").value;
+
+            // Replace special sequences in the format string
+            format = format.replace(/\\n/g, '\n') // Replace \n with a newline
+                .replace(/\\t/g, '\t') // Replace \t with a tab
+                .replace(/\\s/g, ' '); // Replace \s with a space
+
+            // Construct the regex dynamically
+            const regex = new RegExp(regexInput, 'gm');
+
+            // Get matches
+            const matches = testString.matchAll(regex);
+            let _m = [];
+            let n = 1; // Index for numbering
+
+            for (const m of matches) {
+                // Increment n and apply the format dynamically
+                let formattedOutput = format.replace("$n", n)
+                    .replace("$1", m[1])
+                    .replace("$2", m[2])
+                    .replace("$3", m[3])
+                    .replace("$4", m[4]);
+
+                _m.push(formattedOutput);
+                n++;
+            }
+
+            // Output result
+            //console.log(_m.join('\n'));
+            document.getElementById("output").textContent = _m.join('\n').toLocaleLowerCase();
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById("output").textContent;
+            navigator.clipboard.writeText(output).then(() => {
+                const notification = document.querySelector("div.notification");
+                notification.textContent = "Copied to clipboard!";
+                setTimeout(() => {
+                    //notification.remove();
+                    notification.textContent = "";
+                }, 2000); // Adjust the timeout as needed
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const textarea = document.getElementById('testString');
+
+            textarea.addEventListener('focus', () => {
+                textarea.classList.add('expanded');
+            });
+
+            textarea.addEventListener('blur', () => {
+                textarea.classList.remove('expanded');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
