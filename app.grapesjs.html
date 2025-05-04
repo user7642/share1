@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... -->
+    <script src="https://unpkg.com/@grapesjs/studio-sdk/dist/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/tableComponent/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/listPagesComponent/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/fsLightboxComponent/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/lightGalleryComponent/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/swiperComponent/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/accordionComponent/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/flexComponent/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/rteTinyMce/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/canvasEmptyState/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/canvasFullSize/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/canvasGridMode/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@grapesjs/studio-sdk-plugins@latest/dist/layoutSidebarButtons/index.umd.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@grapesjs/studio-sdk/dist/style.css"/>
+  </head>
+  <body>
+    <div id="studio-editor" style="height: 100dvh"></div>
+    <script>
+      GrapesJsStudioSDK.createStudioEditor({
+        root: '#studio-editor',
+        licenseKey: '36b6affb7b6a41fb96d13ad1878fb0c921e1b0ca3d6e41d5b9e8ef2bad19f27f',
+        project: {
+          type: 'web'
+        },
+        assets: {
+          storageType: 'self',
+          // Provide a custom upload handler for assets
+          onUpload: async ({ files }) => {
+            const body = new FormData();
+            for (const file of files) {
+              body.append('files', file);
+            }
+            const response = await fetch('ASSETS_UPLOAD_URL', { method: 'POST', body });
+            const result = await response.json();
+            // The expected result should be an array of assets, eg.
+            // [{ src: 'ASSET_URL' }]
+            return result;
+          },
+          // Provide a custom handler for deleting assets
+          onDelete: async ({ assets }) => {
+            const body = JSON.stringify(assets);
+            await fetch('ASSETS_DELETE_URL', { method: 'DELETE', body });
+          }
+        },
+        storage: {
+          type: 'self',
+          // Provide a custom handler for saving the project data.
+          onSave: async ({ project }) => {
+            throw new Error('Implement your "onSave"!');
+            const body = new FormData();
+            body.append('project', JSON.stringify(project));
+            await fetch('PROJECT_SAVE_URL', { method: 'POST', body });
+          },
+          // Provide a custom handler for loading project data.
+          onLoad: async () => {
+            throw new Error('Implement your "onLoad"!');
+            const response = await fetch('PROJECT_LOAD_URL');
+            const project = await response.json();
+            // The project JSON is expected to be returned inside an object.
+            return { project };
+          },
+          autosaveChanges: 100,
+          autosaveIntervalMs: 10000
+        },
+        plugins: [
+          StudioSdkPlugins_tableComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/table */ }),
+          StudioSdkPlugins_listPagesComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/listPages */ }),
+          StudioSdkPlugins_fsLightboxComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/fslightbox */ }),
+          StudioSdkPlugins_lightGalleryComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/lightGallery */ }),
+          StudioSdkPlugins_swiperComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/swiper */ }),
+          StudioSdkPlugins_accordionComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/accordion */ }),
+          StudioSdkPlugins_flexComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/flex */ }),
+          StudioSdkPlugins_rteTinyMce.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/rte/tinymce */ }),
+          StudioSdkPlugins_canvasEmptyState.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/canvas/emptyState */ }),
+          StudioSdkPlugins_canvasFullSize.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/canvas/full-size */ }),
+          StudioSdkPlugins_canvasGridMode.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/canvas/grid-mode */ }),
+          StudioSdkPlugins_layoutSidebarButtons.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/layout/sidebar-buttons */ })
+        ]
+      });
+    </script>
+  </body>
+<html>
