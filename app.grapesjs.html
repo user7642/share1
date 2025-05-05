@@ -61,6 +61,15 @@
       autosaveChanges: 100,
       autosaveIntervalMs: 10000
     },
+    projectManager: {
+  storage: {
+    type: 'session',
+    options: {
+      session: { key: 'myGrapesProject' }
+    }
+  }
+},
+
     plugins: [
       sessionStoragePlugin, // ✅ Thêm plugin lưu project vào sessionStorage
       StudioSdkPlugins_tableComponent.init({}),
