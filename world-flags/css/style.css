@@ -17,6 +17,15 @@ body {
   border-radius: 8px;
   border: 1px solid #ccc;
   background: white;
+  transition: 0.2s;
+}
+
+/* ACTIVE NGÔN NGỮ */
+.lang-switch button.active {
+  background: #ff9800;
+  color: white;
+  font-weight: bold;
+  border-color: #ff9800;
 }
 
 /* Accordion */
@@ -29,8 +38,14 @@ body {
   background: #eaeaea;
   margin-top: 10px;
   border-radius: 10px;
+  transition: 0.2s;
 }
 
+.acc-btn:hover {
+  background: #ddd;
+}
+
+/* Nội dung */
 .acc-content {
   display: none;
   padding: 10px;
@@ -43,7 +58,7 @@ body {
   gap: 12px;
 }
 
-/* Card — KHÔNG viền */
+/* Card */
 .card {
   background: white;
   padding: 10px;
@@ -52,19 +67,24 @@ body {
   transition: 0.2s;
 }
 
-/* Hover nhẹ thôi */
+/* Hover */
 .card:hover {
   transform: scale(1.05);
 }
 
-/* Ảnh — CHỈ VIỀN Ở ĐÂY */
+/* Click feedback */
+.card:active {
+  transform: scale(0.97);
+}
+
+/* Ảnh */
 img {
   width: 100%;
-  border: 1px solid #ddd;   /* ✔ viền cho cờ */
+  border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-/* Chữ cân lại tỷ lệ */
+/* Text */
 .card p {
   margin-top: 6px;
   font-size: 14px;

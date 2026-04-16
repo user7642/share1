@@ -1,0 +1,19 @@
+argentina|Argentina|Argentina
+brazil|Brazil|Brazil
+colombia|Colombia|Colombia
+curacao|Curacao|Curacao
+
+guiana|Guiana|Guiana
+peru|Peru|Peru
+suriname|Suriname|Suriname
+uruguay|Uruguay|Uruguay
+
+venezuela|Venezuela|Venezuela
+bolivia|Bolivia|Bolivia
+chile|Chile|Chile
+falkland-islands|Falkland Islands|Quần đảo Falkland
+
+ecuador|Ecuador|Ecuador
+guyana|Guyana|Guyana
+paraguay|Paraguay|Paraguay
+aruba|Aruba|Aruba

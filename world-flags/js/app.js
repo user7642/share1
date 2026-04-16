@@ -7,12 +7,25 @@ const audio = document.getElementById("audio");
 // =======================
 function setLang(lang) {
   currentLang = lang;
+
+  // lưu lại lựa chọn
+  localStorage.setItem("lang", lang);
+
+  // reset active
+  document.getElementById("btn-vi").classList.remove("active");
+  document.getElementById("btn-en").classList.remove("active");
+
+  // set active
+  document.getElementById("btn-" + lang).classList.add("active");
 }
 
 // =======================
 // 🔊 PHÁT ÂM (đa châu lục)
 // =======================
 function play(region, key) {
+  audio.pause(); // tránh chồng âm
+  audio.currentTime = 0;
+
   audio.src = `audio/${region}/${currentLang}/${key}.mp3`;
   audio.play();
 }
@@ -62,8 +75,15 @@ document.querySelectorAll(".acc-btn").forEach(btn => {
 // =======================
 // 🚀 INIT
 // =======================
+
+// load ngôn ngữ đã lưu
+const savedLang = localStorage.getItem("lang") || "vi";
+setLang(savedLang);
+
+// render
 renderRegion(regions.asia, "asia", "asia");
 renderRegion(regions.europe, "europe", "europe");
 renderRegion(regions.africa, "africa", "africa");
+renderRegion(regions.oceania, "oceania", "oceania");
 renderRegion(regions["north-america"], "north-america", "north-america");
 renderRegion(regions["south-america"], "south-america", "south-america");

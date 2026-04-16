@@ -1,19 +1,27 @@
-argentina|Argentina|Argentina
-brazil|Brazil|Brazil
-colombia|Colombia|Colombia
-curacao|Curacao|Curacao
+palau|Palau|Palau
+guam|Guam|Guam
+marshall-islands|Marshall Islands|Quần đảo Marshall
 
-guiana|Guiana|Guiana
-peru|Peru|Peru
-suriname|Suriname|Suriname
-uruguay|Uruguay|Uruguay
+papua-new-guinea|Papua New Guinea|Papua New Guinea
+solomon-islands|Solomon Islands|Quần đảo Solomon
+kiribati|Kiribati|Kiribati
 
-venezuela|Venezuela|Venezuela
-bolivia|Bolivia|Bolivia
-chile|Chile|Chile
-falkland-islands|Falkland Islands|Quần đảo Falkland
+fiji|Fiji|Fiji
+cook-islands|Cook Islands|Quần đảo Cook
+french-polynesia|French Polynesia|Polynesia thuộc Pháp
 
-ecuador|Ecuador|Ecuador
-guyana|Guyana|Guyana
-paraguay|Paraguay|Paraguay
-aruba|Aruba|Aruba
+new-zealand|New Zealand|New Zealand
+tonga|Tonga|Tonga
+vanuatu|Vanuatu|Vanuatu
+
+nauru|Nauru|Nauru
+niue|Niue|Niue
+tuvalu|Tuvalu|Tuvalu
+
+micronesia|Micronesia|Liên bang Micronesia
+new-caledonia|New Caledonia|New Caledonia
+pitcairn-islands|Pitcairn Islands|Quần đảo Pitcairn
+
+samoa|Samoa|Samoa
+american-samoa|American Samoa|Samoa thuộc Mỹ
+australia|Australia|Úc

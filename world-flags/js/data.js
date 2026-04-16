@@ -223,6 +223,36 @@ const regions = {
   { key: "guyana", label: "Guyana" },
   { key: "paraguay", label: "Paraguay" },
   { key: "aruba", label: "Aruba" }
+],
+
+oceania: [
+  { key: "palau", label: "Palau" },
+  { key: "guam", label: "Guam" },
+  { key: "marshall-islands", label: "Marshall Islands" },
+
+  { key: "papua-new-guinea", label: "Papua New Guinea" },
+  { key: "solomon-islands", label: "Solomon Islands" },
+  { key: "kiribati", label: "Kiribati" },
+
+  { key: "fiji", label: "Fiji" },
+  { key: "cook-islands", label: "Cook Islands" },
+  { key: "french-polynesia", label: "French Polynesia" },
+
+  { key: "new-zealand", label: "New Zealand" },
+  { key: "tonga", label: "Tonga" },
+  { key: "vanuatu", label: "Vanuatu" },
+
+  { key: "nauru", label: "Nauru" },
+  { key: "niue", label: "Niue" },
+  { key: "tuvalu", label: "Tuvalu" },
+
+  { key: "micronesia", label: "Micronesia" },
+  { key: "new-caledonia", label: "New Caledonia" },
+  { key: "pitcairn-islands", label: "Pitcairn Islands" },
+
+  { key: "samoa", label: "Samoa" },
+  { key: "american-samoa", label: "American Samoa" },
+  { key: "australia", label: "Australia" }
 ]
 
 
