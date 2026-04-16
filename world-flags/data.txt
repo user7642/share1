@@ -1,27 +1,59 @@
-palau|Palau|Palau
-guam|Guam|Guam
-marshall-islands|Marshall Islands|Quần đảo Marshall
+armenia|Armenia|Armenia
+azerbaijan|Azerbaijan|Azerbaijan
+bahrain|Bahrain|Bahrain
+bangladesh|Bangladesh|Bangladesh
+bhutan|Bhutan|Bhutan
+india|India|Ấn Độ
 
-papua-new-guinea|Papua New Guinea|Papua New Guinea
-solomon-islands|Solomon Islands|Quần đảo Solomon
-kiribati|Kiribati|Kiribati
+brunei|Brunei|Brunei
+cambodia|Cambodia|Campuchia
+china|China|Trung Quốc
+united-arab-emirates|United Arab Emirates|Các Tiểu vương quốc Ả Rập Thống nhất
+uzbekistan|Uzbekistan|Uzbekistan
+indonesia|Indonesia|Indonesia
 
-fiji|Fiji|Fiji
-cook-islands|Cook Islands|Quần đảo Cook
-french-polynesia|French Polynesia|Polynesia thuộc Pháp
+iran|Iran|Iran
+iraq|Iraq|Iraq
+japan|Japan|Nhật Bản
+jordan|Jordan|Jordan
+kuwait|Kuwait|Kuwait
+kyrgyzstan|Kyrgyzstan|Kyrgyzstan
 
-new-zealand|New Zealand|New Zealand
-tonga|Tonga|Tonga
-vanuatu|Vanuatu|Vanuatu
+laos|Laos|Lào
+lebanon|Lebanon|Liban
+malaysia|Malaysia|Malaysia
+maldives|Maldives|Maldives
+vietnam|Vietnam|Việt Nam
+myanmar|Myanmar|Myanmar
 
-nauru|Nauru|Nauru
-niue|Niue|Niue
-tuvalu|Tuvalu|Tuvalu
+nepal|Nepal|Nepal
+north-korea|North Korea|Triều Tiên
+oman|Oman|Oman
+pakistan|Pakistan|Pakistan
+palestine|Palestine|Palestine
+philippines|Philippines|Philippines
 
-micronesia|Micronesia|Liên bang Micronesia
-new-caledonia|New Caledonia|New Caledonia
-pitcairn-islands|Pitcairn Islands|Quần đảo Pitcairn
+qatar|Qatar|Qatar
+saudi-arabia|Saudi Arabia|Ả Rập Xê Út
+thailand|Thailand|Thái Lan
+timor-leste|Timor-Leste|Đông Timor
+yemen|Yemen|Yemen
+hong-kong|Hong Kong|Hồng Kông
 
-samoa|Samoa|Samoa
-american-samoa|American Samoa|Samoa thuộc Mỹ
-australia|Australia|Úc
+singapore|Singapore|Singapore
+south-korea|South Korea|Hàn Quốc
+macau|Macau|Ma Cao
+syria|Syria|Syria
+taiwan|Taiwan|Đài Loan
+tajikistan|Tajikistan|Tajikistan
+
+turkmenistan|Turkmenistan|Turkmenistan
+israel|Israel|Israel
+kazakhstan|Kazakhstan|Kazakhstan
+turkey|Turkey|Thổ Nhĩ Kỳ
+mongolia|Mongolia|Mông Cổ
+
+cocos-islands|Cocos Islands|Quần đảo Cocos
+christmas-island|Christmas Island|Đảo Giáng Sinh
+afghanistan|Afghanistan|Afghanistan
+sri-lanka|Sri Lanka|Sri Lanka

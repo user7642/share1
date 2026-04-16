@@ -41,7 +41,25 @@ const regions = {
     { key: "thailand", label: "Thailand" },
     { key: "timor-leste", label: "Timor-Leste" },
     { key: "yemen", label: "Yemen" },
-    { key: "hong-kong", label: "Hong Kong" }
+    { key: "hong-kong", label: "Hong Kong" },
+
+    { key: "singapore", label: "Singapore" },
+    { key: "south-korea", label: "South Korea" },
+    { key: "macau", label: "Macau" },
+    { key: "syria", label: "Syria" },
+    { key: "taiwan", label: "Taiwan" },
+    { key: "tajikistan", label: "Tajikistan" },
+
+    { key: "turkmenistan", label: "Turkmenistan" },
+    { key: "israel", label: "Israel" },
+    { key: "kazakhstan", label: "Kazakhstan" },
+    { key: "turkey", label: "Turkey" },
+    { key: "mongolia", label: "Mongolia" },
+
+    { key: "cocos-islands", label: "Cocos Islands" },
+    { key: "christmas-island", label: "Christmas Island" },
+    { key: "afghanistan", label: "Afghanistan" },
+    { key: "sri-lanka", label: "Sri Lanka" },
   ],
 
   europe: [
