@@ -5,7 +5,7 @@ import os
 # =============================
 # ⚙️ CONFIG (CHỈ SỬA DÒNG NÀY)
 # =============================
-REGION = "africa"   # 👈 đổi thành asia europe africa north-america south-america oceania
+REGION = "north-america"   # 👈 đổi thành asia europe africa north-america south-america oceania
 INPUT_FILE = "data.txt"
 
 OUTPUT_ROOT = "audio"

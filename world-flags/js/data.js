@@ -163,6 +163,46 @@ const regions = {
     { key: "zambia", label: "Zambia" },
     { key: "mayotte", label: "Mayotte" },
     { key: "reunion", label: "Reunion" }
-  ]
+  ],
+
+"north-america": [
+  { key: "martinique", label: "Martinique" },
+  { key: "saint-barthelemy", label: "Saint Barthelemy" },
+  { key: "cayman-islands", label: "Cayman Islands" },
+  { key: "montserrat", label: "Montserrat" },
+  { key: "anguilla", label: "Anguilla" },
+  { key: "british-virgin-islands", label: "British Virgin Islands" },
+  { key: "turks-and-caicos", label: "Turks and Caicos" },
+
+  { key: "saint-vincent-and-the-grenadines", label: "Saint Vincent and the Grenadines" },
+  { key: "puerto-rico", label: "Puerto Rico" },
+  { key: "united-states", label: "United States" },
+  { key: "antigua-and-barbuda", label: "Antigua and Barbuda" },
+  { key: "bahamas", label: "Bahamas" },
+  { key: "barbados", label: "Barbados" },
+  { key: "belize", label: "Belize" },
+  { key: "canada", label: "Canada" },
+
+  { key: "panama", label: "Panama" },
+  { key: "saint-kitts-and-nevis", label: "Saint Kitts and Nevis" },
+  { key: "saint-lucia", label: "Saint Lucia" },
+  { key: "cuba", label: "Cuba" },
+  { key: "costa-rica", label: "Costa Rica" },
+  { key: "dominica", label: "Dominica" },
+  { key: "dominican-republic", label: "Dominican Republic" },
+  { key: "el-salvador", label: "El Salvador" },
+
+  { key: "trinidad-and-tobago", label: "Trinidad and Tobago" },
+  { key: "greenland", label: "Greenland" },
+  { key: "nicaragua", label: "Nicaragua" },
+  { key: "mexico", label: "Mexico" },
+  { key: "grenada", label: "Grenada" },
+  { key: "guatemala", label: "Guatemala" },
+  { key: "haiti", label: "Haiti" },
+  { key: "honduras", label: "Honduras" },
+  { key: "jamaica", label: "Jamaica" }
+]
+
+
 
 };

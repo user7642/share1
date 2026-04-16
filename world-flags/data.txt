@@ -1,63 +1,35 @@
-malawi|Malawi|Malawi
-gambia|Gambia|Gambia
-central-african-republic|Central African Republic|Cộng hòa Trung Phi
-uganda|Uganda|Uganda
-chad|Chad|Chad
-senegal|Senegal|Senegal
-mali|Mali|Mali
-ghana|Ghana|Ghana
+martinique|Martinique|Martinique
+saint-barthelemy|Saint Barthelemy|Saint Barthelemy
+cayman-islands|Cayman Islands|Quần đảo Cayman
+montserrat|Montserrat|Montserrat
+anguilla|Anguilla|Anguilla
+british-virgin-islands|British Virgin Islands|Quần đảo Virgin thuộc Anh
+turks-and-caicos|Turks and Caicos|Quần đảo Turks và Caicos
 
-cabo-verde|Cabo Verde|Cabo Verde
-cameroon|Cameroon|Cameroon
-burundi|Burundi|Burundi
-burkina-faso|Burkina Faso|Burkina Faso
-botswana|Botswana|Botswana
-benin|Benin|Benin
-angola|Angola|Angola
-algeria|Algeria|Algeria
+saint-vincent-and-the-grenadines|Saint Vincent and the Grenadines|Saint Vincent và Grenadines
+puerto-rico|Puerto Rico|Puerto Rico
+united-states|United States|Hoa Kỳ
+antigua-and-barbuda|Antigua and Barbuda|Antigua và Barbuda
+bahamas|Bahamas|Bahamas
+barbados|Barbados|Barbados
+belize|Belize|Belize
+canada|Canada|Canada
 
-gabon|Gabon|Gabon
-ethiopia|Ethiopia|Ethiopia
-eritrea|Eritrea|Eritrea
-equatorial-guinea|Equatorial Guinea|Guinea Xích Đạo
-djibouti|Djibouti|Djibouti
-republic-of-the-congo|Republic of the Congo|Cộng hòa Congo
-democratic-republic-of-the-congo|Democratic Republic of the Congo|Cộng hòa Dân chủ Congo
-comoros|Comoros|Comoros
+panama|Panama|Panama
+saint-kitts-and-nevis|Saint Kitts and Nevis|Saint Kitts và Nevis
+saint-lucia|Saint Lucia|Saint Lucia
+cuba|Cuba|Cuba
+costa-rica|Costa Rica|Costa Rica
+dominica|Dominica|Dominica
+dominican-republic|Dominican Republic|Cộng hòa Dominica
+el-salvador|El Salvador|El Salvador
 
-madagascar|Madagascar|Madagascar
-libya|Libya|Libya
-liberia|Liberia|Liberia
-lesotho|Lesotho|Lesotho
-kenya|Kenya|Kenya
-cote-divoire|Cote d'Ivoire|Bờ Biển Ngà
-guinea-bissau|Guinea-Bissau|Guinea-Bissau
-guinea|Guinea|Guinea
-
-rwanda|Rwanda|Rwanda
-nigeria|Nigeria|Nigeria
-niger|Niger|Niger
-namibia|Namibia|Namibia
-mozambique|Mozambique|Mozambique
-morocco|Morocco|Morocco
-mauritius|Mauritius|Mauritius
-mauritania|Mauritania|Mauritania
-sudan|Sudan|Sudan
-
-togo|Togo|Togo
-tanzania|Tanzania|Tanzania
-eswatini|Eswatini|Eswatini
-south-africa|South Africa|Nam Phi
-somalia|Somalia|Somalia
-zimbabwe|Zimbabwe|Zimbabwe
-sierra-leone|Sierra Leone|Sierra Leone
-seychelles|Seychelles|Seychelles
-
-tunisia|Tunisia|Tunisia
-sao-tome-and-principe|Sao Tome and Principe|Sao Tome và Principe
-south-sudan|South Sudan|Nam Sudan
-egypt|Egypt|Ai Cập
-western-sahara|Western Sahara|Tây Sahara
-zambia|Zambia|Zambia
-mayotte|Mayotte|Mayotte
-reunion|Reunion|Reunion
+trinidad-and-tobago|Trinidad and Tobago|Trinidad và Tobago
+greenland|Greenland|Greenland
+nicaragua|Nicaragua|Nicaragua
+mexico|Mexico|Mexico
+grenada|Grenada|Grenada
+guatemala|Guatemala|Guatemala
+haiti|Haiti|Haiti
+honduras|Honduras|Honduras
+jamaica|Jamaica|Jamaica
