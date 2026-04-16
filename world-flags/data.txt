@@ -1,52 +1,63 @@
-italy|Italy|Ý
-sweden|Sweden|Thụy Điển
-switzerland|Switzerland|Thụy Sĩ
-albania|Albania|Albania
-andorra|Andorra|Andorra
-belarus|Belarus|Belarus
-croatia|Croatia|Croatia
-luxembourg|Luxembourg|Luxembourg
-monaco|Monaco|Monaco
-kosovo|Kosovo|Kosovo
-liechtenstein|Liechtenstein|Liechtenstein
+malawi|Malawi|Malawi
+gambia|Gambia|Gambia
+central-african-republic|Central African Republic|Cộng hòa Trung Phi
+uganda|Uganda|Uganda
+chad|Chad|Chad
+senegal|Senegal|Senegal
+mali|Mali|Mali
+ghana|Ghana|Ghana
 
-ireland|Ireland|Ireland
-ukraine|Ukraine|Ukraina
-united-kingdom|United Kingdom|Vương quốc Anh
-macedonia|North Macedonia|Bắc Macedonia
-poland|Poland|Ba Lan
-montenegro|Montenegro|Montenegro
-portugal|Portugal|Bồ Đào Nha
-russia|Russia|Nga
-romania|Romania|Romania
-serbia|Serbia|Serbia
-slovenia|Slovenia|Slovenia
+cabo-verde|Cabo Verde|Cabo Verde
+cameroon|Cameroon|Cameroon
+burundi|Burundi|Burundi
+burkina-faso|Burkina Faso|Burkina Faso
+botswana|Botswana|Botswana
+benin|Benin|Benin
+angola|Angola|Angola
+algeria|Algeria|Algeria
 
-guernsey|Guernsey|Guernsey
-slovakia|Slovakia|Slovakia
-spain|Spain|Tây Ban Nha
-denmark|Denmark|Đan Mạch
-vatican-city|Vatican City|Thành Vatican
-norway|Norway|Na Uy
-austria|Austria|Áo
-netherlands|Netherlands|Hà Lan
-belgium|Belgium|Bỉ
-bulgaria|Bulgaria|Bulgaria
-bosnia-and-herzegovina|Bosnia and Herzegovina|Bosnia và Herzegovina
+gabon|Gabon|Gabon
+ethiopia|Ethiopia|Ethiopia
+eritrea|Eritrea|Eritrea
+equatorial-guinea|Equatorial Guinea|Guinea Xích Đạo
+djibouti|Djibouti|Djibouti
+republic-of-the-congo|Republic of the Congo|Cộng hòa Congo
+democratic-republic-of-the-congo|Democratic Republic of the Congo|Cộng hòa Dân chủ Congo
+comoros|Comoros|Comoros
 
-georgia|Georgia|Georgia
-estonia|Estonia|Estonia
-finland|Finland|Phần Lan
-france|France|Pháp
-germany|Germany|Đức
-greece|Greece|Hy Lạp
-hungary|Hungary|Hungary
-iceland|Iceland|Iceland
+madagascar|Madagascar|Madagascar
+libya|Libya|Libya
+liberia|Liberia|Liberia
+lesotho|Lesotho|Lesotho
+kenya|Kenya|Kenya
+cote-divoire|Cote d'Ivoire|Bờ Biển Ngà
+guinea-bissau|Guinea-Bissau|Guinea-Bissau
+guinea|Guinea|Guinea
 
-cyprus|Cyprus|Síp
-san-marino|San Marino|San Marino
-czechia|Czechia|Séc
-latvia|Latvia|Latvia
-lithuania|Lithuania|Litva
-malta|Malta|Malta
-moldova|Moldova|Moldova
+rwanda|Rwanda|Rwanda
+nigeria|Nigeria|Nigeria
+niger|Niger|Niger
+namibia|Namibia|Namibia
+mozambique|Mozambique|Mozambique
+morocco|Morocco|Morocco
+mauritius|Mauritius|Mauritius
+mauritania|Mauritania|Mauritania
+sudan|Sudan|Sudan
+
+togo|Togo|Togo
+tanzania|Tanzania|Tanzania
+eswatini|Eswatini|Eswatini
+south-africa|South Africa|Nam Phi
+somalia|Somalia|Somalia
+zimbabwe|Zimbabwe|Zimbabwe
+sierra-leone|Sierra Leone|Sierra Leone
+seychelles|Seychelles|Seychelles
+
+tunisia|Tunisia|Tunisia
+sao-tome-and-principe|Sao Tome and Principe|Sao Tome và Principe
+south-sudan|South Sudan|Nam Sudan
+egypt|Egypt|Ai Cập
+western-sahara|Western Sahara|Tây Sahara
+zambia|Zambia|Zambia
+mayotte|Mayotte|Mayotte
+reunion|Reunion|Reunion

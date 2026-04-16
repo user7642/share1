@@ -1,4 +1,5 @@
 const regions = {
+
   asia: [
     { key: "armenia", label: "Armenia" },
     { key: "azerbaijan", label: "Azerbaijan" },
@@ -96,5 +97,72 @@ const regions = {
     { key: "lithuania", label: "Lithuania" },
     { key: "malta", label: "Malta" },
     { key: "moldova", label: "Moldova" }
+  ],
+
+  africa: [
+    { key: "malawi", label: "Malawi" },
+    { key: "gambia", label: "Gambia" },
+    { key: "central-african-republic", label: "Central African Republic" },
+    { key: "uganda", label: "Uganda" },
+    { key: "chad", label: "Chad" },
+    { key: "senegal", label: "Senegal" },
+    { key: "mali", label: "Mali" },
+    { key: "ghana", label: "Ghana" },
+
+    { key: "cabo-verde", label: "Cabo Verde" },
+    { key: "cameroon", label: "Cameroon" },
+    { key: "burundi", label: "Burundi" },
+    { key: "burkina-faso", label: "Burkina Faso" },
+    { key: "botswana", label: "Botswana" },
+    { key: "benin", label: "Benin" },
+    { key: "angola", label: "Angola" },
+    { key: "algeria", label: "Algeria" },
+
+    { key: "gabon", label: "Gabon" },
+    { key: "ethiopia", label: "Ethiopia" },
+    { key: "eritrea", label: "Eritrea" },
+    { key: "equatorial-guinea", label: "Equatorial Guinea" },
+    { key: "djibouti", label: "Djibouti" },
+    { key: "republic-of-the-congo", label: "Republic of the Congo" },
+    { key: "democratic-republic-of-the-congo", label: "DR Congo" },
+    { key: "comoros", label: "Comoros" },
+
+    { key: "madagascar", label: "Madagascar" },
+    { key: "libya", label: "Libya" },
+    { key: "liberia", label: "Liberia" },
+    { key: "lesotho", label: "Lesotho" },
+    { key: "kenya", label: "Kenya" },
+    { key: "cote-divoire", label: "Cote d'Ivoire" },
+    { key: "guinea-bissau", label: "Guinea-Bissau" },
+    { key: "guinea", label: "Guinea" },
+
+    { key: "rwanda", label: "Rwanda" },
+    { key: "nigeria", label: "Nigeria" },
+    { key: "niger", label: "Niger" },
+    { key: "namibia", label: "Namibia" },
+    { key: "mozambique", label: "Mozambique" },
+    { key: "morocco", label: "Morocco" },
+    { key: "mauritius", label: "Mauritius" },
+    { key: "mauritania", label: "Mauritania" },
+    { key: "sudan", label: "Sudan" },
+
+    { key: "togo", label: "Togo" },
+    { key: "tanzania", label: "Tanzania" },
+    { key: "eswatini", label: "Eswatini" },
+    { key: "south-africa", label: "South Africa" },
+    { key: "somalia", label: "Somalia" },
+    { key: "zimbabwe", label: "Zimbabwe" },
+    { key: "sierra-leone", label: "Sierra Leone" },
+    { key: "seychelles", label: "Seychelles" },
+
+    { key: "tunisia", label: "Tunisia" },
+    { key: "sao-tome-and-principe", label: "Sao Tome and Principe" },
+    { key: "south-sudan", label: "South Sudan" },
+    { key: "egypt", label: "Egypt" },
+    { key: "western-sahara", label: "Western Sahara" },
+    { key: "zambia", label: "Zambia" },
+    { key: "mayotte", label: "Mayotte" },
+    { key: "reunion", label: "Reunion" }
   ]
+
 };

@@ -64,3 +64,4 @@ document.querySelectorAll(".acc-btn").forEach(btn => {
 // =======================
 renderRegion(regions.asia, "asia", "asia");
 renderRegion(regions.europe, "europe", "europe");
+renderRegion(regions.africa, "africa", "africa");

@@ -1,0 +1,52 @@
+italy|Italy|Ý
+sweden|Sweden|Thụy Điển
+switzerland|Switzerland|Thụy Sĩ
+albania|Albania|Albania
+andorra|Andorra|Andorra
+belarus|Belarus|Belarus
+croatia|Croatia|Croatia
+luxembourg|Luxembourg|Luxembourg
+monaco|Monaco|Monaco
+kosovo|Kosovo|Kosovo
+liechtenstein|Liechtenstein|Liechtenstein
+
+ireland|Ireland|Ireland
+ukraine|Ukraine|Ukraina
+united-kingdom|United Kingdom|Vương quốc Anh
+macedonia|North Macedonia|Bắc Macedonia
+poland|Poland|Ba Lan
+montenegro|Montenegro|Montenegro
+portugal|Portugal|Bồ Đào Nha
+russia|Russia|Nga
+romania|Romania|Romania
+serbia|Serbia|Serbia
+slovenia|Slovenia|Slovenia
+
+guernsey|Guernsey|Guernsey
+slovakia|Slovakia|Slovakia
+spain|Spain|Tây Ban Nha
+denmark|Denmark|Đan Mạch
+vatican-city|Vatican City|Thành Vatican
+norway|Norway|Na Uy
+austria|Austria|Áo
+netherlands|Netherlands|Hà Lan
+belgium|Belgium|Bỉ
+bulgaria|Bulgaria|Bulgaria
+bosnia-and-herzegovina|Bosnia and Herzegovina|Bosnia và Herzegovina
+
+georgia|Georgia|Georgia
+estonia|Estonia|Estonia
+finland|Finland|Phần Lan
+france|France|Pháp
+germany|Germany|Đức
+greece|Greece|Hy Lạp
+hungary|Hungary|Hungary
+iceland|Iceland|Iceland
+
+cyprus|Cyprus|Síp
+san-marino|San Marino|San Marino
+czechia|Czechia|Séc
+latvia|Latvia|Latvia
+lithuania|Lithuania|Litva
+malta|Malta|Malta
+moldova|Moldova|Moldova
