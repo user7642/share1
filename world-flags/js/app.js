@@ -66,3 +66,4 @@ renderRegion(regions.asia, "asia", "asia");
 renderRegion(regions.europe, "europe", "europe");
 renderRegion(regions.africa, "africa", "africa");
 renderRegion(regions["north-america"], "north-america", "north-america");
+renderRegion(regions["south-america"], "south-america", "south-america");

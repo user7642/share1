@@ -201,6 +201,28 @@ const regions = {
   { key: "haiti", label: "Haiti" },
   { key: "honduras", label: "Honduras" },
   { key: "jamaica", label: "Jamaica" }
+],
+
+"south-america": [
+  { key: "argentina", label: "Argentina" },
+  { key: "brazil", label: "Brazil" },
+  { key: "colombia", label: "Colombia" },
+  { key: "curacao", label: "Curacao" },
+
+  { key: "guiana", label: "Guiana" },
+  { key: "peru", label: "Peru" },
+  { key: "suriname", label: "Suriname" },
+  { key: "uruguay", label: "Uruguay" },
+
+  { key: "venezuela", label: "Venezuela" },
+  { key: "bolivia", label: "Bolivia" },
+  { key: "chile", label: "Chile" },
+  { key: "falkland-islands", label: "Falkland Islands" },
+
+  { key: "ecuador", label: "Ecuador" },
+  { key: "guyana", label: "Guyana" },
+  { key: "paraguay", label: "Paraguay" },
+  { key: "aruba", label: "Aruba" }
 ]
 
 

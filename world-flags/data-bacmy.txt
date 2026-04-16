@@ -1,0 +1,35 @@
+martinique|Martinique|Martinique
+saint-barthelemy|Saint Barthelemy|Saint Barthelemy
+cayman-islands|Cayman Islands|Quần đảo Cayman
+montserrat|Montserrat|Montserrat
+anguilla|Anguilla|Anguilla
+british-virgin-islands|British Virgin Islands|Quần đảo Virgin thuộc Anh
+turks-and-caicos|Turks and Caicos|Quần đảo Turks và Caicos
+
+saint-vincent-and-the-grenadines|Saint Vincent and the Grenadines|Saint Vincent và Grenadines
+puerto-rico|Puerto Rico|Puerto Rico
+united-states|United States|Hoa Kỳ
+antigua-and-barbuda|Antigua and Barbuda|Antigua và Barbuda
+bahamas|Bahamas|Bahamas
+barbados|Barbados|Barbados
+belize|Belize|Belize
+canada|Canada|Canada
+
+panama|Panama|Panama
+saint-kitts-and-nevis|Saint Kitts and Nevis|Saint Kitts và Nevis
+saint-lucia|Saint Lucia|Saint Lucia
+cuba|Cuba|Cuba
+costa-rica|Costa Rica|Costa Rica
+dominica|Dominica|Dominica
+dominican-republic|Dominican Republic|Cộng hòa Dominica
+el-salvador|El Salvador|El Salvador
+
+trinidad-and-tobago|Trinidad and Tobago|Trinidad và Tobago
+greenland|Greenland|Greenland
+nicaragua|Nicaragua|Nicaragua
+mexico|Mexico|Mexico
+grenada|Grenada|Grenada
+guatemala|Guatemala|Guatemala
+haiti|Haiti|Haiti
+honduras|Honduras|Honduras
+jamaica|Jamaica|Jamaica
