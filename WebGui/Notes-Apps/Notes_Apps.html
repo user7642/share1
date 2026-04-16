@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///home/trvndng/Documents/Workspace/Notes_Apps.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            color: #000;
+            width: 100%;
+            height: 95vh;
+        }
+
+        #notes-apps {
+            margin: 0 4px;
+            min-width: 700px;
+            position: relative;
+            display: flex;
+        }
+
+        div.overlay {
+
+            width: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            display: none;
+            padding: 0 24px;
+            position: absolute;
+            background-color: #e9e8e8;
+        }
+
+        div.closebtn {
+            height: 27px;
+            display: none;
+            margin: 5px;
+            z-index: 200;
+            background-color: #333;
+        }
+
+        #item-name {
+            height: 24px;
+            font-size: 18px;
+            border-radius: 4px;
+            border: 2px solid #fff;
+            background-color: antiquewhite;
+        }
+
+        #item-content {
+            display: none;
+            font-size: 1rem;
+            line-height: 2rem;
+            text-indent: 1rem;
+            padding-left: 10px;
+            border: 1px solid #666;
+            background-color: #c3c2c2;
+
+        }
+
+        div#item-content {
+            max-height: 219px;
+            overflow: hidden;
+        }
+
+        .in-name {
+            /* width: 50%; */
+            float: left;
+        }
+
+        .item-icon {
+            width: auto;
+            float: right;
+        }
+
+        div.main {
+            height: 98vh;
+            flex: 1;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-container {
+            border: 4px solid #033262;
+            display: flex;
+            flex-wrap: nowrap;
+            height: auto;
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 2px;
+            background-color: aqua;
+            margin-bottom: 10px;
+        }
+
+
+        div.menu-apps {
+            font-size: 18px;
+            font-weight: 400;
+            float: left;
+            margin: 0 12px 0;
+
+        }
+
+        div.menu-apps button {
+            width: 45px;
+            padding: 1px 2px;
+            border-radius: 5px;
+        }
+
+        div.header-container>div:last-child {
+            /* float: right; */
+            width: 30%;
+        }
+
+        div#menu-apps {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input#name-apps {
+            /* width: 100%; */
+            /* min-width: 280px; */
+            border: 2px solid #0aa3c9;
+            border-radius: 4px;
+            background-color: #ffffff;
+
+        }
+
+
+
+        .content-container {
+            flex: 2;
+        }
+
+        textarea {
+            font-size: 15px;
+            font-weight: 300;
+            font-family: serif;
+            line-height: 1.75;
+            height: 100%;
+            width: 100%;
+            text-wrap: nowrap;
+            overflow: scroll;
+        }
+
+        @media (min-width:1200px) {
+            #notes-apps {
+                /* width: 65%; */
+                /* margin: auto; */
+            }
+
+            div.overlay {
+                flex: 0 0 21%;
+                display: block;
+                padding: 0 24px;
+                position: relative;
+                background-color: #e9e8e8;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="notes-apps">
+        <div id="nav-pannel" class="overlay" style="width: 0px; display: none;">
+            <div class="closebtn" onclick="closeNav()" style="display: none;">❌</div>
+            <div id="note-list">
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(0)">notes/9-13-54-10</div>
+
+                            <div class="item-icon">📄</div>
+                            <div class="item-icon" onclick="delete_item(0)">❌</div>
+                        </div>
+
+                    </div>
+                    <div class="item-content"></div>
+                </div>
+                <div id="item-content">dsdf dfdsfsdf
+                    asdasdsd</div>
+
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(1)">notes/9-13-57-151</div>
+                            <div class="item-icon">📝</div>
+                            <div class="item-icon" onclick="delete_item(1)">❌</div>
+                        </div>
+
+                    </div>
+                    <div class="item-content"></div>
+                </div>
+                <div id="item-content">dfg fgfgfdfgxvxvc</div>
+
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(2)">👰‍♂️🙇‍♀️</div>
+                            <div class="item-icon">📄</div>
+                            <div class="item-icon" onclick="delete_item(2)">❌</div>
+                        </div>
+
+                    </div>
+                    <div class="item-content"></div>
+                </div>
+                <div id="item-content">👰‍♂️🙇‍♀️</div>
+
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(3)">📝/9-14-0-623</div>
+                            <div class="item-icon">📄</div>
+                            <div class="item-icon" onclick="delete_item(3)">❌</div>
+                        </div>
+
+                    </div>
+                    <div class="item-content"></div>
+                </div>
+                <div id="item-content">sdfsdf</div>
+
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(4)">📝/9-14:154</div>
+                            <div class="item-icon">📄</div>
+                            <div class="item-icon" onclick="delete_item(4)">❌</div>
+                        </div>
+
+                    </div>
+                    <div class="item-content"></div>
+                </div>
+                <div id="item-content">fdfd</div>
+
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(5)">📝/9/5 14:2666</div>
+                            <div class="item-icon">📄</div>
+                            <div class="item-icon" onclick="delete_item(5)">❌</div>
+                        </div>
+
+                    </div>
+                    <div class="item-content"></div>
+                </div>
+                <div id="item-content">dfdf</div>
+
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(6)">📝/9/5 21:20:627</div>
+                            <div class="item-icon">📄</div>
+                            <div class="item-icon" onclick="delete_item(6)">❌</div>
+                        </div>
+
+                    </div>
+                    <div class="item-content"></div>
+                </div>
+                <div id="item-content">dfffdgf
+                    dffgdfgf
+                    dgfad dsdfds
+                    sdf
+                    sdfsfdsfsdfdssdf
+                    fggf</div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="header-container">
+                <div class="menu-list">
+                    <div class="menu-apps" onclick="openNav()">
+                        <button type="button">Open</button>
+                    </div>
+                    <div class="menu-apps">
+                        <button type="button">Add</button>
+                    </div>
+                    <div class="menu-apps">
+                        <button type="button" onclick="delete_item()">Delete</button>
+                    </div>
+                    <div class="menu-apps" onclick="SaveNote()">
+                        <button type="button">Save</button>
+                    </div>
+                    <div class="menu-apps">
+                        <button type="button" onclick="openitem()"> Help</button>
+                    </div>
+                </div>
+                <div class="menu-apps" id="menu-apps">
+                    <input type="text" name="" id="name-apps">
+                    <input id="item-index" type="hidden">
+                    <div type="button" onclick="get_clear()">🧹</div>
+                    <div type="button" onclick="updateitem()">🔄</div>
+                </div>
+
+            </div>
+            <div class="content-container">
+                <textarea id="app-content" placeholder=""></textarea>
+            </div>
+        </div>
+    </div>
+    <script>
+        var key = "MyNotes";
+        function get_clear() {
+            document.getElementById("name-apps").value = "";
+
+            document.getElementById("app-content").value = "";
+        }
+        function getfilename() {
+            const now = new Date();
+            const year = now.getYear()
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const Seconds = now.getSeconds()
+            const Milliseconds = now.getMilliseconds()
+
+            return filename = `🗓️:${day}-${month}-${hours}:${minutes}:${Seconds}`;
+
+        }
+
+        function getitem(key) {
+            item = localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
+            return item;
+        }
+
+        function setitem(key, value) {
+            localStorage.setItem(key, JSON.stringify(value))
+
+        }
+
+        function edititem(i) {
+            item = getitem(key);
+            document.querySelector('#item-index').value = i;
+            document.querySelector('#name-apps').value = i + " " + item[i].name;
+            document.querySelector('#app-content').value = item[i].content;
+            closeNav();
+
+        }
+        function updateitem() {
+            i = document.querySelector('#item-index').value;
+            item = getitem(key);
+            item[i] = {
+                "name": document.querySelector('#name-apps').value,
+                "content": document.querySelector('#app-content').value,
+            }
+            setitem(key, item);
+            openitem();
+
+        }
+
+        function openitem() {
+
+            data = getitem(key);
+
+            const _notes_items = data.map((e, i) => {
+                return `
+                <div id="item-name">
+                    <div class="item-name">
+                        <div class="item-name">
+                            <div class="in-name" onclick="get_content(${i})">${e.name}<<${i}:</div>
+                             <div class="menu-icon">
+                            <div class="item-icon" onclick="edititem(${i})">📝</div>
+                            <div class="item-icon" onclick="delete_item(${i})">❌</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="item-content"></div>
+                    </div>
+                <div id="item-content">${e.content}</div>
+                `
+            }).join("");
+
+            _note_list = document.getElementById("note-list");
+            _note_list.innerHTML = _notes_items;
+        }
+        function SaveNote() {
+            _notes = getitem(key);
+            _notes_value = document.getElementById("app-content").value;
+            _file_name = document.getElementById("name-apps").value;
+
+            if (_file_name === "") {
+                _notes.push({ "name": getfilename(), "content": _notes_value })
+            } else {
+                _notes.push({ "name": _file_name, "content": _notes_value })
+            }
+            setitem(key, _notes);
+        }
+
+        function get_content(i) {
+            c = document.querySelectorAll('#item-content');
+            if (c[i].style.display === "none") {
+                c[i].style.display = "block";
+            } else {
+                c[i].style.display = "none";
+            }
+
+        }
+
+        function delete_item(i) {
+            delitem = getitem(key);
+            delitem.splice(i, 1);
+            setitem(key, delitem);
+            openitem();
+
+        }
+        function openNav() {
+            openitem();
+            document.getElementById("nav-pannel").style.width = "100%";
+            document.querySelector(".overlay").style.display = "block";
+            document.querySelector(".closebtn").style.display = "block";
+        }
+        function closeNav() {
+            document.getElementById("nav-pannel").style.width = "0";
+            document.querySelector(".overlay").style.display = "none";
+            document.querySelector(".closebtn").style.display = "none";
+        }
+    </script>
+
+
+</body>
+
+</html>

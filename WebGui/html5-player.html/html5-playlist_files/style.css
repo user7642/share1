@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 95vh;
+    width: 100vw;
+    font-family: Roboto;
+    font-size: 18px;
+    text-transform: lowercase;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#menu-primary{
+    width:80%;
+}
+
+.video-container {
+    height: 100%;
+    width: 100%;
+    overflow-y: unset;
+    /* padding-top: 48px; */
+}
+
+.video-container {
+    position: relative;
+    top: 48px;
+}
+
+.video-container {
+    display: flex;
+    /* gap: 10px; */
+    flex-direction: column;
+}
+
+.video-container {
+    /* box-shadow: 30px 20px 15px 15px #333; */
+}
+
+video#bvideo {
+    flex: 1;
+    /* height: max-content; */
+}
+
+
+ol#bvideo_playlist {
+    /* position: relative; */
+    position: relative;
+    padding: 0px 12px;
+    border: 2px solid #2196F3;
+    background-color: #f5f3f3;
+    background-image: url(arch.png);
+    background-size: cover;
+}
+
+li {
+    height: 41px;
+    overflow: hidden;
+    position: relative;
+    top: 6px;
+    padding-top: 12px;
+    /* background-image: url(travel_dark.svg); */
+    border-bottom: 1px solid #333;
+}
+
+@media(min-width: 1280px) {
+    body {
+        background-color: #424242;
+        background-image: url(travel_dark.svg);
+    }
+
+    #link-playlist{
+        float: right;
+    }
+    .video-container {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .video-container {
+        flex-direction: row;
+    }
+
+    #playlist-menu {
+        width: 426px;
+    }
+
+ 
+    ol#bvideo_playlist {
+        flex: 0 0 30%;
+        border-radius: 12px;
+        height: 620px;
+        overflow: hidden;
+        overflow-y: auto;
+        
+    }
+
+    video#bvideo {
+        width: 500px;
+        height: 620px;
+        border: 3px solid #2196F3;
+        border-radius: 20px;
+    }
+
+    li {
+        padding: 0px;
+        text-wrap: nowrap;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        border: 2px solid #2196F3;
+        /* background-color: #696969; */
+        /* box-shadow: 5px -5px 9px 0 #333; */
+    }
+
+    ol#bvideo_playlist span {
+        position: absolute;
+        left: 376px;
+        /* display:none; */
+    }
+
+    li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    li a {
+        flex-basis: 88%;
+        padding: 0 6px;
+        overflow: hidden;
+    }
+}

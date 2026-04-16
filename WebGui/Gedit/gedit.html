@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gedit</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .row.col-1>* {
+            flex: 1
+        }
+
+        .row.bor-1>* {
+            border: 1px solid #000
+        }
+
+        textarea {
+            margin:auto;
+            padding:10px;
+            width: 95vw;
+            height: 95vh;
+            font-size:1.5rem;
+            box-shadow: 4px 4px 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <textarea></textarea>
+    </div>
+</body>
+
+</html>

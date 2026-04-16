@@ -1,0 +1,10 @@
+/*Textbox*/
+.ck-editor__editable {
+    min-height: 800px;
+    max-height: 800px;
+    min-width: 860px;
+}
+/*Toolbar*/
+.ck-editor__top {
+    min-width: 880px;
+}

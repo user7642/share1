@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>🎶 playlist video 🎶</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		color: #fcfcfc;
+		width: 100vw;
+		height: 100vh;
+		background-image: url(travel_dark.svg);
+	}
+
+	.wapper {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	.file-container {
+		float: right;
+	}
+
+	table {
+		margin: auto;
+		min-width: 500px;
+	}
+
+	table tr{
+		height: 42px;
+	}
+
+
+   table td:nth-child(1),
+   th:nth-child(1)
+   {
+	text-align: left;
+	
+   }
+
+	table,
+	th,
+	td {
+		border: 2px solid #0b8da7;
+		border-collapse: collapse;
+	}
+
+	td,
+	th {
+		padding: 12px 0 0 12px;
+		text-wrap: nowrap;
+		overflow: hidden;
+		font-style: oblique;
+		font-weight: 400;
+	}
+
+	.popup-tab {
+		top: 50%;
+		left: 50%;
+		z-index: 100;
+		position: fixed;
+		background-color: #ffffff;
+		transform: translate(-50%, -50%);
+
+	}
+
+	.popup-tab {
+		display: none;
+		min-width: 600px;
+		border-radius: 15px;
+		border: 4px solid #1747c0;
+	}
+
+	.form {
+		width: 100%;
+		margin: auto;
+	}
+
+	.form-row {
+		height: 80px;
+		display: flex;
+		align-items: center;
+	}
+
+	.form-row input {
+		flex: 1;
+		height: 30px;
+		border: 2px solid #f8dc09ab;
+		border-radius: 10px;
+	}
+</style>
+
+<body>
+
+	<div class="wapper">
+
+		<table>
+			<thead>
+				<tr>
+					<th>ID___</th>
+					<th>
+						name
+						<div class="file-container">
+							<a href="../html5-playlist.html" style="color:#07a9ca">🎶</a>
+							<label for="file-input">Upload</label>
+							<input id="butDirectory" type="file" multiple>
+						</div>
+					</th>
+					<th>action</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="popup-tab">
+		<div class="form">
+			<div class="form-row">
+				<label for="name">name:</label>
+				<input id="name" type="text">
+				<input id="index" type="hidden">
+				<button onclick="updateitem()">update</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		var key = "videoplaylist";
+		function getdata(key) {
+			let data = JSON.parse(localStorage.getItem(key));
+			return data;
+		}
+		function setitem(key, value) {
+			value = JSON.stringify(value);
+			localStorage.setItem(key, value);
+			renderdata();
+		}
+		function renderdata() {
+			let playlist = getdata(key);
+			arr = [];
+			for (i = 0; i < playlist.length; i++) {
+				td = `
+				<tr><td style="width:auto">${i + 1}</td>
+					<td style="width:90%">${playlist[i].name}</td>
+					<td style="width:auto">
+					<button id="del" onclick="deleteitem(${i})">🗑️</button>
+					<button id="edit" onclick="edititem(${i})">📝</button>
+					</td>
+				</tr>
+				`;
+				arr.push(td);
+			}
+			tbody = document.querySelector('tbody');
+			tbody.innerHTML = arr.join('');
+
+
+
+		}
+
+		renderdata()
+
+		function deleteitem(i) {
+			song = getdata(key);
+			song.splice(i, 1);
+			setitem(key, song);
+		}
+
+		function edititem(i) {
+			song = getdata(key);
+			document.querySelector('.popup-tab').style.display = 'block';
+			document.querySelector('input#name').value = song[i].name;
+			document.querySelector('input#index').value = i;
+
+		}
+
+		function updateitem() {
+			i = document.querySelector('input#index').value;
+			song = getdata(key);
+			song[i] = {
+				name: document.querySelector('input#name').value,
+				link: song[i].link,
+				size: song[i].size,
+			}
+			setitem(key, song);
+			document.querySelector('.popup-tab').style.display = 'none';
+
+		}
+		//videoplaylist
+		var key = 'videoplaylist';
+		function setItem(key, value) {
+			value = JSON.stringify(value);
+			localStorage.setItem(key, value);
+		}
+		function getItem(key) {
+			item = localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
+			return item;
+		}
+		const openFile = () => {
+			return new Promise((resolve) => {
+				const input = document.querySelector('input');
+
+				input.addEventListener('change', async () => {
+					let List_file = input.files;
+					resolve(List_file);
+				});
+				input.click();
+			});
+
+		};
+
+		function getname(file) {
+			file_name = [];
+			for (e of file) {
+				file_name.push({ name: e.name, size: e.size })
+			}
+			return file_name;
+		}
+
+		const getpath = (name) => {
+			obj = [];
+			for (file of name) {
+				n = file.name;
+				p = encodeURIComponent(n);
+				r = 'file:///home/trvndng/Videos/';
+
+				obj.push({ name: file.name, link: r + p, size: file.size })
+			}
+			setItem(key, obj)
+
+
+		}
+		openFile()
+			.then(res => { return res })
+			.then(data => getname(data))
+			.then(name => getpath(name))
+	</script>
+</body>
+
+</html>

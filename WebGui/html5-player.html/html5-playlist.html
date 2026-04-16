@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)file:///home/trvndng/Documents/Workspace/Zzz.workd-testing/Playlist%20video%20player%20for%20HTML5.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Music Player</title>
+    <script src="./html5-playlist_files/jquery.min.js"></script>
+    <script src="./html5-playlist_files/better-video.js"></script>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./html5-playlist_files/style.css">
+</head>
+
+<body> 
+   <div id="menu-primary">
+        <div id="link-playlist"><a href="./html5-playlist_files/listvideo.html">🎶</a></div>
+    </div>
+
+    <div class="video-container">
+        <video height="500px" controls="" src="" id="bvideo" data-bvideo_id="1"></video>
+        <div id="playlist-menu">
+        <ol id="bvideo_playlist">
+            
+        </ol>
+
+    </div>
+    </div>
+    <script>
+        let videos = JSON.parse(localStorage.getItem('videoplaylist'));
+
+        //console.log(videos);
+        var video_playlist = videos;
+    </script>
+</body>
+
+</html>
