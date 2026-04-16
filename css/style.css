@@ -1,0 +1,71 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #FDFDFA;
+}
+
+/* Nút ngôn ngữ */
+.lang-switch {
+  margin: 10px;
+}
+
+.lang-switch button {
+  padding: 10px 14px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+/* Accordion */
+.acc-btn {
+  width: 90%;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background: #eaeaea;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.acc-content {
+  display: none;
+  padding: 10px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+/* Card — KHÔNG viền */
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover nhẹ thôi */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Ảnh — CHỈ VIỀN Ở ĐÂY */
+img {
+  width: 100%;
+  border: 1px solid #ddd;   /* ✔ viền cho cờ */
+  border-radius: 4px;
+}
+
+/* Chữ cân lại tỷ lệ */
+.card p {
+  margin-top: 6px;
+  font-size: 14px;
+}

@@ -1,0 +1,41 @@
+armenia|Armenia|Armenia
+azerbaijan|Azerbaijan|Azerbaijan
+bahrain|Bahrain|Bahrain
+bangladesh|Bangladesh|Bangladesh
+bhutan|Bhutan|Bhutan
+india|India|Ấn Độ
+
+brunei|Brunei|Brunei
+cambodia|Cambodia|Campuchia
+china|China|Trung Quốc
+united-arab-emirates|United Arab Emirates|Các Tiểu vương quốc Ả Rập Thống nhất
+uzbekistan|Uzbekistan|Uzbekistan
+indonesia|Indonesia|Indonesia
+
+iran|Iran|Iran
+iraq|Iraq|Iraq
+japan|Japan|Nhật Bản
+jordan|Jordan|Jordan
+kuwait|Kuwait|Kuwait
+kyrgyzstan|Kyrgyzstan|Kyrgyzstan
+
+laos|Laos|Lào
+lebanon|Lebanon|Liban
+malaysia|Malaysia|Malaysia
+maldives|Maldives|Maldives
+vietnam|Vietnam|Việt Nam
+myanmar|Myanmar|Myanmar
+
+nepal|Nepal|Nepal
+north-korea|North Korea|Triều Tiên
+oman|Oman|Oman
+pakistan|Pakistan|Pakistan
+palestine|Palestine|Palestine
+philippines|Philippines|Philippines
+
+qatar|Qatar|Qatar
+saudi-arabia|Saudi Arabia|Ả Rập Xê Út
+thailand|Thailand|Thái Lan
+timor-leste|Timor-Leste|Đông Timor
+yemen|Yemen|Yemen
+hong-kong|Hong Kong|Hồng Kông
