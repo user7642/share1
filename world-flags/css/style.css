@@ -2,9 +2,27 @@ body {
   font-family: sans-serif;
   text-align: center;
   background: #FDFDFA;
+  margin: 0;
 }
 
-/* Nút ngôn ngữ */
+/* Title */
+h1 {
+  margin-top: 15px;
+}
+
+/* Guide text */
+.guide {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.guide-sub {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Language */
 .lang-switch {
   margin: 10px;
 }
@@ -12,7 +30,7 @@ body {
 .lang-switch button {
   padding: 10px 14px;
   margin: 5px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -20,7 +38,7 @@ body {
   transition: 0.2s;
 }
 
-/* ACTIVE NGÔN NGỮ */
+/* Active */
 .lang-switch button.active {
   background: #ff9800;
   color: white;
@@ -30,9 +48,9 @@ body {
 
 /* Accordion */
 .acc-btn {
-  width: 90%;
-  padding: 15px;
-  font-size: 18px;
+  width: 92%;
+  padding: 14px;
+  font-size: 17px;
   cursor: pointer;
   border: none;
   background: #eaeaea;
@@ -45,7 +63,7 @@ body {
   background: #ddd;
 }
 
-/* Nội dung */
+/* Content */
 .acc-content {
   display: none;
   padding: 10px;
@@ -65,6 +83,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s;
+  border: 1px solid transparent;
 }
 
 /* Hover */
@@ -74,10 +93,11 @@ body {
 
 /* Click feedback */
 .card:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
+  border: 1px solid #ff9800;
 }
 
-/* Ảnh */
+/* Image */
 img {
   width: 100%;
   border: 1px solid #ddd;

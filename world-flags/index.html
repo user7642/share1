@@ -10,51 +10,55 @@
 
 <h1>🌍 Học Cờ Quốc Gia</h1>
 
+<p class="guide">👉 Bấm vào lá cờ để nghe phát âm (Việt – Anh)</p>
+
 <!-- CHỌN NGÔN NGỮ -->
 <div class="lang-switch">
-  <button id="btn-vi" onclick="setLang('vi')">🔊 Nghe tiếng Việt</button>
-  <button id="btn-en" onclick="setLang('en')">🔊 Nghe tiếng Anh</button>
+  <button id="btn-vi" class="active" onclick="setLang('vi')">🔊 Tiếng Việt</button>
+  <button id="btn-en" onclick="setLang('en')">🔊 English</button>
 </div>
 
+<p class="guide-sub">👉 Chọn ngôn ngữ trước khi bấm</p>
+
 <!-- CHÂU Á -->
-<button class="acc-btn">🌏 Châu Á (bấm để mở)</button>
+<button class="acc-btn">🌏 Châu Á</button>
 <div class="acc-content">
   <div class="grid" id="asia"></div>
 </div>
 
 <!-- CHÂU ÂU -->
-<button class="acc-btn">🌍 Châu Âu (bấm để mở)</button>
+<button class="acc-btn">🌍 Châu Âu</button>
 <div class="acc-content">
   <div class="grid" id="europe"></div>
 </div>
 
-<button class="acc-btn">🌍 Châu Phi (bấm để mở)</button>
+<!-- CHÂU PHI -->
+<button class="acc-btn">🌍 Châu Phi</button>
 <div class="acc-content">
   <div class="grid" id="africa"></div>
 </div>
 
-<button class="acc-btn">🌎 Bắc Mỹ (bấm để mở)</button>
+<!-- BẮC MỸ -->
+<button class="acc-btn">🌎 Bắc Mỹ</button>
 <div class="acc-content">
   <div class="grid" id="north-america"></div>
 </div>
 
-<button class="acc-btn">🌎 Nam Mỹ (bấm để mở)</button>
+<!-- NAM MỸ -->
+<button class="acc-btn">🌎 Nam Mỹ</button>
 <div class="acc-content">
   <div class="grid" id="south-america"></div>
 </div>
 
-<button class="acc-btn">🌊 Châu Đại Dương (bấm để mở)</button>
+<!-- CHÂU ĐẠI DƯƠNG -->
+<button class="acc-btn">🌊 Châu Đại Dương</button>
 <div class="acc-content">
   <div class="grid" id="oceania"></div>
 </div>
 
-
 <audio id="audio"></audio>
 
-<!-- QUAN TRỌNG: chỉ 1 file data -->
 <script src="js/data.js"></script>
-
-<!-- logic -->
 <script src="js/app.js"></script>
 
 </body>
