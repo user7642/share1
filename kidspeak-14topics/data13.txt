@@ -1,0 +1,21 @@
+ant|Ant|Con kiến
+bee|Bee|Con ong
+beetle|Beetle|Bọ cánh cứng
+butterfly|Butterfly|Con bướm
+caterpillar|Caterpillar|Con sâu
+cicada|Cicada|Con ve sầu
+cockroach|Cockroach|Con gián
+cricket|Cricket|Con dế mèn
+dragonfly|Dragonfly|Con chuồn chuồn
+dung-beetle|Dung beetle|Bọ hung
+firefly|Firefly|Con đom đóm
+fly|Fly|Con ruồi
+grasshopper|Grasshopper|Con châu chấu
+ladybug|Ladybug|Bọ rùa
+mayfly|Mayfly|Con thiêu thân
+mosquito|Mosquito|Con muỗi
+moth|Moth|Con thiêu thân
+praying-mantis|Praying mantis|Con bọ ngựa
+stick-insect|Stick insect|Con bọ que
+stink-bug|Stink bug|Bọ xít
+termite|Termite|Con mối

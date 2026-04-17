@@ -5,7 +5,7 @@ import os
 # =============================
 # ⚙️ CONFIG (CHỈ SỬA DÒNG NÀY)
 # =============================
-REGION = "pets"   # 👈 1 pets, 2 wild, 3 sea, 4 flowers, 5 vegetables, 6 fruits, 7 body, 8 numbers, 9 alphabet, 10 colors, 11 shapes, 12 jobs, 13 insects, 14 vehicles
+REGION = "vehicles"   # 👈 1 pets, 2 wild, 3 sea, 4 flowers, 5 vegetables, 6 fruits, 7 body, 8 numbers, 9 alphabet, 10 colors, 11 shapes, 12 jobs, 13 insects, 14 vehicles
 INPUT_FILE = "data.txt"
 
 OUTPUT_ROOT = "audio"

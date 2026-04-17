@@ -1,0 +1,22 @@
+chimpanzee|Chimpanzee|Con tinh tinh
+wolf|Wolf|Con sói
+kangaroo|Kangaroo|Con chuột túi
+
+monkey|Monkey|Con khỉ
+hippopotamus|Hippopotamus|Con hà mã
+tiger|Tiger|Con hổ
+
+zebra|Zebra|Con ngựa vằn
+bear|Bear|Con gấu
+deer|Deer|Con hươu
+
+leopard|Leopard|Con báo hoa mai
+fox|Fox|Con cáo
+gorilla|Gorilla|Con khỉ đột
+
+giraffe|Giraffe|Con hươu cao cổ
+lion|Lion|Con sư tử
+rhinoceros|Rhinoceros|Con tê giác
+
+elephant|Elephant|Con voi
+crocodile|Crocodile|Con cá sấu

@@ -1,0 +1,21 @@
+water-spinach|Water spinach|Rau muống
+cabbage|Cabbage|Bắp cải
+sweet-potato|Sweet potato|Khoai lang
+tomato|Tomato|Cà chua
+potato|Potato|Khoai tây
+sweet-leaf|Sweet leaf|Rau ngót
+onion|Onion|Củ hành
+perilla-leaf|Perilla leaf|Lá tía tô
+lettuce|Lettuce|Rau xà lách
+mustard-greens|Mustard greens|Rau cải xanh
+kohlrabi|Kohlrabi|Su hào
+lemongrass|Lemongrass|Sả
+garlic|Garlic|Tỏi
+ginger|Ginger|Gừng
+eggplant|Eggplant|Cà tím
+fish-mint|Fish mint|Rau diếp cá
+cucumber|Cucumber|Dưa leo
+cilantro|Cilantro|Rau mùi
+bitter-melon|Bitter melon|Khổ qua
+carrot|Carrot|Cà rốt
+basil|Basil|Húng quế

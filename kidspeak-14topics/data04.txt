@@ -1,0 +1,18 @@
+hydrangea|Hydrangea|Hoa cẩm tú cầu
+tulip|Tulip|Hoa tulip
+sunflower|Sunflower|Hoa hướng dương
+lotus|Lotus|Hoa sen
+aster|Aster|Hoa thạch thảo
+portulaca|Portulaca|Hoa mười giờ
+lavender|Lavender|Hoa oải hương
+peony|Peony|Hoa mẫu đơn
+lily|Lily|Hoa ly
+apricot-blossom|Apricot blossom|Hoa mai
+bougainvillea|Bougainvillea|Hoa giấy
+rose|Rose|Hoa hồng
+orchid|Orchid|Hoa lan
+hibiscus|Hibiscus|Hoa dâm bụt
+gerbera-daisy|Gerbera daisy|Hoa đồng tiền
+baby-breath|Baby's breath|Hoa baby
+chrysanthemum|Chrysanthemum|Hoa cúc
+cherry-blossom|Cherry blossom|Hoa anh đào

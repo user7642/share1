@@ -1,0 +1,22 @@
+tilapia|Tilapia|Cá rô phi
+mud-carp|Mud carp|Cá mè bùn
+swordfish|Swordfish|Cá kiếm
+silver-carp|Silver carp|Cá mè trắng
+dolphin|Dolphin|Cá heo
+jellyfish|Jellyfish|Con sứa
+turtle|Turtle|Con rùa
+eel|Eel|Con lươn
+crab|Crab|Con cua
+shrimp|Shrimp|Con tôm
+goby-fish|Goby fish|Cá bống
+squid|Squid|Con mực
+snail|Snail|Con ốc
+starfish|Starfish|Sao biển
+whale|Whale|Cá voi
+seahorse|Seahorse|Cá ngựa
+clam|Clam|Con ngao
+snakehead-fish|Snakehead fish|Cá lóc
+catfish|Catfish|Cá trê
+carp|Carp|Cá chép
+goldfish|Goldfish|Cá vàng
+shark|Shark|Cá mập

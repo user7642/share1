@@ -1,0 +1,8 @@
+red|Red|Màu đỏ
+yellow|Yellow|Màu vàng
+blue|Blue|Màu xanh dương
+green|Green|Màu xanh lá cây
+orange|Orange|Màu cam
+purple|Purple|Màu tím
+black|Black|Màu đen
+white|White|Màu trắng

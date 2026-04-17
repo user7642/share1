@@ -1,0 +1,28 @@
+zero|Zero|Số không
+one|One|Số một
+two|Two|Số hai
+three|Three|Số ba
+four|Four|Số bốn
+five|Five|Số năm
+six|Six|Số sáu
+seven|Seven|Số bảy
+eight|Eight|Số tám
+nine|Nine|Số chín
+ten|Ten|Số mười
+twenty|Twenty|Hai mươi
+thirty|Thirty|Ba mươi
+forty|Forty|Bốn mươi
+fifty|Fifty|Năm mươi
+sixty|Sixty|Sáu mươi
+seventy|Seventy|Bảy mươi
+eighty|Eighty|Tám mươi
+ninety|Ninety|Chín mươi
+one-hundred|One hundred|Một trăm
+two-hundred|Two hundred|Hai trăm
+three-hundred|Three hundred|Ba trăm
+four-hundred|Four hundred|Bốn trăm
+five-hundred|Five hundred|Năm trăm
+six-hundred|Six hundred|Sáu trăm
+seven-hundred|Seven hundred|Bảy trăm
+eight-hundred|Eight hundred|Tám trăm
+nine-hundred|Nine hundred|Chín trăm

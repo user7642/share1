@@ -1,0 +1,23 @@
+head|Head|Đầu
+forehead|Forehead|Trán
+hair|Hair|Tóc
+cheek|Cheek|Má
+neck|Neck|Cổ
+shoulder|Shoulder|Vai
+chest|Chest|Ngực
+arm|Arm|Cánh tay
+back|Back|Lưng
+belly|Belly|Bụng
+elbow|Elbow|Khuỷu tay
+hand|Hand|Bàn tay
+leg|Leg|Chân
+buttocks|Buttocks|Mông
+ankle|Ankle|Mắt cá chân
+heel|Heel|Gót chân
+foot|Foot|Bàn chân
+nose|Nose|Mũi
+mouth|Mouth|Miệng
+teeth|Teeth|Răng
+tongue|Tongue|Lưỡi
+eye|Eye|Mắt
+ear|Ear|Tai

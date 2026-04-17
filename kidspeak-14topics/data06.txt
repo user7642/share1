@@ -1,0 +1,21 @@
+watermelon|Watermelon|Dưa hấu
+grape|Grape|Nho
+strawberry|Strawberry|Dâu tây
+sapodilla|Sapodilla|Hồng xiêm
+star-fruit|Star fruit|Khế
+pomelo|Pomelo|Bưởi
+rambutan|Rambutan|Chôm chôm
+papaya|Papaya|Đu đủ
+pineapple|Pineapple|Dứa
+mangosteen|Mangosteen|Măng cụt
+orange|Orange|Cam
+lychee|Lychee|Vải
+mango|Mango|Xoài
+guava|Guava|Ổi
+longan|Longan|Nhãn
+custard-apple|Custard apple|Na
+dragon-fruit|Dragon fruit|Thanh long
+durian|Durian|Sầu riêng
+cherry|Cherry|Cherry
+banana|Banana|Chuối
+bayberry|Bayberry|Dương mai

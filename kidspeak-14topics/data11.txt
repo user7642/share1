@@ -1,0 +1,8 @@
+circle|Circle|Hình tròn
+square|Square|Hình vuông
+triangle|Triangle|Hình tam giác
+rectangle|Rectangle|Hình chữ nhật
+oval|Oval|Hình bầu dục
+rhombus|Rhombus|Hình thoi
+star|Star|Hình ngôi sao
+heart|Heart|Hình trái tim

@@ -1,18 +1,18 @@
-horse|Horse|Con ngựa
-duck|Duck|Con vịt
-goose|Goose|Con ngỗng
-
-dog|Dog|Con chó
-cow|Cow|Con bò
-guinea-fowl|Guinea fowl|Con gà sao
-
-cat|Cat|Con mèo
-goat|Goat|Con dê
-pigeon|Pigeon|Con bồ câu
-pig|Pig|Con lợn
-rabbit|Rabbit|Con thỏ
-
-hen|Hen|Con gà mái
-buffalo|Buffalo|Con trâu
-rooster|Rooster|Con gà trống
-turkey|Turkey|Con gà tây
+crane|Crane|Cần cẩu
+airplane|Airplane|Máy bay
+excavator|Excavator|Máy xúc
+submarine|Submarine|Tàu ngầm
+ship|Ship|Tàu thủy
+train|Train|Tàu hỏa
+boat|Boat|Thuyền
+helicopter|Helicopter|Trực thăng
+dump-truck|Dump truck|Xe ben
+bus|Bus|Xe buýt
+police-car|Police car|Xe cảnh sát
+fire-truck|Fire truck|Xe cứu hỏa
+bicycle|Bicycle|Xe đạp
+road-roller|Road roller|Xe lu
+motorbike|Motorbike|Xe máy
+car|Car|Xe ô tô
+truck|Truck|Xe tải
+taxi|Taxi|Xe taxi

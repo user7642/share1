@@ -1,0 +1,20 @@
+firefighter|Firefighter|Cảnh sát Phòng cháy chữa cháy và Cứu nạn cứu hộ
+teacher|Teacher|Giáo viên
+
+traffic-police-officer|Traffic Police Officer|Cảnh sát giao thông
+doctor|Doctor|Bác sĩ
+police-officer|Police Officer|Công an
+scientist|Scientist|Nhà khoa học
+
+singer|Singer|Ca sĩ
+painter|Painter|Họa sĩ
+navy-sailor|Navy Sailor|Hải quân
+soldier|Soldier|Bộ đội
+
+chef|Chef|Đầu bếp
+nurse|Nurse|Điều dưỡng
+sanitation-worker|Sanitation Worker|Công nhân môi trường
+
+construction-worker|Construction Worker|Công nhân xây dựng
+electrician|Electrician|Nhân viên điện lực
+farmer|Farmer|Nông dân
