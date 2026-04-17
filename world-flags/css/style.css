@@ -5,48 +5,39 @@ body {
   margin: 0;
 }
 
-/* Title */
+/* ===== TITLE ===== */
 h1 {
   margin-top: 15px;
+  font-size: 26px;
 }
 
-/* Guide text */
-.guide {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-.guide-sub {
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 10px;
-}
-
-/* Language */
+/* ===== LANGUAGE SWITCH (ĐẸP + GỌN) ===== */
 .lang-switch {
-  margin: 10px;
+  display: inline-flex;
+  background: #eee;
+  padding: 4px;
+  border-radius: 20px;
+  margin: 10px 0;
 }
 
 .lang-switch button {
-  padding: 10px 14px;
-  margin: 5px;
-  font-size: 15px;
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  font-size: 13px;
   cursor: pointer;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background: white;
+  border-radius: 20px;
   transition: 0.2s;
 }
 
-/* Active */
+/* ACTIVE */
 .lang-switch button.active {
   background: #ff9800;
   color: white;
-  font-weight: bold;
-  border-color: #ff9800;
+  font-weight: 500;
 }
 
-/* Accordion */
+/* ===== ACCORDION BUTTON ===== */
 .acc-btn {
   width: 92%;
   padding: 14px;
@@ -63,20 +54,20 @@ h1 {
   background: #ddd;
 }
 
-/* Content */
+/* ===== CONTENT ===== */
 .acc-content {
   display: none;
   padding: 10px;
 }
 
-/* Grid */
+/* ===== GRID ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 12px;
 }
 
-/* Card */
+/* ===== CARD ===== */
 .card {
   background: white;
   padding: 10px;
@@ -86,26 +77,59 @@ h1 {
   border: 1px solid transparent;
 }
 
-/* Hover */
 .card:hover {
   transform: scale(1.05);
 }
 
-/* Click feedback */
 .card:active {
   transform: scale(0.96);
   border: 1px solid #ff9800;
 }
 
-/* Image */
+/* ===== IMAGE ===== */
 img {
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-/* Text */
+/* ===== TEXT ===== */
 .card p {
   margin-top: 6px;
   font-size: 14px;
+}
+
+/* ===== HINT ===== */
+.hint {
+  font-size: 16px;
+  color: #888;
+  margin: 20px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lang-switch button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
 }
