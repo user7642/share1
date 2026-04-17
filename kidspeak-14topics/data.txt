@@ -1,0 +1,18 @@
+horse|Horse|Con ngựa
+duck|Duck|Con vịt
+goose|Goose|Con ngỗng
+
+dog|Dog|Con chó
+cow|Cow|Con bò
+guinea-fowl|Guinea fowl|Con gà sao
+
+cat|Cat|Con mèo
+goat|Goat|Con dê
+pigeon|Pigeon|Con bồ câu
+pig|Pig|Con lợn
+rabbit|Rabbit|Con thỏ
+
+hen|Hen|Con gà mái
+buffalo|Buffalo|Con trâu
+rooster|Rooster|Con gà trống
+turkey|Turkey|Con gà tây

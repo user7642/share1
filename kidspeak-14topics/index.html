@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>KidSpeak - 14 Topics</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>🎧 KidSpeak - 14 Chủ Đề</h1>
+
+<!-- NGÔN NGỮ -->
+<div class="lang-switch">
+  <button id="btn-vi" class="active" onclick="setLang('vi')">🇻🇳 Tiếng Việt</button>
+  <button id="btn-en" onclick="setLang('en')">🇺🇸 English</button>
+</div>
+
+<!-- 1. PETS -->
+<button class="acc-btn">🐶 Động vật nuôi</button>
+<div class="acc-content">
+  <div class="grid" id="pets"></div>
+</div>
+
+<!-- 2. WILD -->
+<button class="acc-btn">🐯 Động vật hoang dã</button>
+<div class="acc-content">
+  <div class="grid" id="wild"></div>
+</div>
+
+<!-- 3. SEA -->
+<button class="acc-btn">🐟 Động vật dưới nước</button>
+<div class="acc-content">
+  <div class="grid" id="sea"></div>
+</div>
+
+<!-- 4. FLOWERS -->
+<button class="acc-btn">🌸 Các loài hoa</button>
+<div class="acc-content">
+  <div class="grid" id="flowers"></div>
+</div>
+
+<!-- 5. VEGETABLES -->
+<button class="acc-btn">🥕 Rau củ</button>
+<div class="acc-content">
+  <div class="grid" id="vegetables"></div>
+</div>
+
+<!-- 6. FRUITS -->
+<button class="acc-btn">🍎 Trái cây</button>
+<div class="acc-content">
+  <div class="grid" id="fruits"></div>
+</div>
+
+<!-- 7. BODY -->
+<button class="acc-btn">🧍 Bộ phận cơ thể</button>
+<div class="acc-content">
+  <div class="grid" id="body"></div>
+</div>
+
+<!-- 8. NUMBERS -->
+<button class="acc-btn">🔢 Số</button>
+<div class="acc-content">
+  <div class="grid" id="numbers"></div>
+</div>
+
+<!-- 9. ALPHABET -->
+<button class="acc-btn">🔤 Chữ cái</button>
+<div class="acc-content">
+  <div class="grid" id="alphabet"></div>
+</div>
+
+<!-- 10. COLORS -->
+<button class="acc-btn">🎨 Màu sắc</button>
+<div class="acc-content">
+  <div class="grid" id="colors"></div>
+</div>
+
+<!-- 11. SHAPES -->
+<button class="acc-btn">🔷 Hình khối</button>
+<div class="acc-content">
+  <div class="grid" id="shapes"></div>
+</div>
+
+<!-- 12. JOBS -->
+<button class="acc-btn">👮 Nghề nghiệp</button>
+<div class="acc-content">
+  <div class="grid" id="jobs"></div>
+</div>
+
+<!-- 13. INSECTS -->
+<button class="acc-btn">🐝 Côn trùng</button>
+<div class="acc-content">
+  <div class="grid" id="insects"></div>
+</div>
+
+<!-- 14. VEHICLES -->
+<button class="acc-btn">🚗 Phương tiện</button>
+<div class="acc-content">
+  <div class="grid" id="vehicles"></div>
+</div>
+
+<!-- GUIDE -->
+<div class="guide">
+  <span>👉 Bấm để mở chủ đề</span>
+  <span>🔊 Bấm hình để nghe</span>
+</div>
+
+<audio id="audio"></audio>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
