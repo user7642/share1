@@ -88,10 +88,27 @@ renderRegion(regions.jobs, "jobs", "jobs");
 renderRegion(regions.insects, "insects", "insects");
 renderRegion(regions.vehicles, "vehicles", "vehicles");
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/service-worker.js")
-      .then(() => console.log("PWA ready"))
-      .catch(err => console.log("SW error:", err));
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(reg => {
+        console.log('✅ SW registered:', reg);
+
+        reg.onupdatefound = () => {
+          const newWorker = reg.installing;
+          newWorker.onstatechange = () => {
+            if (newWorker.state === 'installed') {
+              if (navigator.serviceWorker.controller) {
+                console.log('🔄 New version available');
+              } else {
+                console.log('✅ App cached for offline');
+              }
+            }
+          };
+        };
+      })
+      .catch(err => {
+        console.error('❌ SW error:', err);
+      });
   });
 }
