@@ -87,3 +87,11 @@ renderRegion(regions.shapes, "shapes", "shapes");
 renderRegion(regions.jobs, "jobs", "jobs");
 renderRegion(regions.insects, "insects", "insects");
 renderRegion(regions.vehicles, "vehicles", "vehicles");
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/service-worker.js")
+      .then(() => console.log("PWA ready"))
+      .catch(err => console.log("SW error:", err));
+  });
+}
