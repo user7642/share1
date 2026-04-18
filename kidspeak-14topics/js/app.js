@@ -5,7 +5,6 @@ const audio = document.getElementById("audio");
 // =======================
 // 🌍 ĐỔI NGÔN NGỮ
 // =======================
-function setLang(lang) {
   currentLang = lang;
 
   localStorage.setItem("lang", lang);
@@ -28,36 +27,52 @@ function play(region, key) {
 }
 
 // =======================
-// 🎯 RENDER
+// 🎯 RENDER (LAZY)
 // =======================
 function renderRegion(data, containerId, region) {
   const container = document.getElementById(containerId);
 
-  if (!data || data.length === 0) return; // tránh lỗi topic chưa làm
+  if (!data || data.length === 0) return;
+  if (container.dataset.rendered === "true") return; // tránh render lại
+
+  const fragment = document.createDocumentFragment();
 
   data.forEach(item => {
     const card = document.createElement("div");
     card.className = "card";
 
     card.innerHTML = `
-      <img src="img/${region}/${item.key}.png">
+      <img loading="lazy" src="img/${region}/${item.key}.png">
       <p>${item.label}</p>
     `;
 
     card.onclick = () => play(region, item.key);
 
-    container.appendChild(card);
+    fragment.appendChild(card);
   });
+
+  container.appendChild(fragment);
+  container.dataset.rendered = "true";
 }
 
 // =======================
-// 📂 ACCORDION
+// 📂 ACCORDION + LAZY LOAD
 // =======================
 document.querySelectorAll(".acc-btn").forEach(btn => {
   btn.onclick = function () {
     const content = this.nextElementSibling;
-    content.style.display =
-      content.style.display === "block" ? "none" : "block";
+    const grid = content.querySelector(".grid");
+    const id = grid.id;
+
+    const isOpen = content.style.display === "block";
+
+    // toggle
+    content.style.display = isOpen ? "none" : "block";
+
+    // 👉 chỉ render khi mở lần đầu
+    if (!isOpen) {
+      renderRegion(regions[id], id, id);
+    }
   };
 });
 
@@ -69,25 +84,11 @@ document.querySelectorAll(".acc-btn").forEach(btn => {
 const savedLang = localStorage.getItem("lang") || "vi";
 setLang(savedLang);
 
-// =======================
-// 🔥 RENDER 14 CHỦ ĐỀ
-// =======================
+// ❌ KHÔNG render trước nữa (lazy hoàn toàn)
 
-renderRegion(regions.pets, "pets", "pets");
-renderRegion(regions.wild, "wild", "wild");
-renderRegion(regions.sea, "sea", "sea");
-renderRegion(regions.flowers, "flowers", "flowers");
-renderRegion(regions.vegetables, "vegetables", "vegetables");
-renderRegion(regions.fruits, "fruits", "fruits");
-renderRegion(regions.body, "body", "body");
-renderRegion(regions.numbers, "numbers", "numbers");
-renderRegion(regions.alphabet, "alphabet", "alphabet");
-renderRegion(regions.colors, "colors", "colors");
-renderRegion(regions.shapes, "shapes", "shapes");
-renderRegion(regions.jobs, "jobs", "jobs");
-renderRegion(regions.insects, "insects", "insects");
-renderRegion(regions.vehicles, "vehicles", "vehicles");
-
+// =======================
+// 🔧 SERVICE WORKER
+// =======================
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./service-worker.js')

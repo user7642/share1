@@ -582,6 +582,7 @@
 ├── data12.txt
 ├── data13.txt
 ├── data.txt
+├── favicon.ico
 ├── icon-192.png
 ├── icon-512.png
 ├── img
@@ -879,4 +880,4 @@
 ├── tree.txt
 └── tts_gen.py
 
-61 directories, 819 files
+61 directories, 820 files
