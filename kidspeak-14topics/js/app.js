@@ -87,3 +87,54 @@ renderRegion(regions.shapes, "shapes", "shapes");
 renderRegion(regions.jobs, "jobs", "jobs");
 renderRegion(regions.insects, "insects", "insects");
 renderRegion(regions.vehicles, "vehicles", "vehicles");
+
+
+// Đăng ký Service Worker và xử lý Cache
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'activated') {
+          startFullCaching();
+        }
+      });
+    });
+    
+    // Nếu đã active rồi thì cứ chạy tải dữ liệu
+    if (navigator.serviceWorker.controller) {
+      startFullCaching();
+    }
+  });
+}
+
+function startFullCaching() {
+  const files = [];
+  // Tự động quét 14 chủ đề từ data.js
+  for (const topic in regions) {
+    regions[topic].forEach(item => {
+      files.push(`img/${topic}/${item.key}.png`);
+      files.push(`audio/${topic}/vi/${item.key}.mp3`);
+      files.push(`audio/${topic}/en/${item.key}.mp3`);
+    });
+  }
+
+  // Gửi danh sách cho SW để "hút" dữ liệu
+  if (navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage({
+      type: 'START_CACHING',
+      files: files
+    });
+  }
+}
+
+// Lắng nghe tiến độ từ SW
+navigator.serviceWorker.addEventListener('message', (event) => {
+  if (event.data.type === 'CACHE_PROGRESS') {
+    const progressBar = document.getElementById('download-progress');
+    progressBar.style.width = event.data.progress + '%';
+    if (event.data.progress >= 100) {
+      setTimeout(() => progressBar.style.display = 'none', 1000);
+    }
+  }
+});
