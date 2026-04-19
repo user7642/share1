@@ -1,0 +1,17 @@
+{
+  "name": "Học Cờ Quốc Gia",
+  "short_name": "Học Cờ",
+  "description": "Ứng dụng học cờ và phát âm tên quốc gia",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2c3e50",
+  "icons": [
+    {
+      "src": "flags/asia/Vietnam.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+.
+├── audio
+│   ├── africa
+│   │   ├── en
+│   │   │   ├── algeria.mp3
+│   │   │   ├── angola.mp3
+│   │   │   ├── benin.mp3
+│   │   │   ├── botswana.mp3
+│   │   │   ├── burkina-faso.mp3
+│   │   │   ├── burundi.mp3
+│   │   │   ├── cabo-verde.mp3
+│   │   │   ├── cameroon.mp3
+│   │   │   ├── central-african-republic.mp3
+│   │   │   ├── chad.mp3
+│   │   │   ├── comoros.mp3
+│   │   │   ├── cote-divoire.mp3
+│   │   │   ├── democratic-republic-of-the-congo.mp3
+│   │   │   ├── djibouti.mp3
+│   │   │   ├── egypt.mp3
+│   │   │   ├── equatorial-guinea.mp3
+│   │   │   ├── eritrea.mp3
+│   │   │   ├── eswatini.mp3
+│   │   │   ├── ethiopia.mp3
+│   │   │   ├── gabon.mp3
+│   │   │   ├── gambia.mp3
+│   │   │   ├── ghana.mp3
+│   │   │   ├── guinea-bissau.mp3
+│   │   │   ├── guinea.mp3
+│   │   │   ├── kenya.mp3
+│   │   │   ├── lesotho.mp3
+│   │   │   ├── liberia.mp3
+│   │   │   ├── libya.mp3
+│   │   │   ├── madagascar.mp3
+│   │   │   ├── malawi.mp3
+│   │   │   ├── mali.mp3
+│   │   │   ├── mauritania.mp3
+│   │   │   ├── mauritius.mp3
+│   │   │   ├── mayotte.mp3
+│   │   │   ├── morocco.mp3
+│   │   │   ├── mozambique.mp3
+│   │   │   ├── namibia.mp3
+│   │   │   ├── nigeria.mp3
+│   │   │   ├── niger.mp3
+│   │   │   ├── republic-of-the-congo.mp3
+│   │   │   ├── reunion.mp3
+│   │   │   ├── rwanda.mp3
+│   │   │   ├── sao-tome-and-principe.mp3
+│   │   │   ├── senegal.mp3
+│   │   │   ├── seychelles.mp3
+│   │   │   ├── sierra-leone.mp3
+│   │   │   ├── somalia.mp3
+│   │   │   ├── south-africa.mp3
+│   │   │   ├── south-sudan.mp3
+│   │   │   ├── sudan.mp3
+│   │   │   ├── tanzania.mp3
+│   │   │   ├── togo.mp3
+│   │   │   ├── tunisia.mp3
+│   │   │   ├── uganda.mp3
+│   │   │   ├── western-sahara.mp3
+│   │   │   ├── zambia.mp3
+│   │   │   └── zimbabwe.mp3
+│   │   └── vi
+│   │       ├── algeria.mp3
+│   │       ├── angola.mp3
+│   │       ├── benin.mp3
+│   │       ├── botswana.mp3
+│   │       ├── burkina-faso.mp3
+│   │       ├── burundi.mp3
+│   │       ├── cabo-verde.mp3
+│   │       ├── cameroon.mp3
+│   │       ├── central-african-republic.mp3
+│   │       ├── chad.mp3
+│   │       ├── comoros.mp3
+│   │       ├── cote-divoire.mp3
+│   │       ├── democratic-republic-of-the-congo.mp3
+│   │       ├── djibouti.mp3
+│   │       ├── egypt.mp3
+│   │       ├── equatorial-guinea.mp3
+│   │       ├── eritrea.mp3
+│   │       ├── eswatini.mp3
+│   │       ├── ethiopia.mp3
+│   │       ├── gabon.mp3
+│   │       ├── gambia.mp3
+│   │       ├── ghana.mp3
+│   │       ├── guinea-bissau.mp3
+│   │       ├── guinea.mp3
+│   │       ├── kenya.mp3
+│   │       ├── lesotho.mp3
+│   │       ├── liberia.mp3
+│   │       ├── libya.mp3
+│   │       ├── madagascar.mp3
+│   │       ├── malawi.mp3
+│   │       ├── mali.mp3
+│   │       ├── mauritania.mp3
+│   │       ├── mauritius.mp3
+│   │       ├── mayotte.mp3
+│   │       ├── morocco.mp3
+│   │       ├── mozambique.mp3
+│   │       ├── namibia.mp3
+│   │       ├── nigeria.mp3
+│   │       ├── niger.mp3
+│   │       ├── republic-of-the-congo.mp3
+│   │       ├── reunion.mp3
+│   │       ├── rwanda.mp3
+│   │       ├── sao-tome-and-principe.mp3
+│   │       ├── senegal.mp3
+│   │       ├── seychelles.mp3
+│   │       ├── sierra-leone.mp3
+│   │       ├── somalia.mp3
+│   │       ├── south-africa.mp3
+│   │       ├── south-sudan.mp3
+│   │       ├── sudan.mp3
+│   │       ├── tanzania.mp3
+│   │       ├── togo.mp3
+│   │       ├── tunisia.mp3
+│   │       ├── uganda.mp3
+│   │       ├── western-sahara.mp3
+│   │       ├── zambia.mp3
+│   │       └── zimbabwe.mp3
+│   ├── asia
+│   │   ├── en
+│   │   │   ├── afghanistan.mp3
+│   │   │   ├── armenia.mp3
+│   │   │   ├── azerbaijan.mp3
+│   │   │   ├── bahrain.mp3
+│   │   │   ├── bangladesh.mp3
+│   │   │   ├── bhutan.mp3
+│   │   │   ├── brunei.mp3
+│   │   │   ├── cambodia.mp3
+│   │   │   ├── china.mp3
+│   │   │   ├── christmas-island.mp3
+│   │   │   ├── cocos-islands.mp3
+│   │   │   ├── hong-kong.mp3
+│   │   │   ├── india.mp3
+│   │   │   ├── indonesia.mp3
+│   │   │   ├── iran.mp3
+│   │   │   ├── iraq.mp3
+│   │   │   ├── israel.mp3
+│   │   │   ├── japan.mp3
+│   │   │   ├── jordan.mp3
+│   │   │   ├── kazakhstan.mp3
+│   │   │   ├── kuwait.mp3
+│   │   │   ├── kyrgyzstan.mp3
+│   │   │   ├── laos.mp3
+│   │   │   ├── lebanon.mp3
+│   │   │   ├── macau.mp3
+│   │   │   ├── malaysia.mp3
+│   │   │   ├── maldives.mp3
+│   │   │   ├── mongolia.mp3
+│   │   │   ├── myanmar.mp3
+│   │   │   ├── nepal.mp3
+│   │   │   ├── north-korea.mp3
+│   │   │   ├── oman.mp3
+│   │   │   ├── pakistan.mp3
+│   │   │   ├── palestine.mp3
+│   │   │   ├── philippines.mp3
+│   │   │   ├── qatar.mp3
+│   │   │   ├── saudi-arabia.mp3
+│   │   │   ├── singapore.mp3
+│   │   │   ├── south-korea.mp3
+│   │   │   ├── sri-lanka.mp3
+│   │   │   ├── syria.mp3
+│   │   │   ├── taiwan.mp3
+│   │   │   ├── tajikistan.mp3
+│   │   │   ├── thailand.mp3
+│   │   │   ├── timor-leste.mp3
+│   │   │   ├── turkey.mp3
+│   │   │   ├── turkmenistan.mp3
+│   │   │   ├── united-arab-emirates.mp3
+│   │   │   ├── uzbekistan.mp3
+│   │   │   ├── vietnam.mp3
+│   │   │   └── yemen.mp3
+│   │   └── vi
+│   │       ├── afghanistan.mp3
+│   │       ├── armenia.mp3
+│   │       ├── azerbaijan.mp3
+│   │       ├── bahrain.mp3
+│   │       ├── bangladesh.mp3
+│   │       ├── bhutan.mp3
+│   │       ├── brunei.mp3
+│   │       ├── cambodia.mp3
+│   │       ├── china.mp3
+│   │       ├── christmas-island.mp3
+│   │       ├── cocos-islands.mp3
+│   │       ├── hong-kong.mp3
+│   │       ├── india.mp3
+│   │       ├── indonesia.mp3
+│   │       ├── iran.mp3
+│   │       ├── iraq.mp3
+│   │       ├── israel.mp3
+│   │       ├── japan.mp3
+│   │       ├── jordan.mp3
+│   │       ├── kazakhstan.mp3
+│   │       ├── kuwait.mp3
+│   │       ├── kyrgyzstan.mp3
+│   │       ├── laos.mp3
+│   │       ├── lebanon.mp3
+│   │       ├── macau.mp3
+│   │       ├── malaysia.mp3
+│   │       ├── maldives.mp3
+│   │       ├── mongolia.mp3
+│   │       ├── myanmar.mp3
+│   │       ├── nepal.mp3
+│   │       ├── north-korea.mp3
+│   │       ├── oman.mp3
+│   │       ├── pakistan.mp3
+│   │       ├── palestine.mp3
+│   │       ├── philippines.mp3
+│   │       ├── qatar.mp3
+│   │       ├── saudi-arabia.mp3
+│   │       ├── singapore.mp3
+│   │       ├── south-korea.mp3
+│   │       ├── sri-lanka.mp3
+│   │       ├── syria.mp3
+│   │       ├── taiwan.mp3
+│   │       ├── tajikistan.mp3
+│   │       ├── thailand.mp3
+│   │       ├── timor-leste.mp3
+│   │       ├── turkey.mp3
+│   │       ├── turkmenistan.mp3
+│   │       ├── united-arab-emirates.mp3
+│   │       ├── uzbekistan.mp3
+│   │       ├── vietnam.mp3
+│   │       └── yemen.mp3
+│   ├── europe
+│   │   ├── en
+│   │   │   ├── albania.mp3
+│   │   │   ├── andorra.mp3
+│   │   │   ├── austria.mp3
+│   │   │   ├── belarus.mp3
+│   │   │   ├── belgium.mp3
+│   │   │   ├── bosnia-and-herzegovina.mp3
+│   │   │   ├── bulgaria.mp3
+│   │   │   ├── croatia.mp3
+│   │   │   ├── cyprus.mp3
+│   │   │   ├── czechia.mp3
+│   │   │   ├── denmark.mp3
+│   │   │   ├── estonia.mp3
+│   │   │   ├── finland.mp3
+│   │   │   ├── france.mp3
+│   │   │   ├── georgia.mp3
+│   │   │   ├── germany.mp3
+│   │   │   ├── greece.mp3
+│   │   │   ├── guernsey.mp3
+│   │   │   ├── hungary.mp3
+│   │   │   ├── iceland.mp3
+│   │   │   ├── ireland.mp3
+│   │   │   ├── italy.mp3
+│   │   │   ├── kosovo.mp3
+│   │   │   ├── latvia.mp3
+│   │   │   ├── liechtenstein.mp3
+│   │   │   ├── lithuania.mp3
+│   │   │   ├── luxembourg.mp3
+│   │   │   ├── macedonia.mp3
+│   │   │   ├── malta.mp3
+│   │   │   ├── moldova.mp3
+│   │   │   ├── monaco.mp3
+│   │   │   ├── montenegro.mp3
+│   │   │   ├── netherlands.mp3
+│   │   │   ├── norway.mp3
+│   │   │   ├── poland.mp3
+│   │   │   ├── portugal.mp3
+│   │   │   ├── romania.mp3
+│   │   │   ├── russia.mp3
+│   │   │   ├── san-marino.mp3
+│   │   │   ├── serbia.mp3
+│   │   │   ├── slovakia.mp3
+│   │   │   ├── slovenia.mp3
+│   │   │   ├── spain.mp3
+│   │   │   ├── sweden.mp3
+│   │   │   ├── switzerland.mp3
+│   │   │   ├── ukraine.mp3
+│   │   │   ├── united-kingdom.mp3
+│   │   │   └── vatican-city.mp3
+│   │   └── vi
+│   │       ├── albania.mp3
+│   │       ├── andorra.mp3
+│   │       ├── austria.mp3
+│   │       ├── belarus.mp3
+│   │       ├── belgium.mp3
+│   │       ├── bosnia-and-herzegovina.mp3
+│   │       ├── bulgaria.mp3
+│   │       ├── croatia.mp3
+│   │       ├── cyprus.mp3
+│   │       ├── czechia.mp3
+│   │       ├── denmark.mp3
+│   │       ├── estonia.mp3
+│   │       ├── finland.mp3
+│   │       ├── france.mp3
+│   │       ├── georgia.mp3
+│   │       ├── germany.mp3
+│   │       ├── greece.mp3
+│   │       ├── guernsey.mp3
+│   │       ├── hungary.mp3
+│   │       ├── iceland.mp3
+│   │       ├── ireland.mp3
+│   │       ├── italy.mp3
+│   │       ├── kosovo.mp3
+│   │       ├── latvia.mp3
+│   │       ├── liechtenstein.mp3
+│   │       ├── lithuania.mp3
+│   │       ├── luxembourg.mp3
+│   │       ├── macedonia.mp3
+│   │       ├── malta.mp3
+│   │       ├── moldova.mp3
+│   │       ├── monaco.mp3
+│   │       ├── montenegro.mp3
+│   │       ├── netherlands.mp3
+│   │       ├── norway.mp3
+│   │       ├── poland.mp3
+│   │       ├── portugal.mp3
+│   │       ├── romania.mp3
+│   │       ├── russia.mp3
+│   │       ├── san-marino.mp3
+│   │       ├── serbia.mp3
+│   │       ├── slovakia.mp3
+│   │       ├── slovenia.mp3
+│   │       ├── spain.mp3
+│   │       ├── sweden.mp3
+│   │       ├── switzerland.mp3
+│   │       ├── ukraine.mp3
+│   │       ├── united-kingdom.mp3
+│   │       └── vatican-city.mp3
+│   ├── north-america
+│   │   ├── en
+│   │   │   ├── anguilla.mp3
+│   │   │   ├── antigua-and-barbuda.mp3
+│   │   │   ├── bahamas.mp3
+│   │   │   ├── barbados.mp3
+│   │   │   ├── belize.mp3
+│   │   │   ├── british-virgin-islands.mp3
+│   │   │   ├── canada.mp3
+│   │   │   ├── cayman-islands.mp3
+│   │   │   ├── costa-rica.mp3
+│   │   │   ├── cuba.mp3
+│   │   │   ├── dominica.mp3
+│   │   │   ├── dominican-republic.mp3
+│   │   │   ├── el-salvador.mp3
+│   │   │   ├── greenland.mp3
+│   │   │   ├── grenada.mp3
+│   │   │   ├── guatemala.mp3
+│   │   │   ├── haiti.mp3
+│   │   │   ├── honduras.mp3
+│   │   │   ├── jamaica.mp3
+│   │   │   ├── martinique.mp3
+│   │   │   ├── mexico.mp3
+│   │   │   ├── montserrat.mp3
+│   │   │   ├── nicaragua.mp3
+│   │   │   ├── panama.mp3
+│   │   │   ├── puerto-rico.mp3
+│   │   │   ├── saint-barthelemy.mp3
+│   │   │   ├── saint-kitts-and-nevis.mp3
+│   │   │   ├── saint-lucia.mp3
+│   │   │   ├── saint-vincent-and-the-grenadines.mp3
+│   │   │   ├── trinidad-and-tobago.mp3
+│   │   │   ├── turks-and-caicos.mp3
+│   │   │   └── united-states.mp3
+│   │   └── vi
+│   │       ├── anguilla.mp3
+│   │       ├── antigua-and-barbuda.mp3
+│   │       ├── bahamas.mp3
+│   │       ├── barbados.mp3
+│   │       ├── belize.mp3
+│   │       ├── british-virgin-islands.mp3
+│   │       ├── canada.mp3
+│   │       ├── cayman-islands.mp3
+│   │       ├── costa-rica.mp3
+│   │       ├── cuba.mp3
+│   │       ├── dominica.mp3
+│   │       ├── dominican-republic.mp3
+│   │       ├── el-salvador.mp3
+│   │       ├── greenland.mp3
+│   │       ├── grenada.mp3
+│   │       ├── guatemala.mp3
+│   │       ├── haiti.mp3
+│   │       ├── honduras.mp3
+│   │       ├── jamaica.mp3
+│   │       ├── martinique.mp3
+│   │       ├── mexico.mp3
+│   │       ├── montserrat.mp3
+│   │       ├── nicaragua.mp3
+│   │       ├── panama.mp3
+│   │       ├── puerto-rico.mp3
+│   │       ├── saint-barthelemy.mp3
+│   │       ├── saint-kitts-and-nevis.mp3
+│   │       ├── saint-lucia.mp3
+│   │       ├── saint-vincent-and-the-grenadines.mp3
+│   │       ├── trinidad-and-tobago.mp3
+│   │       ├── turks-and-caicos.mp3
+│   │       └── united-states.mp3
+│   ├── oceania
+│   │   ├── en
+│   │   │   ├── american-samoa.mp3
+│   │   │   ├── australia.mp3
+│   │   │   ├── cook-islands.mp3
+│   │   │   ├── fiji.mp3
+│   │   │   ├── french-polynesia.mp3
+│   │   │   ├── guam.mp3
+│   │   │   ├── kiribati.mp3
+│   │   │   ├── marshall-islands.mp3
+│   │   │   ├── micronesia.mp3
+│   │   │   ├── nauru.mp3
+│   │   │   ├── new-caledonia.mp3
+│   │   │   ├── new-zealand.mp3
+│   │   │   ├── niue.mp3
+│   │   │   ├── palau.mp3
+│   │   │   ├── papua-new-guinea.mp3
+│   │   │   ├── pitcairn-islands.mp3
+│   │   │   ├── samoa.mp3
+│   │   │   ├── solomon-islands.mp3
+│   │   │   ├── tonga.mp3
+│   │   │   ├── tuvalu.mp3
+│   │   │   └── vanuatu.mp3
+│   │   └── vi
+│   │       ├── american-samoa.mp3
+│   │       ├── australia.mp3
+│   │       ├── cook-islands.mp3
+│   │       ├── fiji.mp3
+│   │       ├── french-polynesia.mp3
+│   │       ├── guam.mp3
+│   │       ├── kiribati.mp3
+│   │       ├── marshall-islands.mp3
+│   │       ├── micronesia.mp3
+│   │       ├── nauru.mp3
+│   │       ├── new-caledonia.mp3
+│   │       ├── new-zealand.mp3
+│   │       ├── niue.mp3
+│   │       ├── palau.mp3
+│   │       ├── papua-new-guinea.mp3
+│   │       ├── pitcairn-islands.mp3
+│   │       ├── samoa.mp3
+│   │       ├── solomon-islands.mp3
+│   │       ├── tonga.mp3
+│   │       ├── tuvalu.mp3
+│   │       └── vanuatu.mp3
+│   └── south-america
+│       ├── en
+│       │   ├── argentina.mp3
+│       │   ├── aruba.mp3
+│       │   ├── bolivia.mp3
+│       │   ├── brazil.mp3
+│       │   ├── chile.mp3
+│       │   ├── colombia.mp3
+│       │   ├── curacao.mp3
+│       │   ├── ecuador.mp3
+│       │   ├── falkland-islands.mp3
+│       │   ├── guiana.mp3
+│       │   ├── guyana.mp3
+│       │   ├── paraguay.mp3
+│       │   ├── peru.mp3
+│       │   ├── suriname.mp3
+│       │   ├── uruguay.mp3
+│       │   └── venezuela.mp3
+│       └── vi
+│           ├── argentina.mp3
+│           ├── aruba.mp3
+│           ├── bolivia.mp3
+│           ├── brazil.mp3
+│           ├── chile.mp3
+│           ├── colombia.mp3
+│           ├── curacao.mp3
+│           ├── ecuador.mp3
+│           ├── falkland-islands.mp3
+│           ├── guiana.mp3
+│           ├── guyana.mp3
+│           ├── paraguay.mp3
+│           ├── peru.mp3
+│           ├── suriname.mp3
+│           ├── uruguay.mp3
+│           └── venezuela.mp3
+├── css
+│   └── style.css
+├── data-bacmy.txt
+├── data-chauau.txt
+├── data-chauphi.txt
+├── data-chauuc.txt
+├── data-namy.txt
+├── data.txt
+├── flags
+│   ├── africa
+│   │   ├── Algeria.svg
+│   │   ├── Angola.svg
+│   │   ├── Benin.svg
+│   │   ├── Botswana.svg
+│   │   ├── Burkina Faso.svg
+│   │   ├── Burundi.svg
+│   │   ├── Cabo Verde.svg
+│   │   ├── Cameroon.svg
+│   │   ├── Cape Verde.svg
+│   │   ├── Central African Republic.svg
+│   │   ├── Chad.svg
+│   │   ├── Comoros.svg
+│   │   ├── Cote Divoire.svg
+│   │   ├── Democratic Republic of the Congo.svg
+│   │   ├── Democratic Republic Of The Congo.svg
+│   │   ├── Djibouti.svg
+│   │   ├── Egypt.svg
+│   │   ├── Equatorial Guinea.svg
+│   │   ├── Eritrea.svg
+│   │   ├── Eswatini.svg
+│   │   ├── Ethiopia.svg
+│   │   ├── French Southern Territories.svg
+│   │   ├── Gabon.svg
+│   │   ├── Gambia.svg
+│   │   ├── Ghana.svg
+│   │   ├── Guinea Bissau.svg
+│   │   ├── Guinea.svg
+│   │   ├── Kenya.svg
+│   │   ├── Lesotho.svg
+│   │   ├── Liberia.svg
+│   │   ├── Libya.svg
+│   │   ├── Madagascar.svg
+│   │   ├── Malawi.svg
+│   │   ├── Mali.svg
+│   │   ├── Mauritania.svg
+│   │   ├── Mauritius.svg
+│   │   ├── Mayotte.svg
+│   │   ├── Morocco.svg
+│   │   ├── Mozambique.svg
+│   │   ├── Namibia.svg
+│   │   ├── Nigeria.svg
+│   │   ├── Niger.svg
+│   │   ├── Republic of the Congo.svg
+│   │   ├── Republic Of The Congo.svg
+│   │   ├── Reunion.svg
+│   │   ├── Rwanda.svg
+│   │   ├── Saint Helena Ascension And Tristan Da Cunha.svg
+│   │   ├── Sao Tome and Principe.svg
+│   │   ├── Sao Tome And Principe.svg
+│   │   ├── Senegal.svg
+│   │   ├── Seychelles.svg
+│   │   ├── Sierra Leone.svg
+│   │   ├── Somalia.svg
+│   │   ├── South Africa.svg
+│   │   ├── South Sudan.svg
+│   │   ├── Sudan.svg
+│   │   ├── Tanzania.svg
+│   │   ├── Togo.svg
+│   │   ├── Tunisia.svg
+│   │   ├── Uganda.svg
+│   │   ├── Western Sahara.svg
+│   │   ├── Zambia.svg
+│   │   └── Zimbabwe.svg
+│   ├── asia
+│   │   ├── Afghanistan.svg
+│   │   ├── aria2_commands.sh
+│   │   ├── Armenia.svg
+│   │   ├── Asia-en.svg
+│   │   ├── Asia-vi.png
+│   │   ├── Asia-vi.svg
+│   │   ├── Azerbaijan.svg
+│   │   ├── Bahrain.svg
+│   │   ├── Bangladesh.svg
+│   │   ├── Bhutan.svg
+│   │   ├── Brunei.svg
+│   │   ├── Cambodia.svg
+│   │   ├── China.svg
+│   │   ├── Christmas Island.svg
+│   │   ├── Cocos Islands.svg
+│   │   ├── Hong Kong.svg
+│   │   ├── India.svg
+│   │   ├── Indonesia.svg
+│   │   ├── Iran.svg
+│   │   ├── Iraq.svg
+│   │   ├── Israel.svg
+│   │   ├── Japan.svg
+│   │   ├── Jordan.svg
+│   │   ├── Kazakhstan.svg
+│   │   ├── Kuwait.svg
+│   │   ├── Kyrgyzstan.svg
+│   │   ├── Laos.svg
+│   │   ├── Lebanon.svg
+│   │   ├── Macau.svg
+│   │   ├── Malaysia.svg
+│   │   ├── Maldives.svg
+│   │   ├── Mongolia.svg
+│   │   ├── Myanmar.svg
+│   │   ├── Nepal.svg
+│   │   ├── North Korea.svg
+│   │   ├── Oman.svg
+│   │   ├── Pakistan.svg
+│   │   ├── Palestine.svg
+│   │   ├── Philippines.svg
+│   │   ├── Qatar.svg
+│   │   ├── Saudi Arabia.svg
+│   │   ├── Singapore.svg
+│   │   ├── South Korea.svg
+│   │   ├── Sri Lanka.svg
+│   │   ├── Syria.svg
+│   │   ├── Taiwan.svg
+│   │   ├── Tajikistan.svg
+│   │   ├── Thailand.svg
+│   │   ├── Timor Leste.svg
+│   │   ├── Turkey.svg
+│   │   ├── Turkmenistan.svg
+│   │   ├── United Arab Emirates.svg
+│   │   ├── Uzbekistan.svg
+│   │   ├── Vietnam.svg
+│   │   └── Yemen.svg
+│   ├── europe
+│   │   ├── Albania.svg
+│   │   ├── Andorra.svg
+│   │   ├── Austria.svg
+│   │   ├── Belarus.svg
+│   │   ├── Belgium.svg
+│   │   ├── Bosnia And Herzegovina.svg
+│   │   ├── Bulgaria.svg
+│   │   ├── Cabo Verde.svg
+│   │   ├── Croatia.svg
+│   │   ├── Cyprus.svg
+│   │   ├── Czechia.svg
+│   │   ├── Denmark.svg
+│   │   ├── Estonia.svg
+│   │   ├── Finland.svg
+│   │   ├── France.svg
+│   │   ├── Georgia.svg
+│   │   ├── Germany.svg
+│   │   ├── Greece.svg
+│   │   ├── Guernsey.svg
+│   │   ├── Hungary.svg
+│   │   ├── Iceland.svg
+│   │   ├── Ireland.svg
+│   │   ├── Italy.svg
+│   │   ├── Kosovo.svg
+│   │   ├── Latvia.svg
+│   │   ├── Liechtenstein.svg
+│   │   ├── Lithuania.svg
+│   │   ├── Luxembourg.svg
+│   │   ├── Macedonia.svg
+│   │   ├── Malta.svg
+│   │   ├── Moldova.svg
+│   │   ├── Monaco.svg
+│   │   ├── Montenegro.svg
+│   │   ├── Netherlands.svg
+│   │   ├── Norway.svg
+│   │   ├── Poland.svg
+│   │   ├── Portugal.svg
+│   │   ├── Romania.svg
+│   │   ├── Russia.svg
+│   │   ├── San Marino.svg
+│   │   ├── Serbia.svg
+│   │   ├── Slovakia.svg
+│   │   ├── Slovenia.svg
+│   │   ├── Spain.svg
+│   │   ├── Sweden.svg
+│   │   ├── Switzerland.svg
+│   │   ├── Ukraine.svg
+│   │   ├── United Kingdom.svg
+│   │   └── Vatican City.svg
+│   ├── north-america
+│   │   ├── Anguilla.svg
+│   │   ├── Antigua And Barbuda.svg
+│   │   ├── Bahamas.svg
+│   │   ├── Barbados.svg
+│   │   ├── Belize.svg
+│   │   ├── British Virgin Islands.svg
+│   │   ├── Canada.svg
+│   │   ├── Cayman Islands.svg
+│   │   ├── Costa Rica.svg
+│   │   ├── Cuba.svg
+│   │   ├── Dominican Republic.svg
+│   │   ├── Dominica.svg
+│   │   ├── El Salvador.svg
+│   │   ├── Greenland.svg
+│   │   ├── Grenada.svg
+│   │   ├── Guatemala.svg
+│   │   ├── Haiti.svg
+│   │   ├── Honduras.svg
+│   │   ├── Jamaica.svg
+│   │   ├── Martinique.svg
+│   │   ├── Mexico.svg
+│   │   ├── Montserrat.svg
+│   │   ├── Nicaragua.svg
+│   │   ├── North America.svg
+│   │   ├── Panama.svg
+│   │   ├── Puerto Rico.svg
+│   │   ├── Saint Barthelemy.svg
+│   │   ├── Saint Kitts And Nevis.svg
+│   │   ├── Saint Lucia.svg
+│   │   ├── Saint Vincent And The Grenadines.svg
+│   │   ├── Trinidad And Tobago.svg
+│   │   ├── Turks And Caicos.svg
+│   │   └── United States.svg
+│   ├── oceania
+│   │   ├── American Samoa.svg
+│   │   ├── Australia.svg
+│   │   ├── Cook Islands.svg
+│   │   ├── Fiji.svg
+│   │   ├── French Polynesia.svg
+│   │   ├── Guam.svg
+│   │   ├── Kiribati.svg
+│   │   ├── Marshall Islands.svg
+│   │   ├── Micronesia.svg
+│   │   ├── Nauru.svg
+│   │   ├── New Caledonia.svg
+│   │   ├── New Zealand.svg
+│   │   ├── Niue.svg
+│   │   ├── Oceania.png
+│   │   ├── Oceania.svg
+│   │   ├── Palau.svg
+│   │   ├── Papua New Guinea.svg
+│   │   ├── Pitcairn Islands.svg
+│   │   ├── Samoa.svg
+│   │   ├── Solomon Islands.svg
+│   │   ├── Tonga.svg
+│   │   ├── Tuvalu.svg
+│   │   └── Vanuatu.svg
+│   └── south-america
+│       ├── Argentina.svg
+│       ├── Aruba.svg
+│       ├── Bolivia.svg
+│       ├── Brazil.svg
+│       ├── Chile.svg
+│       ├── Colombia.svg
+│       ├── Curacao.svg
+│       ├── Ecuador.svg
+│       ├── Falkland_Islands.png
+│       ├── Falkland Islands.svg
+│       ├── Guiana.svg
+│       ├── Guyana.svg
+│       ├── Paraguay.svg
+│       ├── Peru.svg
+│       ├── Suriname.svg
+│       ├── Uruguay.svg
+│       └── Venezuela.svg
+├── index.html
+├── js
+│   ├── app.js
+│   └── data.js
+├── tree.txt
+└── tts_gen.py
+
+29 directories, 702 files
