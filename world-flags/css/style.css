@@ -113,6 +113,43 @@ img {
   display: block;
 }
 
+/* ===== FOOTER NAVIGATION ===== */
+.footer-nav {
+  position: fixed; /* Cố định vị trí */
+  bottom: 0;       /* Sát mép dưới */
+  right: 0;        /* Sát bên phải */
+  left: 0;         /* Trải dài từ trái sang phải để có vạch ngang toàn màn hình */
+  background: #FDFDFA; /* Trùng màu nền body để che các phần tử bên dưới khi cuộn */
+  padding: 10px 4%;
+  border-top: 1px solid #ddd; /* Vạch ngang bạn muốn */
+  text-align: right;
+  z-index: 1000;   /* Luôn nổi lên trên cùng */
+}
+
+.install-link {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.install-link:hover {
+  color: #ff9800;
+}
+
+.install-link span {
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+/* Thêm khoảng trống ở cuối body để không bị footer che mất nội dung cuối cùng khi cuộn */
+body {
+  padding-bottom: 60px; 
+}
+
 /* mobile gọn hơn */
 @media (max-width: 480px) {
   .guide {
