@@ -1,3 +1,4 @@
+/* ===== TỔNG QUAN ===== */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     text-align: center;
@@ -9,12 +10,14 @@ body {
 
 h1 { margin-top: 15px; font-size: 26px; color: #333; }
 
+/* ===== THANH TIẾN TRÌNH ĐỒNG BỘ ===== */
 #sync-container {
     padding: 15px;
     background: #fff;
     border-radius: 8px;
     margin: 10px auto;
     width: 90%;
+    max-width: 600px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -35,13 +38,12 @@ h1 { margin-top: 15px; font-size: 26px; color: #333; }
 
 #progress-fill {
     height: 100%;
-    background: #4caf50; /* Màu xanh lá thân thiện */
+    background: #4caf50;
     width: 0%;
     transition: width 0.3s ease;
 }
 
-
-
+/* ===== CHUYỂN ĐỔI NGÔN NGỮ ===== */
 .lang-switch {
     display: inline-flex;
     background: #eee;
@@ -68,57 +70,75 @@ h1 { margin-top: 15px; font-size: 26px; color: #333; }
     box-shadow: 0 2px 8px rgba(255, 152, 0, 0.4);
 }
 
+/* ===== ACCORDION (CĂN GIỮA MENU) ===== */
 .acc-btn {
     width: 92%;
+    max-width: 1000px; /* Giới hạn để đẹp trên PC */
     padding: 16px;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
     border: none;
     background: #f0f0f0;
-    margin-top: 8px;
+    margin: 8px auto 0 auto; /* Căn giữa chính xác */
     border-radius: 12px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .acc-btn::after { content: '▼'; font-size: 12px; transition: 0.3s; }
 .acc-btn.active::after { transform: rotate(180deg); }
 .acc-btn.active { background: #e0e0e0; }
 
-.acc-content { display: none; padding: 15px 4%; }
+/* ===== NỘI DUNG GRID ===== */
+.acc-content { 
+    display: none; 
+    padding: 20px 4%; 
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
+/* ===== THẺ LÁ CỜ (ĐƠN GIẢN HÓA THEO IMAGE_AD3F05) ===== */
 .card {
-    background: white;
-    padding: 12px;
-    border-radius: 15px;
+    background: transparent; /* Loại bỏ nền trắng */
+    padding: 0;             /* Loại bỏ padding */
+    border-radius: 0;       /* Loại bỏ bo góc card */
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
+    border: none;           /* Loại bỏ viền card */
+    box-shadow: none;       /* Loại bỏ bóng đổ card */
     transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card:active { transform: scale(0.92); border-color: #ff9800; }
+.card:active { transform: scale(0.95); }
 
 .card img {
     width: 100%;
     aspect-ratio: 3/2;
     object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #eee;
+    border-radius: 0;       /* Phẳng như hình mẫu */
+    border: 1px solid #bbb; /* Viền xám mảnh đúng yêu cầu */
 }
 
-.card p { margin: 8px 0 0; font-size: 14px; color: #444; font-weight: 500; }
+.card p { 
+    margin: 10px 0 0; 
+    font-size: 14px; 
+    color: #444; 
+    font-weight: 500;
+    text-align: center;
+}
 
+/* ===== HƯỚNG DẪN & FOOTER ===== */
 .guide { margin: 30px 0; color: #888; font-size: 14px; line-height: 1.6; }
 
 .footer-nav {
@@ -136,10 +156,12 @@ h1 { margin-top: 15px; font-size: 26px; color: #333; }
     display: inline-flex; align-items: center;
 }
 
-
-
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
-    .grid { grid-template-columns: 1fr 1fr; }
+    .grid { 
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px;
+    }
     h1 { font-size: 20px; }
+    .acc-btn { padding: 12px; font-size: 16px; }
 }
