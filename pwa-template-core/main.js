@@ -4,15 +4,20 @@ import { countryData } from './data.js';
 let currentLang = 'vi';
 const opfsWorker = new Worker('opfs-worker.js');
 
+// Biến quản lý tiến trình đồng bộ
+let totalFiles = 0;
+let loadedFiles = 0;
+
 /**
  * 1. KHỞI TẠO HỆ THỐNG & ĐỒNG BỘ (SYNC)
  */
 
-// Hàm thực hiện đồng bộ hóa toàn bộ tài nguyên dựa trên manifest.json
 async function syncMedia() {
+    const syncContainer = document.getElementById('sync-container');
+    const syncStatus = document.getElementById('sync-status');
+
     console.log("🔄 Đang kiểm tra đồng bộ hóa tài nguyên...");
 
-    // Web Lock API: Đảm bảo chỉ có duy nhất 1 tab thực hiện quá trình sync
     if (!navigator.locks) return; 
 
     await navigator.locks.request('sync_assets_lock', async (lock) => {
@@ -21,8 +26,14 @@ async function syncMedia() {
             if (!response.ok) throw new Error("Không tìm thấy manifest.json");
             
             const manifest = await response.json();
+            totalFiles = manifest.files.length;
+            loadedFiles = 0;
+
+            if (totalFiles > 0 && syncContainer) {
+                syncContainer.style.display = 'block';
+                syncContainer.style.opacity = '1'; // Đảm bảo hiển thị rõ ràng khi bắt đầu
+            }
             
-            // Kiểm tra dung lượng bộ nhớ (Quota Guard)
             if (navigator.storage && navigator.storage.estimate) {
                 const { quota, usage } = await navigator.storage.estimate();
                 const totalNeeded = manifest.files.reduce((acc, f) => acc + f.size, 0);
@@ -32,27 +43,25 @@ async function syncMedia() {
                 }
             }
 
-            // Sắp xếp tệp theo độ ưu tiên (Audio tải trước, Image tải sau)
             const sortedFiles = manifest.files.sort((a, b) => a.priority - b.priority);
-            console.log(`📦 Tìm thấy ${sortedFiles.length} tài nguyên. Bắt đầu tải ngầm...`);
+            console.log(`📦 Tìm thấy ${totalFiles} tài nguyên. Bắt đầu tải ngầm...`);
 
-            // Gửi yêu cầu tải cho Worker xử lý ngầm
             for (const file of sortedFiles) {
                 opfsWorker.postMessage({
                     action: 'readFile',
-                    path: file.path
+                    path: file.path,
+                    isSync: true 
                 });
             }
             
         } catch (err) {
             console.error("❌ Lỗi đồng bộ hóa:", err);
+            if (syncStatus) syncStatus.innerText = "❌ Lỗi đồng bộ dữ liệu";
         }
     });
 }
 
-// Chạy tiến trình đồng bộ khi trang web đã tải xong
 window.addEventListener('load', () => {
-    // Trì hoãn 2 giây để ưu tiên hiển thị giao diện trước
     setTimeout(syncMedia, 2000);
 });
 
@@ -60,14 +69,12 @@ window.addEventListener('load', () => {
  * 2. LOGIC GIAO DIỆN (UI & ACCORDION)
  */
 
-// Hàm chuẩn hóa tên ID thành tên file hiển thị (ví dụ: "south-korea" -> "South Korea")
 function formatDisplayName(id) {
     return id.split('-')
              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
              .join(' ');
 }
 
-// Cấu hình sự kiện cho các nút Accordion
 document.querySelectorAll('.acc-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         this.classList.toggle('active');
@@ -83,7 +90,6 @@ document.querySelectorAll('.acc-btn').forEach(btn => {
     });
 });
 
-// Hàm tạo danh sách lá cờ bên trong mỗi châu lục
 function renderGrid(continent) {
     const grid = document.getElementById(continent);
     if (!grid || grid.children.length > 0) return;
@@ -110,36 +116,73 @@ function renderGrid(continent) {
  * 3. XỬ LÝ ÂM THANH & NGÔN NGỮ
  */
 
-// Hàm chuyển đổi ngôn ngữ (Gán vào window để HTML onclick có thể gọi)
 window.setLang = function(lang) {
     currentLang = lang;
     document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 };
 
-// Gửi yêu cầu phát âm thanh tới Worker
 function playSound(continent, countryId) {
     const filePath = `assets/media/audio/${continent}/${currentLang}/${countryId}.mp3`;
     
     opfsWorker.postMessage({
         action: 'readFile',
-        path: filePath
+        path: filePath,
+        isSync: false 
     });
 }
 
-// Nhận dữ liệu âm thanh từ Worker và phát ra loa
+// Nhận phản hồi từ Worker
 opfsWorker.onmessage = (e) => {
-    if (e.data.action === 'audioBuffer') {
-        try {
-            const blob = new Blob([e.data.buffer], { type: 'audio/mpeg' });
-            const url = URL.createObjectURL(blob);
-            const audio = new Audio(url);
-            audio.play().catch(err => console.warn("Trình duyệt chặn tự động phát âm thanh. Hãy tương tác với trang web trước."));
+    const { action, buffer, isSync } = e.data;
+
+    if (action === 'audioBuffer') {
+        // 1. Xử lý cập nhật tiến trình Sync
+        if (isSync) {
+            loadedFiles++;
+            const percent = Math.round((loadedFiles / totalFiles) * 100);
             
-            // Giải phóng bộ nhớ sau khi phát xong
-            audio.onended = () => URL.revokeObjectURL(url);
-        } catch (err) {
-            console.error("Lỗi xử lý luồng âm thanh:", err);
+            const progressFill = document.getElementById('progress-fill');
+            const syncPercentage = document.getElementById('sync-percentage');
+            const syncStatus = document.getElementById('sync-status');
+            const syncContainer = document.getElementById('sync-container');
+
+            if (progressFill) progressFill.style.width = `${percent}%`;
+            if (syncPercentage) syncPercentage.innerText = `${percent}%`;
+            if (syncStatus) syncStatus.innerText = `Đã tải ${loadedFiles}/${totalFiles} tệp`;
+
+            // Khi hoàn thành 100%
+            if (loadedFiles === totalFiles) {
+                setTimeout(() => {
+                    if (syncStatus) syncStatus.innerText = "✅ Đã sẵn sàng Offline!";
+                    
+                    // Đợi 3 giây để người dùng xác nhận thông báo, sau đó ẩn mượt mà
+                    setTimeout(() => {
+                        if (syncContainer) {
+                            syncContainer.style.transition = 'opacity 1s ease';
+                            syncContainer.style.opacity = '0';
+                            
+                            // Sau khi mờ hẳn (1s) thì set display none
+                            setTimeout(() => {
+                                syncContainer.style.display = 'none';
+                            }, 1000);
+                        }
+                    }, 3000);
+                }, 500);
+            }
+        } 
+        
+        // 2. Phát âm thanh khi người dùng nhấn (isSync === false)
+        if (!isSync) {
+            try {
+                const blob = new Blob([buffer], { type: 'audio/mpeg' });
+                const url = URL.createObjectURL(blob);
+                const audio = new Audio(url);
+                audio.play().catch(err => console.warn("Trình duyệt chặn audio:", err));
+                audio.onended = () => URL.revokeObjectURL(url);
+            } catch (err) {
+                console.error("Lỗi âm thanh:", err);
+            }
         }
     }
 };
