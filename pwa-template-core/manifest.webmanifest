@@ -1,0 +1,29 @@
+{
+  "name": "Flag Core PWA",
+  "short_name": "FlagCore",
+  "description": "Nền tảng học cờ quốc gia tích hợp công nghệ lưu trữ OPFS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FDFDFA",
+  "theme_color": "#FDFDFA",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
