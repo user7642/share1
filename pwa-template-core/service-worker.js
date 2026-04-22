@@ -1,7 +1,10 @@
 // service-worker.js - Trình quản lý ngoại tuyến cho PWA Flag Core
-const CACHE_NAME = 'pwa-flag-core-v1';
 
-// Danh sách các tệp "xương sống" cần để hiển thị giao diện
+// Biến phiên bản duy nhất (Cập nhật số này để làm mới toàn bộ App Shell)
+const APP_VERSION = '1.0.4'; 
+const CACHE_NAME = `flag-core-v${APP_VERSION}`;
+
+// Danh sách các tệp "xương sống" (App Shell)
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -11,25 +14,26 @@ const STATIC_ASSETS = [
   '/manifest.json'
 ];
 
-// 1. Sự kiện INSTALL: Tải và lưu các tệp tĩnh vào Cache Storage
+// 1. INSTALL: Tải bộ khung vào cache
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('📡 SW: Đang lưu trữ bộ khung giao diện vào Cache');
+      console.log(`📡 SW: Đang đóng gói phiên bản ${APP_VERSION}`);
       return cache.addAll(STATIC_ASSETS);
     })
   );
-  self.skipWaiting(); // Kích hoạt ngay lập tức
+  self.skipWaiting(); 
 });
 
-// 2. Sự kiện ACTIVATE: Dọn dẹp các cache cũ nếu có cập nhật phiên bản
+// 2. ACTIVATE: Dọn dẹp các bản cache cũ
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((name) => {
-          if (name !== CACHE_NAME) {
-            console.log('🧹 SW: Đang xóa cache cũ:', name);
+          // Nếu tìm thấy cache cũ (bắt đầu bằng flag-core-v) mà không phải bản hiện tại thì xóa
+          if (name.startsWith('flag-core-v') && name !== CACHE_NAME) {
+            console.log(`🧹 SW: Đang dọn dẹp cache cũ: ${name}`);
             return caches.delete(name);
           }
         })
@@ -39,16 +43,22 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// 3. Sự kiện FETCH: Chặn các yêu cầu mạng để phục vụ từ Cache nếu mất mạng
+// 3. FETCH: Chiến lược Network First (Ưu tiên cập nhật mới nhất)
 self.addEventListener('fetch', (event) => {
-  // Chỉ xử lý các yêu cầu lấy tệp tĩnh (không xử lý âm thanh trong OPFS)
+  if (!event.request.url.startsWith('http')) return;
+
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Trả về file từ cache nếu có, nếu không thì đi lấy từ mạng
-      return response || fetch(event.request).catch(() => {
-        // Nếu cả cache và mạng đều không có (ví dụ đang offline)
-        console.warn('📴 Bạn đang ngoại tuyến và tệp này chưa được lưu.');
-      });
-    })
+    fetch(event.request)
+      .then((response) => {
+        // Có mạng: Cập nhật cache và hiển thị ngay
+        return caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      })
+      .catch(() => {
+        // Mất mạng: Dùng bản lưu gần nhất trong cache
+        return caches.match(event.request);
+      })
   );
 });
