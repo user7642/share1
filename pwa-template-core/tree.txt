@@ -1,5 +1,4 @@
 .
-├── ain.js
 ├── assets
 │   └── media
 │       ├── audio
@@ -123,7 +122,7 @@
 │       │   └── south-america
 │       │       ├── en
 │       │       └── vi
-│       └── flags
+│       └── image
 │           ├── africa
 │           ├── asia
 │           │   ├── Afghanistan.svg
@@ -185,11 +184,23 @@
 │           ├── north-america
 │           ├── oceania
 │           └── south-america
+├── data.js
+├── favicon.ico
+├── gen_data.py
+├── generate_manifest.py
+├── icon-192.png
+├── icon-512.png
 ├── index.html
+├── install.html
+├── main.js
+├── main.js.save
 ├── manifest.json
+├── manifest.webmanifest
 ├── opfs-worker.js
+├── qr-install.png
+├── service-worker.js
 ├── storage-manager.js
 ├── style.css
 └── tree.txt
 
-29 directories, 164 files
+29 directories, 175 files

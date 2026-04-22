@@ -1,7 +1,7 @@
 // service-worker.js - Trình quản lý ngoại tuyến cho PWA Flag Core
 
 // Biến phiên bản duy nhất (Cập nhật số này để làm mới toàn bộ App Shell)
-const APP_VERSION = '1.0.4'; 
+const APP_VERSION = '1.0.5'; 
 const CACHE_NAME = `flag-core-v${APP_VERSION}`;
 
 // Danh sách các tệp "xương sống" (App Shell)

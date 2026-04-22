@@ -1,381 +1,360 @@
 {
-  "version": "2026.04.21-0930",
-  "generated": "2026-04-21T09:30:43.237846+00:00",
-  "count": 156,
+  "version": "2026.04.22-1133",
+  "generated": "2026-04-22T11:33:12.895901+00:00",
+  "count": 153,
   "files": [
     {
-      "path": "assets/media/flags/asia/Maldives.svg",
+      "path": "assets/media/image/asia/Maldives.svg",
       "sha256": "45f64c4eecbda57c8f419eb222be5c5e64b03f721fc171db01a408144da332c0",
       "size": 267,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Vietnam.svg",
+      "path": "assets/media/image/asia/Vietnam.svg",
       "sha256": "175120e06bb95dda22133758395f352acb46433ff81eee449326db54e78af2c4",
       "size": 283,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Taiwan.svg",
+      "path": "assets/media/image/asia/Taiwan.svg",
       "sha256": "11a8acaecfcc6258cfeedc15555fbc4dbe2b1df640497be2d5dcb4f60a5c4167",
       "size": 416,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Lebanon.svg",
+      "path": "assets/media/image/asia/Lebanon.svg",
       "sha256": "ad184d36e7183828aecb2b3e6d05a92d454a4f01d478e38ce8c7db78d83e913c",
       "size": 14800,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Palestine.svg",
+      "path": "assets/media/image/asia/Palestine.svg",
       "sha256": "df299146faffa45913ac8677931f4a5cd94b60fc99e39a51eb9ef922ca6da182",
       "size": 281,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Thailand.svg",
+      "path": "assets/media/image/asia/Thailand.svg",
       "sha256": "f137bb494e00c3c29e9d03fbf4d15c2650d82f2a8f02cf51341f6a4557117db9",
       "size": 259,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Mongolia.svg",
+      "path": "assets/media/image/asia/Mongolia.svg",
       "sha256": "b7ccaa99a79fe613cb0a8953ef2f49b25f5e56c5c2b05b5725627ff01d60af6f",
       "size": 1526,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Hong Kong.svg",
+      "path": "assets/media/image/asia/Hong Kong.svg",
       "sha256": "bdc810878f887e885920d1d47133aec5fcd143043935bfd022fb00ef811621e5",
       "size": 845,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Cambodia.svg",
+      "path": "assets/media/image/asia/Cambodia.svg",
       "sha256": "d3e7df02fdb48d08e6784f4c3eead2c026fe458a8cdea8d09c78cded471eac35",
       "size": 10374,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Saudi Arabia.svg",
+      "path": "assets/media/image/asia/Saudi Arabia.svg",
       "sha256": "b0b36326e3e5b74624ee8b5de8273ea00f7bbe9b5ba0da6250cbe7b3c637505e",
       "size": 28593,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Asia-vi.svg",
-      "sha256": "c14b624fb0acba939a00269871d43b6ab4c0e467b3a2c85b79d1518f64eeac36",
-      "size": 25360,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "assets/media/flags/asia/Tajikistan.svg",
+      "path": "assets/media/image/asia/Tajikistan.svg",
       "sha256": "da7ceb19dd07cd78d9b1a592278e9ee1950de097bf362642cac1569083e8cafc",
       "size": 4048,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Asia-en.svg",
-      "sha256": "5a1d768223cadfd8becaa60b3e4e79c9d4684eb85057b2fff7e78f52d846525f",
-      "size": 25365,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "assets/media/flags/asia/Uzbekistan.svg",
+      "path": "assets/media/image/asia/Uzbekistan.svg",
       "sha256": "89c84ce01c20fa1c19ab8068b822948e29c53c36fe3b4723463bedfce34a9da2",
       "size": 1301,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Afghanistan.svg",
+      "path": "assets/media/image/asia/Afghanistan.svg",
       "sha256": "fc326ebb964d9a50e31984495d1cf94f810a8af2ecaac5615001358404a389be",
       "size": 37065,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/China.svg",
+      "path": "assets/media/image/asia/China.svg",
       "sha256": "5fce7409cd290e6b3c5ecd09c0d2c400ae459e3d59c6c0539793ac0e803d0179",
       "size": 563,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Kuwait.svg",
+      "path": "assets/media/image/asia/Kuwait.svg",
       "sha256": "b550075b6f53c591fabdcd505be66c5085dff0168edd9a96c6b3c1d939e8bcbb",
       "size": 317,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Oman.svg",
+      "path": "assets/media/image/asia/Oman.svg",
       "sha256": "6ced4f73a1f9618141537d2b47ec30a39b25aa2dbefa1f38d8e0740f3e1f4f43",
       "size": 109508,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Pakistan.svg",
+      "path": "assets/media/image/asia/Pakistan.svg",
       "sha256": "d6ace20003ef4172b2cb2f090614f06602fb139a900cd1c65c4f8cc17367bc37",
       "size": 707,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Japan.svg",
+      "path": "assets/media/image/asia/Japan.svg",
       "sha256": "35e785339e19d1ec1987cb9c3d8e66fc97f29a287db0b0b590b8dfdd96d4766b",
       "size": 209,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Christmas Island.svg",
+      "path": "assets/media/image/asia/Christmas Island.svg",
       "sha256": "ba6170328b6b192131c54dc94b455786ddb08a0997b377ff361e117be0be3af2",
       "size": 5383,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Indonesia.svg",
+      "path": "assets/media/image/asia/Indonesia.svg",
       "sha256": "2ab57d2d418baba7b0ff55729435d0c780ca52a98b754f92d44e96cd1399dae5",
       "size": 148,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Philippines.svg",
+      "path": "assets/media/image/asia/Philippines.svg",
       "sha256": "b0010e0b5f5945506e98b76f3469faf964c1ce30de75673186d303f9112b5454",
       "size": 892,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Sri Lanka.svg",
+      "path": "assets/media/image/asia/Sri Lanka.svg",
       "sha256": "eea9217df822c4b9a50001821453f73cb45d61df96086cec87cb4a2be2e066fd",
       "size": 19062,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Yemen.svg",
+      "path": "assets/media/image/asia/Yemen.svg",
       "sha256": "a92f3989182049dc218f7698c45d8cdfc64e6f945c71f20a9d188dd01698df2d",
       "size": 179,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Jordan.svg",
+      "path": "assets/media/image/asia/Jordan.svg",
       "sha256": "7a044c4d0f995a5dafe157e4554e4b9bc5e77ab303c6a04685999cc1930f79dc",
       "size": 412,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Bahrain.svg",
+      "path": "assets/media/image/asia/Bahrain.svg",
       "sha256": "bfa65642e5dc9b67c3c5570dc48711f83a02dd865a251514a7243df7a5d73b24",
       "size": 298,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Asia-vi.png",
-      "sha256": "a426aba498b24b0184dcce6f0b69b2c3c2b02ad8f2f2d5a166932146ab92cefd",
-      "size": 79865,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "assets/media/flags/asia/Kazakhstan.svg",
+      "path": "assets/media/image/asia/Kazakhstan.svg",
       "sha256": "bcf331e5a92785976aabe77aeac25de912e97d4e20557c521359e1033d1450af",
       "size": 9668,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Bhutan.svg",
+      "path": "assets/media/image/asia/Bhutan.svg",
       "sha256": "bfbf299f9ee043d6fcc11c12cfe2dede242579b948f93a38d3c2e0ba4ebab383",
       "size": 36864,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Cocos Islands.svg",
+      "path": "assets/media/image/asia/Cocos Islands.svg",
       "sha256": "a68a3324ee4c709acc69e1fc355e3d44d276069c498064c7bf843a4b9454f17d",
       "size": 6132,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/India.svg",
+      "path": "assets/media/image/asia/India.svg",
       "sha256": "c49eb8f6dddd9a910d54092d31fb812b6e542f5a8dda6dbc7911e795078da2c9",
       "size": 825,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Brunei.svg",
+      "path": "assets/media/image/asia/Brunei.svg",
       "sha256": "11c704ce4271bcbddd1c372cb6dd457a278c51ce7db7ad98ab5f5c5517695dd6",
       "size": 31244,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/North Korea.svg",
+      "path": "assets/media/image/asia/North Korea.svg",
       "sha256": "0facdb3b7f4028e3ab0ce5457983ff62b22e77177e896cf472654ae6b2f9ebeb",
       "size": 407,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Macau.svg",
+      "path": "assets/media/image/asia/Macau.svg",
       "sha256": "35252f8cf7604421b40c67a5194b877920e3bcdeef9179b15f2d3958d584ecd2",
       "size": 2365,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Qatar.svg",
+      "path": "assets/media/image/asia/Qatar.svg",
       "sha256": "92a082037fa252496f22e40bd52909678dec793fb31fcb8e9c4abd73b154f613",
       "size": 310,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Iran.svg",
+      "path": "assets/media/image/asia/Iran.svg",
       "sha256": "c1d6eb64f7060fb362ad8efd0205cdd37c7443fa1f009b9882feede56022009c",
       "size": 2218,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Bangladesh.svg",
+      "path": "assets/media/image/asia/Bangladesh.svg",
       "sha256": "453b90fee62df5770d9610e8ba99e047f63f986a027cc071f2a90d79c8012150",
       "size": 156,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Azerbaijan.svg",
+      "path": "assets/media/image/asia/Azerbaijan.svg",
       "sha256": "f16a9688b22090aaeac332332410a67ce073b9556bc9192771231ad713d5dacd",
       "size": 588,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Iraq.svg",
+      "path": "assets/media/image/asia/Iraq.svg",
       "sha256": "2a3ac265b9efcfb0b8761b753b8dba85b63af329deed39dc7a363e61dad70667",
       "size": 1204,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Malaysia.svg",
+      "path": "assets/media/image/asia/Malaysia.svg",
       "sha256": "53b0aa224ba67a2d32be58aab6eb2e4395ac3df66e62692ac83a30bc296ee3a2",
       "size": 683,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Turkmenistan.svg",
+      "path": "assets/media/image/asia/Turkmenistan.svg",
       "sha256": "f0bf471d0f3070cd1ece9c66ccb7bfc5e86e32072b657e9a3a426a624dd72510",
       "size": 75449,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Singapore.svg",
+      "path": "assets/media/image/asia/Singapore.svg",
       "sha256": "40484fc9a30b09a2c89834737cda478cad250a8489923e4a4d2ec93e905f32a5",
       "size": 593,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Timor Leste.svg",
+      "path": "assets/media/image/asia/Timor Leste.svg",
       "sha256": "086a0f322643bef67059a6b64be35c788aef86a9941f6640b220255e7180ae93",
       "size": 338,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Myanmar.svg",
+      "path": "assets/media/image/asia/Myanmar.svg",
       "sha256": "b96625d297f111bf6f588251780f972d3f6e3b1f663831c164bd35e93a06ba2a",
       "size": 636,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Laos.svg",
+      "path": "assets/media/image/asia/Laos.svg",
       "sha256": "4d8b2ffd9f0565f534f6cafb6c389b31d538465ae8fefc72a42797959884b44a",
       "size": 233,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/United Arab Emirates.svg",
+      "path": "assets/media/image/asia/United Arab Emirates.svg",
       "sha256": "2eb3d53df8f3f845dfafff448fb165647c8e3ed2b2f08296af1080fece92ad35",
       "size": 323,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Kyrgyzstan.svg",
+      "path": "assets/media/image/asia/Kyrgyzstan.svg",
       "sha256": "d6baff517bb0b83b0a6e8b8e650534b8420da5940dd758646e239e7429f7e29e",
       "size": 15577,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Nepal.svg",
+      "path": "assets/media/image/asia/Nepal.svg",
       "sha256": "ba25a92555ba89507f637ed75c10a5517943c42aad1e9a37821cbd7e6cb223a0",
       "size": 1132,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Israel.svg",
+      "path": "assets/media/image/asia/Israel.svg",
       "sha256": "a5732410968d238f8a506a455bd7be7fea2908d0abcf638020fbe7b58bd4ad2f",
       "size": 398,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Syria.svg",
+      "path": "assets/media/image/asia/Syria.svg",
       "sha256": "45bbfbcf04cf52204b754157809522b95528db54c0882f27a7d50743b66f9700",
       "size": 634,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Armenia.svg",
+      "path": "assets/media/image/asia/Armenia.svg",
       "sha256": "1eb2190d967efac59bb4f18f699b465f76dc3128593011e59243450cd593f846",
       "size": 201,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/South Korea.svg",
+      "path": "assets/media/image/asia/South Korea.svg",
       "sha256": "4bdbb18896cb97bd0931c2b8d38c7914cf5324c0a258bc2b443103a9c39d67be",
       "size": 588,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "assets/media/flags/asia/Turkey.svg",
+      "path": "assets/media/image/asia/Turkey.svg",
       "sha256": "5a47e932cdb371d9708d8c9a209d3acfd006cdd3ee7dd38ae44df6180e170e90",
       "size": 324,
       "category": "image",
