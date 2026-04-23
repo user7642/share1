@@ -4,93 +4,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>PWA Flag Core</title>
+    <title>PWA Core</title>
 
     <meta name="theme-color" content="#FDFDFA">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
-
     <link rel="manifest" href="site.webmanifest">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-
 <body>
 
-<h1>🌍 Học Cờ Quốc Gia</h1>
+    <header>
+        <h1>🌍 Học Cờ Quốc Gia</h1>
+    </header>
 
-<div id="sync-container" style="display: none;">
-    <div class="sync-info">
-        <span id="sync-status">Đang đồng bộ dữ liệu...</span>
-        <span id="sync-percentage">0%</span>
+    <div id="sync-container" style="display: none;">
+        <div class="sync-info">
+            <span id="sync-status">Đang đồng bộ dữ liệu...</span>
+            <span id="sync-percentage">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
     </div>
-    <div class="progress-bar">
-        <div id="progress-fill"></div>
+
+    <div class="lang-switch">
+        <button id="btn-vi" class="active" onclick="setLang('vi')">🔊 Tiếng Việt</button>
+        <button id="btn-en" onclick="setLang('en')">🔊 English</button>
     </div>
-</div>
 
-<div class="lang-switch">
-    <button id="btn-vi" class="active" onclick="setLang('vi')">🔊 Nghe tiếng Việt</button>
-    <button id="btn-en" onclick="setLang('en')">🔊 Nghe tiếng Anh</button>
-</div>
+    <main>
+        <section class="continent">
+            <button class="acc-btn">🌏 Châu Á</button>
+            <div class="acc-content"><div class="grid" id="asia"></div></div>
+        </section>
 
-<button class="acc-btn">🌏 Châu Á</button>
-<div class="acc-content">
-  <div class="grid" id="asia"></div>
-</div>
+        <section class="continent">
+            <button class="acc-btn">🌍 Châu Âu</button>
+            <div class="acc-content"><div class="grid" id="europe"></div></div>
+        </section>
 
-<button class="acc-btn">🌍 Châu Âu</button>
-<div class="acc-content">
-  <div class="grid" id="europe"></div>
-</div>
+        <section class="continent">
+            <button class="acc-btn">🌍 Châu Phi</button>
+            <div class="acc-content"><div class="grid" id="africa"></div></div>
+        </section>
 
-<button class="acc-btn">🌍 Châu Phi</button>
-<div class="acc-content">
-  <div class="grid" id="africa"></div>
-</div>
+        <section class="continent">
+            <button class="acc-btn">🌎 Bắc Mỹ</button>
+            <div class="acc-content"><div class="grid" id="north-america"></div></div>
+        </section>
 
-<button class="acc-btn">🌎 Bắc Mỹ</button>
-<div class="acc-content">
-  <div class="grid" id="north-america"></div>
-</div>
+        <section class="continent">
+            <button class="acc-btn">🌎 Nam Mỹ</button>
+            <div class="acc-content"><div class="grid" id="south-america"></div></div>
+        </section>
 
-<button class="acc-btn">🌎 Nam Mỹ</button>
-<div class="acc-content">
-  <div class="grid" id="south-america"></div>
-</div>
+        <section class="continent">
+            <button class="acc-btn">🌊 Châu Đại Dương</button>
+            <div class="acc-content"><div class="grid" id="oceania"></div></div>
+        </section>
+    </main>
 
-<button class="acc-btn">🌊 Châu Đại Dương</button>
-<div class="acc-content">
-  <div class="grid" id="oceania"></div>
-</div>
+    <div class="guide">
+        <span>👉 Bấm tiêu đề để mở / đóng</span>
+        <span>🔊 Bấm lá cờ để nghe phát âm</span>
+    </div> 
 
-<div class="guide">
-    <span>👉 Bấm tiêu đề để mở / đóng</span>
-    <span>🔊 Bấm lá cờ để nghe phát âm</span>
-</div> 
+    <footer class="footer-nav">
+        <a href="install.html" class="install-link">Hướng dẫn cài đặt <span>➔</span></a>
+    </footer>
 
-<footer class="footer-nav">
-    <a href="install.html" class="install-link">Hướng dẫn cài đặt <span>➔</span></a>
-</footer>
+    <div id="update-banner" style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); 
+         background: rgba(51, 51, 51, 0.95); color: #fff; padding: 14px 28px; border-radius: 50px; 
+         font-size: 14px; display: none; z-index: 10000; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+         backdrop-filter: blur(5px); animation: slideUp 0.4s ease-out; border: 1px solid rgba(255,255,255,0.1);">
+        🚀 Đã có phiên bản mới. Làm mới trang để cập nhật.
+    </div>
 
-<script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 
-<script>
-    // Đăng ký Service Worker (Giữ nguyên vì SW nằm ở root)
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('service-worker.js')
-                .catch(err => console.log('SW registration failed: ', err));
-        });
-    }
+    <script>
+        // Quản lý Service Worker & Cập nhật
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js').then(reg => {
+                    // Kiểm tra trạng thái cập nhật
+                    reg.addEventListener('updatefound', () => {
+                        const newWorker = reg.installing;
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                document.getElementById('update-banner').style.display = 'block';
+                            }
+                        });
+                    });
+                }).catch(err => console.error('SW Error:', err));
+            });
+        }
 
-    // Yêu cầu quyền lưu trữ bền vững
-    if (navigator.storage && navigator.storage.persist) {
-        navigator.storage.persist().then(persistent => {
-            if (persistent) console.log("Storage will not be cleared except by explicit user action");
-        });
-    }
-</script>
+        // Quyền lưu trữ bền vững (Persistent Storage)
+        if (navigator.storage && navigator.storage.persist) {
+            navigator.storage.persist().then(granted => {
+                if (granted) console.log("✅ Dữ liệu sẽ được lưu trữ bền vững.");
+            });
+        }
+    </script>
+
+    <style>
+        /* Hiệu ứng trượt nhẹ cho banner cập nhật */
+        @keyframes slideUp {
+            from { bottom: -50px; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+        main { padding-bottom: 80px; } /* Tránh bị footer đè */
+    </style>
+
 </body>
 </html>

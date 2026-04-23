@@ -1,4 +1,4 @@
-// main.js - Hệ thống quản lý PWA Generic Core v3.2 (Updated)
+// main.js - Hệ thống quản lý PWA Generic Core v3.2 (Full Optimized)
 import { appData } from './data.js';
 
 let currentLang = 'vi';
@@ -9,7 +9,33 @@ let loadedFiles = 0;
 const opfsWorker = new Worker('/assets/js/opfs-worker.js');
 
 /**
- * 1. XỬ LÝ PHẢN HỒI TỪ WORKER
+ * 1. QUẢN LÝ SERVICE WORKER & THÔNG BÁO CẬP NHẬT
+ */
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').then(reg => {
+            // Lắng nghe sự kiện tìm thấy bản cập nhật mới
+            reg.addEventListener('updatefound', () => {
+                const newWorker = reg.installing;
+                newWorker.addEventListener('statechange', () => {
+                    // Khi SW mới đã tải xong (installed) và đang chờ kích hoạt
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                        const banner = document.getElementById('update-banner');
+                        if (banner) banner.style.display = 'block';
+                    }
+                });
+            });
+        }).catch(err => console.error('❌ SW Registration Error:', err));
+    });
+
+    // Phát hiện khi Service Worker mới chính thức chiếm quyền điều khiển
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+        console.log("🔄 Service Worker mới đã kích hoạt thành công.");
+    });
+}
+
+/**
+ * 2. XỬ LÝ PHẢN HỒI TỪ OPFS WORKER
  */
 opfsWorker.onmessage = (e) => {
     const { action, buffer, isSync, path, message } = e.data;
@@ -56,14 +82,13 @@ function updateProgress() {
 }
 
 /**
- * 2. ĐỒNG BỘ DỮ LIỆU (OPFS)
+ * 3. ĐỒNG BỘ DỮ LIỆU MEDIA (OPFS)
  */
 async function syncMedia() {
     if (!navigator.locks) return;
 
     await navigator.locks.request('sync_assets_lock', async () => {
         try {
-            // Fetch manifest chứa danh sách media đã được lọc bởi generate_manifest.py
             const response = await fetch('/manifest.json'); 
             if (!response.ok) throw new Error("Không tìm thấy manifest.json");
             
@@ -78,7 +103,6 @@ async function syncMedia() {
                 syncContainer.style.display = 'block';
                 syncContainer.style.opacity = '1';
                 
-                // Gửi lệnh tải từng file media
                 fileList.forEach(file => {
                     opfsWorker.postMessage({ 
                         action: 'readFile', 
@@ -87,13 +111,11 @@ async function syncMedia() {
                     });
                 });
 
-                // Gửi lệnh Cleanup để xóa file thừa (cũ) trong kho OPFS
                 opfsWorker.postMessage({ 
                     action: 'cleanup', 
                     manifestList: fileList.map(f => f.path) 
                 });
             }
-
         } catch (err) {
             console.error("❌ Lỗi đồng bộ tài nguyên:", err);
         }
@@ -101,7 +123,7 @@ async function syncMedia() {
 }
 
 /**
- * 3. LOGIC GIAO DIỆN & RENDER
+ * 4. LOGIC GIAO DIỆN & RENDER
  */
 function initAccordion() {
     document.querySelectorAll('.acc-btn').forEach(btn => {
@@ -121,14 +143,12 @@ function initAccordion() {
 
 function renderGrid(categoryId) {
     const grid = document.getElementById(categoryId);
-    // Tránh render lại nếu đã có nội dung
     if (!grid || grid.children.length > 0 || !appData[categoryId]) return;
 
     const fragment = document.createDocumentFragment();
     appData[categoryId].forEach(item => {
         const card = document.createElement('div');
         card.className = 'card';
-        
         const ext = item.ext || 'svg';
         const imgPath = `/assets/media/image/${categoryId}/${item.id}.${ext}`;
         
@@ -137,7 +157,6 @@ function renderGrid(categoryId) {
             <p>${item.display}</p>
         `;
         
-        // Gán sự kiện click để phát âm thanh
         card.onclick = () => playSound(categoryId, item.id);
         fragment.appendChild(card);
     });
@@ -152,10 +171,7 @@ window.setLang = (lang) => {
 };
 
 function playSound(categoryId, itemId) {
-    // Luôn đảm bảo đường dẫn bắt đầu bằng / để Worker fetch chính xác từ Root
     const filePath = `/assets/media/audio/${categoryId}/${currentLang}/${itemId}.mp3`;
-    
-    // Kiểm tra nhanh: Nếu là file hệ thống (vô tình lọt vào) thì không gửi
     if (/\.(html|js|css)$/i.test(filePath)) return;
 
     opfsWorker.postMessage({
@@ -165,9 +181,15 @@ function playSound(categoryId, itemId) {
     });
 }
 
-// Khởi chạy hệ thống
+/**
+ * 5. KHỞI CHẠY HỆ THỐNG
+ */
 window.addEventListener('load', () => {
     initAccordion();
-    // Chạy đồng bộ sau khi trang load 1.5s để ưu tiên hiển thị UI
+    // Yêu cầu quyền lưu trữ bền vững
+    if (navigator.storage && navigator.storage.persist) {
+        navigator.storage.persist();
+    }
+    // Chạy đồng bộ media sau 1.5s
     setTimeout(syncMedia, 1500);
 });

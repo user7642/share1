@@ -1,10 +1,8 @@
-// service-worker.js - Trình quản lý ngoại tuyến cho PWA Flag Core
+// service-worker.js - Trình quản lý ngoại tuyến tối ưu
 
-// Biến phiên bản duy nhất (Cập nhật số này để làm mới toàn bộ App Shell)
-const APP_VERSION = '1.1.3'; 
+const APP_VERSION = '1.1.4'; // Tăng phiên bản khi thay đổi App Shell
 const CACHE_NAME = `flag-core-v${APP_VERSION}`;
 
-// Danh sách các tệp "xương sống" (App Shell) - ĐÃ CẬP NHẬT PATH
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -15,29 +13,28 @@ const STATIC_ASSETS = [
   '/assets/js/storage-manager.js',
   '/assets/js/opfs-worker.js',
   '/manifest.json',
-  '/manifest.webmanifest'
+  '/manifest.webmanifest',
+  '/favicon.ico'
 ];
 
-// 1. INSTALL: Tải bộ khung vào cache
+// 1. INSTALL: Lưu App Shell vào Cache Storage
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log(`📡 SW: Đang đóng gói phiên bản ${APP_VERSION}`);
-      // Sử dụng {cache: 'reload'} để tránh lấy lại bản cache cũ của trình duyệt
+      console.log(`📡 SW: Đang đóng gói App Shell v${APP_VERSION}`);
       return cache.addAll(STATIC_ASSETS);
     })
   );
-  self.skipWaiting(); 
+  self.skipWaiting();
 });
 
-// 2. ACTIVATE: Dọn dẹp các bản cache cũ
+// 2. ACTIVATE: Xóa cache cũ ngay lập tức
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((name) => {
           if (name.startsWith('flag-core-v') && name !== CACHE_NAME) {
-            console.log(`🧹 SW: Đang dọn dẹp cache cũ: ${name}`);
             return caches.delete(name);
           }
         })
@@ -47,26 +44,38 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// 3. FETCH: Chiến lược Network First (Ưu tiên cập nhật mới nhất)
+// 3. FETCH: Chiến lược thông minh
 self.addEventListener('fetch', (event) => {
-  // Chỉ xử lý các yêu cầu HTTP/HTTPS
-  if (!event.request.url.startsWith('http')) return;
+  const url = new URL(event.request.url);
 
+  // A. BỎ QUA CÁC YÊU CẦU MEDIA (Để OPFS xử lý)
+  // Không lưu Audio/Image nặng vào Cache Storage để tránh tràn bộ nhớ trình duyệt
+  if (url.pathname.includes('/assets/media/')) {
+    return; 
+  }
+
+  // B. CHIẾN LƯỢC CHO APP SHELL (Stale-While-Revalidate)
+  // Ưu tiên tốc độ (Cache) nhưng vẫn cập nhật ngầm (Network)
   event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        // Nếu lấy được file mới từ mạng, lưu vào cache rồi trả về
-        if (response && response.status === 200) {
-          const responseToCache = response.clone();
+    caches.match(event.request).then((cachedResponse) => {
+      const fetchPromise = fetch(event.request).then((networkResponse) => {
+        // Cập nhật lại Cache nếu fetch thành công
+        if (networkResponse && networkResponse.status === 200) {
+          const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, responseToCache);
           });
         }
-        return response;
-      })
-      .catch(() => {
-        // Mất mạng: Tìm trong cache
-        return caches.match(event.request);
-      })
+        return networkResponse;
+      });
+
+      // Trả về bản cache ngay lập tức nếu có, nếu không thì đợi fetch
+      return cachedResponse || fetchPromise;
+    }).catch(() => {
+        // FALLBACK: Nếu là trang HTML và mất mạng hoàn toàn
+        if (event.request.mode === 'navigate') {
+            return caches.match('/index.html');
+        }
+    })
   );
 });
