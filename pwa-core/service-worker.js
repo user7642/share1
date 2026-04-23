@@ -1,83 +1,95 @@
-// service-worker.js - Trình quản lý ngoại tuyến vạn năng (Local & GitHub)
+// service-worker.js — FINAL CLEAN (production-safe)
 
-const APP_VERSION = '1.1.5'; 
+const APP_VERSION = '1.2.1';
 const CACHE_NAME = `flag-core-v${APP_VERSION}`;
 
-// Tự động xác định thư mục gốc (Base Path) của Service Worker
-// Ví dụ: Tại local là "/" nhưng tại GitHub là "/share1/pwa-core/"
-const BASE = self.registration.scope;
-
-// Danh sách tài nguyên dùng ĐƯỜNG DẪN TƯƠNG ĐỐI (Không có dấu / ở đầu)
+// ✔ dùng path nhất quán (không ./)
 const ASSETS_TO_CACHE = [
-  '',               // Đại diện cho trang chủ (index.html)
-  'index.html',
-  'install.html',
-  'assets/css/style.css',
-  'assets/js/main.js',
-  'assets/js/data.js',
-  'assets/js/storage-manager.js',
-  'assets/js/opfs-worker.js',
-  'manifest.json',
-  'site.webmanifest',
-  'favicon.ico'
+  '/',
+  '/index.html',
+  '/install.html',
+
+  '/assets/css/style.css',
+
+  '/assets/js/main.js',
+  '/assets/js/data.js',
+  '/assets/js/storage-manager.js',
+  '/assets/js/opfs-worker.js',
+
+  '/manifest.webmanifest',
+  '/favicon.ico'
 ];
 
-// 1. INSTALL: Cộng BASE vào từng file để nạp chính xác vị trí
+// ================= INSTALL =================
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log(`📡 SW: Đang đóng gói v${APP_VERSION} tại ${BASE}`);
-      // Tạo danh sách đường dẫn đầy đủ dựa trên môi trường hiện tại
-      const fullPaths = ASSETS_TO_CACHE.map(path => `${BASE}${path}`);
-      return cache.addAll(fullPaths);
+      console.log(`📦 SW: Cache v${APP_VERSION}`);
+      return cache.addAll(ASSETS_TO_CACHE);
     })
   );
+
   self.skipWaiting();
 });
 
-// 2. ACTIVATE: Dọn dẹp cache cũ
+// ================= ACTIVATE =================
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
+    caches.keys().then((keys) => {
       return Promise.all(
-        cacheNames.map((name) => {
-          if (name.startsWith('flag-core-v') && name !== CACHE_NAME) {
-            return caches.delete(name);
+        keys.map((key) => {
+          if (key.startsWith('flag-core-v') && key !== CACHE_NAME) {
+            console.log(`🗑️ Delete old cache: ${key}`);
+            return caches.delete(key);
           }
         })
       );
     })
   );
+
   self.clients.claim();
 });
 
-// 3. FETCH: Chiến lược Stale-While-Revalidate thông minh
+// ================= FETCH =================
 self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
+  const request = event.request;
+  const url = new URL(request.url);
 
-  // A. BỎ QUA MEDIA (Để OPFS xử lý riêng)
-  if (url.pathname.includes('/assets/media/')) return;
+  // A. bỏ qua media (OPFS xử lý)
+  if (url.pathname.includes('/assets/media/')) {
+    return;
+  }
 
-  // B. XỬ LÝ APP SHELL
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      const fetchPromise = fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
-        }
-        return networkResponse;
-      });
+    caches.match(request).then((cachedResponse) => {
 
-      // Trả về cache ngay (nếu có) để đạt tốc độ tức thì, cập nhật ngầm sau
+      const fetchPromise = fetch(request)
+        .then((networkResponse) => {
+
+          if (
+            !networkResponse ||
+            networkResponse.status !== 200 ||
+            networkResponse.type !== 'basic'
+          ) {
+            return networkResponse;
+          }
+
+          const responseToCache = networkResponse.clone();
+
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, responseToCache);
+          });
+
+          return networkResponse;
+        })
+        .catch(() => {
+          // ✔ fallback chuẩn
+          if (request.mode === 'navigate') {
+            return caches.match('/index.html');
+          }
+        });
+
       return cachedResponse || fetchPromise;
-    }).catch(() => {
-      // FALLBACK: Khi mất mạng hoàn toàn, trả về trang chủ dự phòng
-      if (event.request.mode === 'navigate') {
-        return caches.match(`${BASE}index.html`);
-      }
     })
   );
 });

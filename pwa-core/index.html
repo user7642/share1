@@ -10,11 +10,15 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
-    <link rel="manifest" href="site.webmanifest">
+    <!-- Icons -->
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.webmanifest">   
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -23,6 +27,7 @@
         <h1>🌍 Học Cờ Quốc Gia</h1>
     </header>
 
+    <!-- Sync Progress -->
     <div id="sync-container" style="display: none;">
         <div class="sync-info">
             <span id="sync-status">Đang đồng bộ dữ liệu...</span>
@@ -33,12 +38,15 @@
         </div>
     </div>
 
+    <!-- Language Switch -->
     <div class="lang-switch">
         <button id="btn-vi" class="active" onclick="setLang('vi')">🔊 Tiếng Việt</button>
         <button id="btn-en" onclick="setLang('en')">🔊 English</button>
     </div>
 
+    <!-- Main Content -->
     <main>
+
         <section class="continent">
             <button class="acc-btn">🌏 Châu Á</button>
             <div class="acc-content"><div class="grid" id="asia"></div></div>
@@ -68,58 +76,84 @@
             <button class="acc-btn">🌊 Châu Đại Dương</button>
             <div class="acc-content"><div class="grid" id="oceania"></div></div>
         </section>
+
     </main>
 
+    <!-- Guide -->
     <div class="guide">
         <span>👉 Bấm tiêu đề để mở / đóng</span>
         <span>🔊 Bấm lá cờ để nghe phát âm</span>
     </div> 
 
+    <!-- Footer -->
     <footer class="footer-nav">
-        <a href="install.html" class="install-link">Hướng dẫn cài đặt <span>➔</span></a>
+        <a href="./pwa-install-guide.html" class="install-link">
+            Hướng dẫn cài đặt <span>➔</span>
+        </a>
     </footer>
 
-    <div id="update-banner" style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); 
-         background: rgba(51, 51, 51, 0.95); color: #fff; padding: 14px 28px; border-radius: 50px; 
-         font-size: 14px; display: none; z-index: 10000; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-         backdrop-filter: blur(5px); animation: slideUp 0.4s ease-out; border: 1px solid rgba(255,255,255,0.1);">
+    <!-- Update Banner -->
+    <div id="update-banner" style="
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(51, 51, 51, 0.95);
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-size: 14px;
+        display: none;
+        z-index: 10000;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255,255,255,0.1);
+    ">
         🚀 Đã có phiên bản mới. Làm mới trang để cập nhật.
     </div>
 
-    <script type="module" src="assets/js/main.js"></script>
+    <!-- Main JS -->
+    <script type="module" src="./assets/js/main.js"></script>
 
+    <!-- Service Worker -->
     <script>
-        // Quản lý Service Worker & Cập nhật
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                // ĐÃ SỬA: Đăng ký SW dùng đường dẫn tương đối để tự nhận diện Scope
-                navigator.serviceWorker.register('service-worker.js').then(reg => {
-                    reg.addEventListener('updatefound', () => {
-                        const newWorker = reg.installing;
-                        newWorker.addEventListener('statechange', () => {
-                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                document.getElementById('update-banner').style.display = 'block';
-                            }
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => {
+                        reg.addEventListener('updatefound', () => {
+                            const newWorker = reg.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    document.getElementById('update-banner').style.display = 'block';
+                                }
+                            });
                         });
-                    });
-                }).catch(err => console.error('SW Error:', err));
+                    })
+                    .catch(err => console.error('SW Error:', err));
             });
         }
 
-        // Quyền lưu trữ bền vững
+        // Persistent storage
         if (navigator.storage && navigator.storage.persist) {
             navigator.storage.persist().then(granted => {
-                if (granted) console.log("✅ Dữ liệu sẽ được lưu trữ bền vững.");
+                if (granted) {
+                    console.log("✅ Dữ liệu lưu trữ bền vững đã được kích hoạt.");
+                }
             });
         }
     </script>
 
+    <!-- Animation -->
     <style>
         @keyframes slideUp {
             from { bottom: -50px; opacity: 0; }
             to { bottom: 30px; opacity: 1; }
         }
-        main { padding-bottom: 80px; }
+
+        main {
+            padding-bottom: 80px;
+        }
     </style>
 
 </body>

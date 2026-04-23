@@ -1,1113 +1,1078 @@
 {
   "header": {
-    "version": "2026.04.23-0351",
-    "generated": "2026-04-23T03:51:38.437402+00:00",
+    "version": "2026.04.23-0657",
+    "generated": "2026-04-23T06:57:37.450275+00:00",
     "author": "PWA Flag Core System",
-    "description": "Media asset manifest for OPFS synchronization"
+    "description": "Media asset list for OPFS synchronization"
   },
-  "count": 158,
+  "count": 153,
   "files": [
     {
-      "path": "/assets/media/audio/asia/en/afghanistan.mp3",
+      "path": "assets/media/audio/asia/en/afghanistan.mp3",
       "sha256": "fbdd58f0fd65ba7d0013e4ebe4097c406afe501909bb3ca83fa8370349e949a2",
       "size": 11520,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/armenia.mp3",
+      "path": "assets/media/audio/asia/en/armenia.mp3",
       "sha256": "76b28ce85b171bc3872571eb68d58d0d2f9c1e67e2273d1d1a1d3edffa5fbe89",
       "size": 8256,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/azerbaijan.mp3",
+      "path": "assets/media/audio/asia/en/azerbaijan.mp3",
       "sha256": "fe92eb05508d075b25031b6b2994c9ac08689aa1108beee2667863177a28bbbc",
       "size": 11520,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/bahrain.mp3",
+      "path": "assets/media/audio/asia/en/bahrain.mp3",
       "sha256": "b5510b6d25b983f87c9a6c941e7603227b1e4c5cf008630a597bacbc86a70bba",
       "size": 8064,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/bangladesh.mp3",
+      "path": "assets/media/audio/asia/en/bangladesh.mp3",
       "sha256": "4c32fb9ef6b9fce14cdc6d4cb49cbb19fadd922eec312e9fd430b6b09345b02b",
       "size": 10176,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/bhutan.mp3",
+      "path": "assets/media/audio/asia/en/bhutan.mp3",
       "sha256": "95d31e6c098f9b1932ca21e6254812ea9124f0e4680ad62aca809a84fc5ee5d9",
       "size": 8064,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/brunei.mp3",
+      "path": "assets/media/audio/asia/en/brunei.mp3",
       "sha256": "68f8a1c415c6ad54a9f91486e4510cee7efcf549b4c5303c0afd8d9b57977375",
       "size": 7488,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/cambodia.mp3",
+      "path": "assets/media/audio/asia/en/cambodia.mp3",
       "sha256": "87c2f31cb2bcf5d49e5e2effecd492f98becc044d810a729da27d2c76f2c1e87",
       "size": 9024,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/china.mp3",
+      "path": "assets/media/audio/asia/en/china.mp3",
       "sha256": "625344fc1d05d2b1b415df08e9cdd9989b210a1657bb6a49438044d0e9714ad1",
       "size": 6720,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/christmas-island.mp3",
+      "path": "assets/media/audio/asia/en/christmas-island.mp3",
       "sha256": "f9fb2b399454c86e7ec1a673e6bc20dafc00c61353f40dd576c1aca4da97d450",
       "size": 11520,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/cocos-islands.mp3",
+      "path": "assets/media/audio/asia/en/cocos-islands.mp3",
       "sha256": "2e3b58c481d54d90dd0e2204e87e9b7910c40545f305255589178dcbd85f55c2",
       "size": 12672,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/hong-kong.mp3",
+      "path": "assets/media/audio/asia/en/hong-kong.mp3",
       "sha256": "285009dfb398f1804e5836ef55d7c0bbbece0347bc8f3221e8197ed6f3f5ad11",
       "size": 8832,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/india.mp3",
+      "path": "assets/media/audio/asia/en/india.mp3",
       "sha256": "9c31fe93c605a9de12566e9365e9ed62c1e60d8417e410760259f1603eabaab8",
       "size": 6720,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/indonesia.mp3",
+      "path": "assets/media/audio/asia/en/indonesia.mp3",
       "sha256": "466cb4cb478ed78c9c3ed752ad23bf48869fd915c6cb0dd64cd4482c564b6031",
       "size": 9024,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/iran.mp3",
+      "path": "assets/media/audio/asia/en/iran.mp3",
       "sha256": "b5e7e2abaadc5f482e78cab3aab66c95d5ce0b47a347bc9c94acf47bcb52ef95",
       "size": 7296,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/iraq.mp3",
+      "path": "assets/media/audio/asia/en/iraq.mp3",
       "sha256": "b5abfa8949766eef35b719104b9401343c817b1c98528a053050fae8b5ca419f",
       "size": 6912,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/israel.mp3",
+      "path": "assets/media/audio/asia/en/israel.mp3",
       "sha256": "3a132dea297e145356a20820f7388dff52f3e5d8963ba5a6f0af8bafb638a6a3",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/japan.mp3",
+      "path": "assets/media/audio/asia/en/japan.mp3",
       "sha256": "9e99c6870ddb43441db69706e5acb26a817436ba877fec3335e1bf77612f4a98",
       "size": 8064,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/jordan.mp3",
+      "path": "assets/media/audio/asia/en/jordan.mp3",
       "sha256": "517b501434e6c7c6b52678706fab72ac459083143ded6e9d5b467ac526ce9009",
       "size": 7296,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/kazakhstan.mp3",
+      "path": "assets/media/audio/asia/en/kazakhstan.mp3",
       "sha256": "7b0f11f0c22d6753550a2ed3be8946e309eb1310f4d318c757ffa46e110f8ef8",
       "size": 10560,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/kuwait.mp3",
+      "path": "assets/media/audio/asia/en/kuwait.mp3",
       "sha256": "6cc334c44c213a398fff19125922f8e62d141241a40264ba6e7314c6bfb61955",
       "size": 6912,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/kyrgyzstan.mp3",
+      "path": "assets/media/audio/asia/en/kyrgyzstan.mp3",
       "sha256": "9656acf984bc5c502c38ad4bb7f6cd19448e99151b5f32cc1c613cbfed1eead4",
       "size": 10176,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/laos.mp3",
+      "path": "assets/media/audio/asia/en/laos.mp3",
       "sha256": "9a8ed0c62be12c2f99eb6480b085ef2e808e85710b6fec08dc0c7122befb2f88",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/lebanon.mp3",
+      "path": "assets/media/audio/asia/en/lebanon.mp3",
       "sha256": "ae9216949261594e8fb4f83845cd2346d54e54a1fab2884d072af7795cc75ffb",
       "size": 8448,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/macau.mp3",
+      "path": "assets/media/audio/asia/en/macau.mp3",
       "sha256": "3cfecff2a1a5d395af018c782723438c534b5c0fca8d5431db5887ae864f75fc",
       "size": 8064,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/malaysia.mp3",
+      "path": "assets/media/audio/asia/en/malaysia.mp3",
       "sha256": "af5660ecc6ac94a666e37dbfc261490f7b8825d582a73d2d8efe3a5a1becde46",
       "size": 8448,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/maldives.mp3",
+      "path": "assets/media/audio/asia/en/maldives.mp3",
       "sha256": "17790d061755453a5d2f610d421b208913adff8e5c4ed07e3cd8e2b4dcd2f118",
       "size": 9984,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/mongolia.mp3",
+      "path": "assets/media/audio/asia/en/mongolia.mp3",
       "sha256": "53acccec8dbafe6db98decdc957e8361a8ea0e396e3c7f0ac164e0c30b61604f",
       "size": 8832,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/myanmar.mp3",
+      "path": "assets/media/audio/asia/en/myanmar.mp3",
       "sha256": "65d2303252034cde61df5c20a64bf10e3fca48d54b0b5f78a9774acd6d8e90e0",
       "size": 9216,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/nepal.mp3",
+      "path": "assets/media/audio/asia/en/nepal.mp3",
       "sha256": "7d368693e032f4730f1d8668da1228ae69f1fcdc5450e7039606827aaaea98db",
       "size": 7680,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/north-korea.mp3",
+      "path": "assets/media/audio/asia/en/north-korea.mp3",
       "sha256": "95cf6af7a1ccd1bad6684dd34c11204be1fc5e69f2fdad7c0f64797d4d162188",
       "size": 9600,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/oman.mp3",
+      "path": "assets/media/audio/asia/en/oman.mp3",
       "sha256": "4d71b6295f9089c087ae4ce244067e73d29aa3d4422726cff9fe3db77b966f31",
       "size": 7680,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/pakistan.mp3",
+      "path": "assets/media/audio/asia/en/pakistan.mp3",
       "sha256": "6e0aeea72844449d19c3f4c912e1534ecf28a4d2804a6b0cfbdfad323688642c",
       "size": 9984,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/palestine.mp3",
+      "path": "assets/media/audio/asia/en/palestine.mp3",
       "sha256": "e52b589c8536569fa4094013fdfb2121bfd4b366b9abb33011b068257f1d34ca",
       "size": 9984,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/philippines.mp3",
+      "path": "assets/media/audio/asia/en/philippines.mp3",
       "sha256": "17ccd35bb2dc9b8265c45a178deb6d98a9ca7ce41396c65a382c35929b7f4e80",
       "size": 10752,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/qatar.mp3",
+      "path": "assets/media/audio/asia/en/qatar.mp3",
       "sha256": "9ad0ead5dc434e0c5bdc0ee155c33d1010498a12e975c48c304d665d19a4808a",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/saudi-arabia.mp3",
+      "path": "assets/media/audio/asia/en/saudi-arabia.mp3",
       "sha256": "02bfefae3c70a78197e589818a7ea9b98dfaa2983036cab4c0e3d29cd42f10e2",
       "size": 11328,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/singapore.mp3",
+      "path": "assets/media/audio/asia/en/singapore.mp3",
       "sha256": "460d8655cfa4d991adccd79cacf1bdcc9e7bf06c85f72a01e89783d6b43778d1",
       "size": 9600,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/south-korea.mp3",
+      "path": "assets/media/audio/asia/en/south-korea.mp3",
       "sha256": "5cccf5068ee313ad9241bd77f08ad1c45eb589dfbf7bca32cddf5979fbc93e16",
       "size": 10176,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/sri-lanka.mp3",
+      "path": "assets/media/audio/asia/en/sri-lanka.mp3",
       "sha256": "9eba4a59d669fd887e15652387b6c67550aa82e7640bdfaca311c3898ca4e0e6",
       "size": 9792,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/syria.mp3",
+      "path": "assets/media/audio/asia/en/syria.mp3",
       "sha256": "0c56b5b223f8e8efdf3c0308714df104df7cffbbdeb3f92fc4180b40c2bdcf60",
       "size": 7680,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/taiwan.mp3",
+      "path": "assets/media/audio/asia/en/taiwan.mp3",
       "sha256": "b4e4bcd87eae5b67b1890beacdb7ef4572c75e473a59c3d4f4c00c53d6d1899b",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/tajikistan.mp3",
+      "path": "assets/media/audio/asia/en/tajikistan.mp3",
       "sha256": "ede9a429f3eac43ca87d53575b91fcfe884e6f766dde4c951e23603e60191d61",
       "size": 11328,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/thailand.mp3",
+      "path": "assets/media/audio/asia/en/thailand.mp3",
       "sha256": "cffbc28f60b548d83e7c7f9fe5934a346e12680805bba0ee475d90cd3905bfb6",
       "size": 8064,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/timor-leste.mp3",
+      "path": "assets/media/audio/asia/en/timor-leste.mp3",
       "sha256": "c5259cf4e4a2d169636426720602e06b8bff69ff162e6999f15e3e4f915499e9",
       "size": 12288,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/turkey.mp3",
+      "path": "assets/media/audio/asia/en/turkey.mp3",
       "sha256": "16a784ab08f9700d83f3ca98e5d2bdf65ea8a17eefc198f1b0ce7e83cd8cd68b",
       "size": 7104,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/turkmenistan.mp3",
+      "path": "assets/media/audio/asia/en/turkmenistan.mp3",
       "sha256": "7d63c0f2091d2cb6d19646440e9c5844d25c2c7446e2e55293503248bcf8a8f2",
       "size": 11328,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/united-arab-emirates.mp3",
+      "path": "assets/media/audio/asia/en/united-arab-emirates.mp3",
       "sha256": "99ce37b5bb5ee13e14b82873ffd79d1b8a0f33c2510b8b26a45c3aef3fe3656b",
       "size": 15744,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/uzbekistan.mp3",
+      "path": "assets/media/audio/asia/en/uzbekistan.mp3",
       "sha256": "e61223e3a861d47ca4967937ddb47a368389b2812c8180d77da823c557093271",
       "size": 11712,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/vietnam.mp3",
+      "path": "assets/media/audio/asia/en/vietnam.mp3",
       "sha256": "a909bf2c793d106a7d065c276f769b2a1bb64dc3b89cb9d5fdca7ea83098e4fd",
       "size": 9024,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/en/yemen.mp3",
+      "path": "assets/media/audio/asia/en/yemen.mp3",
       "sha256": "bcf70efd333765d96a8e2c46d952bf4e6a20008202e59047f70f71da6a871903",
       "size": 7296,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/afghanistan.mp3",
+      "path": "assets/media/audio/asia/vi/afghanistan.mp3",
       "sha256": "23c2b79f3f792113655a95c2c7dec9419f790a48d67271e4c3c79c954acdafaa",
       "size": 10368,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/armenia.mp3",
+      "path": "assets/media/audio/asia/vi/armenia.mp3",
       "sha256": "a36c5b5c78dabee358c42ceb5c8a53e8e6e821ca98266a851d6ab285877807b2",
       "size": 9792,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/azerbaijan.mp3",
+      "path": "assets/media/audio/asia/vi/azerbaijan.mp3",
       "sha256": "265ca1e2c475c1dc730362508eb792781d6d4c8324af86b83c15a79e2a989049",
       "size": 10752,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/bahrain.mp3",
+      "path": "assets/media/audio/asia/vi/bahrain.mp3",
       "sha256": "9fe6b2c74615d7d728f8604027f629f8b61441693c13573fe2f805829795c990",
       "size": 7488,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/bangladesh.mp3",
+      "path": "assets/media/audio/asia/vi/bangladesh.mp3",
       "sha256": "32f96305506d7b7557ffd1bfd391ce7c80061ec91112d1c5cb8ca52775befd33",
       "size": 8832,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/bhutan.mp3",
+      "path": "assets/media/audio/asia/vi/bhutan.mp3",
       "sha256": "22ba3b03ff5d02c5cca8999665bf5385830a65fd69f226cd6d293c789e36bb63",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/brunei.mp3",
+      "path": "assets/media/audio/asia/vi/brunei.mp3",
       "sha256": "b889ebffa26e19c063fb250163243284cdbe2d1441d04a5b8174cc82a1129e60",
       "size": 7680,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/cambodia.mp3",
+      "path": "assets/media/audio/asia/vi/cambodia.mp3",
       "sha256": "6044994346e8e5acae4fda702f8d7d938dac45561505d69901e6597bd024fcdd",
       "size": 10176,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/china.mp3",
+      "path": "assets/media/audio/asia/vi/china.mp3",
       "sha256": "c7aba328cddc04ff5b63d7d20530898adf0b23de1839db8609d1c54008de094e",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/christmas-island.mp3",
+      "path": "assets/media/audio/asia/vi/christmas-island.mp3",
       "sha256": "830931b42e1c8cd5007d0ca57ff4240499e6950372a07d72f84537d2de1089d0",
       "size": 11712,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/cocos-islands.mp3",
+      "path": "assets/media/audio/asia/vi/cocos-islands.mp3",
       "sha256": "d38c814246521abd6095970e7e80b09bf67130acdb6794c61ede414e4c68f3da",
       "size": 12864,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/hong-kong.mp3",
+      "path": "assets/media/audio/asia/vi/hong-kong.mp3",
       "sha256": "7e164835eb8ac33a441f374d63b01a98b55138bdad9ac9674cc1c2f2bab59f6a",
       "size": 8448,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/india.mp3",
+      "path": "assets/media/audio/asia/vi/india.mp3",
       "sha256": "4f17f1b0a7846421c685e7dda0d74a73bd613a12e34dc9ac25dd918e52a3b84b",
       "size": 7488,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/indonesia.mp3",
+      "path": "assets/media/audio/asia/vi/indonesia.mp3",
       "sha256": "d0eac2350c90ba30eb15d39a01f704837fc813459ebe189a1881e10214f58c85",
       "size": 10944,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/iran.mp3",
+      "path": "assets/media/audio/asia/vi/iran.mp3",
       "sha256": "10ddbfd76f2b4647ddcb146eec6f59b2e8c90a075b16d7084a8a453afb7f72cb",
       "size": 7488,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/iraq.mp3",
+      "path": "assets/media/audio/asia/vi/iraq.mp3",
       "sha256": "ff2d59ba18bdfa4b6bdcaaa8c0f1a2776028c617502cb70be4005f2ac6d8c7cf",
       "size": 6528,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/israel.mp3",
+      "path": "assets/media/audio/asia/vi/israel.mp3",
       "sha256": "ceb9ffe1ade0fefc57061749a41cc4295614e3ddcb6d843db341bed52a5f2381",
       "size": 8832,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/japan.mp3",
+      "path": "assets/media/audio/asia/vi/japan.mp3",
       "sha256": "ebaca8f75d8f563e58fc73887408d7ebcbfe445c43b9a277c7fb339403c2be50",
       "size": 8064,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/jordan.mp3",
+      "path": "assets/media/audio/asia/vi/jordan.mp3",
       "sha256": "a3b0f755904422d0c814d16da0420cd0d1919ddbe009ba3c0306e5834f7582d3",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/kazakhstan.mp3",
+      "path": "assets/media/audio/asia/vi/kazakhstan.mp3",
       "sha256": "dacb0e35340da064a4a685e3499f2ce210d045a8fd2be54c670b40a077d369a4",
       "size": 10368,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/kuwait.mp3",
+      "path": "assets/media/audio/asia/vi/kuwait.mp3",
       "sha256": "1959ff61a062d9db6ffd4c09c3b795edc7e0102b3d9d83332ae744ad954c4c1b",
       "size": 6528,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/kyrgyzstan.mp3",
+      "path": "assets/media/audio/asia/vi/kyrgyzstan.mp3",
       "sha256": "b27ca14782011da6dfe7d4db8b4555c64c2eab44fa4011d860e0a49333e91a0b",
       "size": 10368,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/laos.mp3",
+      "path": "assets/media/audio/asia/vi/laos.mp3",
       "sha256": "ce1769d27bdece2d21669cfcabc32ce42e2083467851b6dca66073112754a4ef",
       "size": 6336,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/lebanon.mp3",
+      "path": "assets/media/audio/asia/vi/lebanon.mp3",
       "sha256": "1528b21c390910001984e2d201af777d1c47099d4e5ee08d5a904539628290f2",
       "size": 7296,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/macau.mp3",
+      "path": "assets/media/audio/asia/vi/macau.mp3",
       "sha256": "e964d760936bbd408733b3b1070bdf3a116b2163e02e8ec5c848a98330a80969",
       "size": 8640,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/malaysia.mp3",
+      "path": "assets/media/audio/asia/vi/malaysia.mp3",
       "sha256": "ed1d42f49a52da4b8e665973ec1a3108b6286315d59b96c1d8c867d205500d9b",
       "size": 10752,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/maldives.mp3",
+      "path": "assets/media/audio/asia/vi/maldives.mp3",
       "sha256": "5eff2e3d16ec8ec9f731d3890ef5adb513ee31659a8e260895fd7ce590077fb4",
       "size": 9600,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/mongolia.mp3",
+      "path": "assets/media/audio/asia/vi/mongolia.mp3",
       "sha256": "2464890b91de00a37220ac1c28737628fb187c16748ddec884654837fdc2be42",
       "size": 9024,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/myanmar.mp3",
+      "path": "assets/media/audio/asia/vi/myanmar.mp3",
       "sha256": "1d2fe6f089d87b9fcc742b1bd2e8b26e89105f9a4ca9eb625bb4cac78115e131",
       "size": 8640,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/nepal.mp3",
+      "path": "assets/media/audio/asia/vi/nepal.mp3",
       "sha256": "2011c486331e802706047fbea2168baff52f00e09c40a2f512c1d3f876c4b70e",
       "size": 7680,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/north-korea.mp3",
+      "path": "assets/media/audio/asia/vi/north-korea.mp3",
       "sha256": "6fa485c2a40a20516ba9ca6985a638e211bae7c89f873a3df6fb30496618ae8c",
       "size": 8640,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/oman.mp3",
+      "path": "assets/media/audio/asia/vi/oman.mp3",
       "sha256": "2bc36d334f91487b77d9e3b0582efff0ebfec496a7da0a18d2068e8f86820891",
       "size": 7488,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/pakistan.mp3",
+      "path": "assets/media/audio/asia/vi/pakistan.mp3",
       "sha256": "f3fb18f618986a6cac281f295ed43957cbff9426249b6adaed9f02b9f222313c",
       "size": 9408,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/palestine.mp3",
+      "path": "assets/media/audio/asia/vi/palestine.mp3",
       "sha256": "8150ca91b299120c30bc3dd47418991565e06d667e77856b86809d79fd1f023b",
       "size": 9984,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/philippines.mp3",
+      "path": "assets/media/audio/asia/vi/philippines.mp3",
       "sha256": "d03b8929856638293c07867fea2dbc49fa4292fbe53ffffcf39c48bdf73d3a59",
       "size": 9408,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/qatar.mp3",
+      "path": "assets/media/audio/asia/vi/qatar.mp3",
       "sha256": "820cd74dc249630ac19ebd837184ce9243eda0d8a552a7420e2c3a4fa1db7b47",
       "size": 7872,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/saudi-arabia.mp3",
+      "path": "assets/media/audio/asia/vi/saudi-arabia.mp3",
       "sha256": "e36dfb10e95ad0d78e7b74bd46e8fc96f840326af42da9555b1b089841afb9d1",
       "size": 11904,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/singapore.mp3",
+      "path": "assets/media/audio/asia/vi/singapore.mp3",
       "sha256": "72c17d22d2e9be43d92b2ce59af47ae316d6205eae3ddd56ea8f9ca6f30fde26",
       "size": 9984,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/south-korea.mp3",
+      "path": "assets/media/audio/asia/vi/south-korea.mp3",
       "sha256": "44142d4ab52d0045eff928bed24aa50aa80ad35c64cb578a2a0df500c36bb176",
       "size": 8256,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/sri-lanka.mp3",
+      "path": "assets/media/audio/asia/vi/sri-lanka.mp3",
       "sha256": "15caf471a1ef8a3dc6f2decbb9b0b205679c87155315d59cd4eff31498251996",
       "size": 13056,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/syria.mp3",
+      "path": "assets/media/audio/asia/vi/syria.mp3",
       "sha256": "df20ec0d518c3b32e02dad947b79dad716476c14705c4204bbdfcbac2929f528",
       "size": 7488,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/taiwan.mp3",
+      "path": "assets/media/audio/asia/vi/taiwan.mp3",
       "sha256": "c216a92958bd37c8d64ff8b5539800420380938c54728987809d075fada51932",
       "size": 8448,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/tajikistan.mp3",
+      "path": "assets/media/audio/asia/vi/tajikistan.mp3",
       "sha256": "19b15d789408e2bf1949a372c41076e56906b89ae5d61baadec55c6e6db2bda2",
       "size": 11712,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/thailand.mp3",
+      "path": "assets/media/audio/asia/vi/thailand.mp3",
       "sha256": "ad9e813bb92045096e18f8c5afab2ce8ec7a1d3688e433045b4b7da16e96687a",
       "size": 8256,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/timor-leste.mp3",
+      "path": "assets/media/audio/asia/vi/timor-leste.mp3",
       "sha256": "91a4ad3c6ba3bd255f7f99f3bfbc67f9046f2195b8f15971cd44855caebad5cc",
       "size": 10176,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/turkey.mp3",
+      "path": "assets/media/audio/asia/vi/turkey.mp3",
       "sha256": "d2d4736c13318604ac43e729cc8a985af651aa0ddbacd50dff0b0f0cb77a4e2f",
       "size": 10560,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/turkmenistan.mp3",
+      "path": "assets/media/audio/asia/vi/turkmenistan.mp3",
       "sha256": "526d3d50990bb09609bfbf470ba76fbaed79e6d29e0206a67195f59c7695f401",
       "size": 11136,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/united-arab-emirates.mp3",
+      "path": "assets/media/audio/asia/vi/united-arab-emirates.mp3",
       "sha256": "7365dd0c7c2ccc58fc5a0b7b41a54629e02bf55741399b2bff5e770bbb933f78",
       "size": 21888,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/uzbekistan.mp3",
+      "path": "assets/media/audio/asia/vi/uzbekistan.mp3",
       "sha256": "bb2fd26d019695783cfa25515ada38fe889074ff6a9ce65a6a9ea31a1ee1493c",
       "size": 12288,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/vietnam.mp3",
+      "path": "assets/media/audio/asia/vi/vietnam.mp3",
       "sha256": "1cfb60bb4cba8392271e08e9b99cad050abc9cf95483301096d9efa8f0d9dc17",
       "size": 8064,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/media/audio/asia/vi/yemen.mp3",
+      "path": "assets/media/audio/asia/vi/yemen.mp3",
       "sha256": "59d04522eb129c6bf99b0acbaecdf363128a440151dffcdfc1c26cbeb96af2e1",
       "size": 8256,
       "category": "audio",
       "priority": 1
     },
     {
-      "path": "/assets/icons/favicon-16.png",
-      "sha256": "245647c1b9733280022fe3c89f168ab874c657cb740f5a76c8237aa644dd4c16",
-      "size": 436,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "/assets/icons/favicon-32.png",
-      "sha256": "a977a42f0430dd413c86e0cd5a12c8c6dd170c1b78ec2ed3b382745f8bde7975",
-      "size": 1165,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "/assets/icons/icon-192.png",
-      "sha256": "023c0a2fd3e3d7e9aa7cbcfedd0430a250291413fbc394b80e92ea7792e231d0",
-      "size": 25727,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "/assets/icons/icon-512.png",
-      "sha256": "4329848cb190c68dccb3b53c517a6ba54f5bbfe2f12732d57a827240bb341390",
-      "size": 257216,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "/assets/icons/qr-install.png",
-      "sha256": "e53f5e3820a24e98336ba4d61f949e06c3aa1f540f58c28ab564e3929fbd4c74",
-      "size": 5870,
-      "category": "image",
-      "priority": 2
-    },
-    {
-      "path": "/assets/media/image/asia/afghanistan.svg",
+      "path": "assets/media/image/asia/afghanistan.svg",
       "sha256": "fc326ebb964d9a50e31984495d1cf94f810a8af2ecaac5615001358404a389be",
       "size": 37065,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/armenia.svg",
+      "path": "assets/media/image/asia/armenia.svg",
       "sha256": "1eb2190d967efac59bb4f18f699b465f76dc3128593011e59243450cd593f846",
       "size": 201,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/azerbaijan.svg",
+      "path": "assets/media/image/asia/azerbaijan.svg",
       "sha256": "f16a9688b22090aaeac332332410a67ce073b9556bc9192771231ad713d5dacd",
       "size": 588,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/bahrain.svg",
+      "path": "assets/media/image/asia/bahrain.svg",
       "sha256": "bfa65642e5dc9b67c3c5570dc48711f83a02dd865a251514a7243df7a5d73b24",
       "size": 298,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/bangladesh.svg",
+      "path": "assets/media/image/asia/bangladesh.svg",
       "sha256": "453b90fee62df5770d9610e8ba99e047f63f986a027cc071f2a90d79c8012150",
       "size": 156,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/bhutan.svg",
+      "path": "assets/media/image/asia/bhutan.svg",
       "sha256": "bfbf299f9ee043d6fcc11c12cfe2dede242579b948f93a38d3c2e0ba4ebab383",
       "size": 36864,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/brunei.svg",
+      "path": "assets/media/image/asia/brunei.svg",
       "sha256": "11c704ce4271bcbddd1c372cb6dd457a278c51ce7db7ad98ab5f5c5517695dd6",
       "size": 31244,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/cambodia.svg",
+      "path": "assets/media/image/asia/cambodia.svg",
       "sha256": "d3e7df02fdb48d08e6784f4c3eead2c026fe458a8cdea8d09c78cded471eac35",
       "size": 10374,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/china.svg",
+      "path": "assets/media/image/asia/china.svg",
       "sha256": "5fce7409cd290e6b3c5ecd09c0d2c400ae459e3d59c6c0539793ac0e803d0179",
       "size": 563,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/christmas island.svg",
+      "path": "assets/media/image/asia/christmas island.svg",
       "sha256": "ba6170328b6b192131c54dc94b455786ddb08a0997b377ff361e117be0be3af2",
       "size": 5383,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/cocos islands.svg",
+      "path": "assets/media/image/asia/cocos islands.svg",
       "sha256": "a68a3324ee4c709acc69e1fc355e3d44d276069c498064c7bf843a4b9454f17d",
       "size": 6132,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/hong kong.svg",
+      "path": "assets/media/image/asia/hong kong.svg",
       "sha256": "bdc810878f887e885920d1d47133aec5fcd143043935bfd022fb00ef811621e5",
       "size": 845,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/india.svg",
+      "path": "assets/media/image/asia/india.svg",
       "sha256": "c49eb8f6dddd9a910d54092d31fb812b6e542f5a8dda6dbc7911e795078da2c9",
       "size": 825,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/indonesia.svg",
+      "path": "assets/media/image/asia/indonesia.svg",
       "sha256": "2ab57d2d418baba7b0ff55729435d0c780ca52a98b754f92d44e96cd1399dae5",
       "size": 148,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/iran.svg",
+      "path": "assets/media/image/asia/iran.svg",
       "sha256": "c1d6eb64f7060fb362ad8efd0205cdd37c7443fa1f009b9882feede56022009c",
       "size": 2218,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/iraq.svg",
+      "path": "assets/media/image/asia/iraq.svg",
       "sha256": "2a3ac265b9efcfb0b8761b753b8dba85b63af329deed39dc7a363e61dad70667",
       "size": 1204,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/israel.svg",
+      "path": "assets/media/image/asia/israel.svg",
       "sha256": "a5732410968d238f8a506a455bd7be7fea2908d0abcf638020fbe7b58bd4ad2f",
       "size": 398,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/japan.svg",
+      "path": "assets/media/image/asia/japan.svg",
       "sha256": "35e785339e19d1ec1987cb9c3d8e66fc97f29a287db0b0b590b8dfdd96d4766b",
       "size": 209,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/jordan.svg",
+      "path": "assets/media/image/asia/jordan.svg",
       "sha256": "7a044c4d0f995a5dafe157e4554e4b9bc5e77ab303c6a04685999cc1930f79dc",
       "size": 412,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/kazakhstan.svg",
+      "path": "assets/media/image/asia/kazakhstan.svg",
       "sha256": "bcf331e5a92785976aabe77aeac25de912e97d4e20557c521359e1033d1450af",
       "size": 9668,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/kuwait.svg",
+      "path": "assets/media/image/asia/kuwait.svg",
       "sha256": "b550075b6f53c591fabdcd505be66c5085dff0168edd9a96c6b3c1d939e8bcbb",
       "size": 317,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/kyrgyzstan.svg",
+      "path": "assets/media/image/asia/kyrgyzstan.svg",
       "sha256": "d6baff517bb0b83b0a6e8b8e650534b8420da5940dd758646e239e7429f7e29e",
       "size": 15577,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/laos.svg",
+      "path": "assets/media/image/asia/laos.svg",
       "sha256": "4d8b2ffd9f0565f534f6cafb6c389b31d538465ae8fefc72a42797959884b44a",
       "size": 233,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/lebanon.svg",
+      "path": "assets/media/image/asia/lebanon.svg",
       "sha256": "ad184d36e7183828aecb2b3e6d05a92d454a4f01d478e38ce8c7db78d83e913c",
       "size": 14800,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/macau.svg",
+      "path": "assets/media/image/asia/macau.svg",
       "sha256": "35252f8cf7604421b40c67a5194b877920e3bcdeef9179b15f2d3958d584ecd2",
       "size": 2365,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/malaysia.svg",
+      "path": "assets/media/image/asia/malaysia.svg",
       "sha256": "53b0aa224ba67a2d32be58aab6eb2e4395ac3df66e62692ac83a30bc296ee3a2",
       "size": 683,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/maldives.svg",
+      "path": "assets/media/image/asia/maldives.svg",
       "sha256": "45f64c4eecbda57c8f419eb222be5c5e64b03f721fc171db01a408144da332c0",
       "size": 267,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/mongolia.svg",
+      "path": "assets/media/image/asia/mongolia.svg",
       "sha256": "b7ccaa99a79fe613cb0a8953ef2f49b25f5e56c5c2b05b5725627ff01d60af6f",
       "size": 1526,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/myanmar.svg",
+      "path": "assets/media/image/asia/myanmar.svg",
       "sha256": "b96625d297f111bf6f588251780f972d3f6e3b1f663831c164bd35e93a06ba2a",
       "size": 636,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/nepal.svg",
+      "path": "assets/media/image/asia/nepal.svg",
       "sha256": "ba25a92555ba89507f637ed75c10a5517943c42aad1e9a37821cbd7e6cb223a0",
       "size": 1132,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/north korea.svg",
+      "path": "assets/media/image/asia/north korea.svg",
       "sha256": "0facdb3b7f4028e3ab0ce5457983ff62b22e77177e896cf472654ae6b2f9ebeb",
       "size": 407,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/oman.svg",
+      "path": "assets/media/image/asia/oman.svg",
       "sha256": "6ced4f73a1f9618141537d2b47ec30a39b25aa2dbefa1f38d8e0740f3e1f4f43",
       "size": 109508,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/pakistan.svg",
+      "path": "assets/media/image/asia/pakistan.svg",
       "sha256": "d6ace20003ef4172b2cb2f090614f06602fb139a900cd1c65c4f8cc17367bc37",
       "size": 707,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/palestine.svg",
+      "path": "assets/media/image/asia/palestine.svg",
       "sha256": "df299146faffa45913ac8677931f4a5cd94b60fc99e39a51eb9ef922ca6da182",
       "size": 281,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/philippines.svg",
+      "path": "assets/media/image/asia/philippines.svg",
       "sha256": "b0010e0b5f5945506e98b76f3469faf964c1ce30de75673186d303f9112b5454",
       "size": 892,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/qatar.svg",
+      "path": "assets/media/image/asia/qatar.svg",
       "sha256": "92a082037fa252496f22e40bd52909678dec793fb31fcb8e9c4abd73b154f613",
       "size": 310,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/saudi arabia.svg",
+      "path": "assets/media/image/asia/saudi arabia.svg",
       "sha256": "b0b36326e3e5b74624ee8b5de8273ea00f7bbe9b5ba0da6250cbe7b3c637505e",
       "size": 28593,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/singapore.svg",
+      "path": "assets/media/image/asia/singapore.svg",
       "sha256": "40484fc9a30b09a2c89834737cda478cad250a8489923e4a4d2ec93e905f32a5",
       "size": 593,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/south korea.svg",
+      "path": "assets/media/image/asia/south korea.svg",
       "sha256": "4bdbb18896cb97bd0931c2b8d38c7914cf5324c0a258bc2b443103a9c39d67be",
       "size": 588,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/sri lanka.svg",
+      "path": "assets/media/image/asia/sri lanka.svg",
       "sha256": "eea9217df822c4b9a50001821453f73cb45d61df96086cec87cb4a2be2e066fd",
       "size": 19062,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/syria.svg",
+      "path": "assets/media/image/asia/syria.svg",
       "sha256": "45bbfbcf04cf52204b754157809522b95528db54c0882f27a7d50743b66f9700",
       "size": 634,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/taiwan.svg",
+      "path": "assets/media/image/asia/taiwan.svg",
       "sha256": "11a8acaecfcc6258cfeedc15555fbc4dbe2b1df640497be2d5dcb4f60a5c4167",
       "size": 416,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/tajikistan.svg",
+      "path": "assets/media/image/asia/tajikistan.svg",
       "sha256": "da7ceb19dd07cd78d9b1a592278e9ee1950de097bf362642cac1569083e8cafc",
       "size": 4048,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/thailand.svg",
+      "path": "assets/media/image/asia/thailand.svg",
       "sha256": "f137bb494e00c3c29e9d03fbf4d15c2650d82f2a8f02cf51341f6a4557117db9",
       "size": 259,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/timor leste.svg",
+      "path": "assets/media/image/asia/timor leste.svg",
       "sha256": "086a0f322643bef67059a6b64be35c788aef86a9941f6640b220255e7180ae93",
       "size": 338,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/turkey.svg",
+      "path": "assets/media/image/asia/turkey.svg",
       "sha256": "5a47e932cdb371d9708d8c9a209d3acfd006cdd3ee7dd38ae44df6180e170e90",
       "size": 324,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/turkmenistan.svg",
+      "path": "assets/media/image/asia/turkmenistan.svg",
       "sha256": "f0bf471d0f3070cd1ece9c66ccb7bfc5e86e32072b657e9a3a426a624dd72510",
       "size": 75449,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/united arab emirates.svg",
+      "path": "assets/media/image/asia/united arab emirates.svg",
       "sha256": "2eb3d53df8f3f845dfafff448fb165647c8e3ed2b2f08296af1080fece92ad35",
       "size": 323,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/uzbekistan.svg",
+      "path": "assets/media/image/asia/uzbekistan.svg",
       "sha256": "89c84ce01c20fa1c19ab8068b822948e29c53c36fe3b4723463bedfce34a9da2",
       "size": 1301,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/vietnam.svg",
+      "path": "assets/media/image/asia/vietnam.svg",
       "sha256": "175120e06bb95dda22133758395f352acb46433ff81eee449326db54e78af2c4",
       "size": 283,
       "category": "image",
       "priority": 2
     },
     {
-      "path": "/assets/media/image/asia/yemen.svg",
+      "path": "assets/media/image/asia/yemen.svg",
       "sha256": "a92f3989182049dc218f7698c45d8cdfc64e6f945c71f20a9d188dd01698df2d",
       "size": 179,
       "category": "image",
