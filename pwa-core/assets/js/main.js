@@ -1,4 +1,4 @@
-// main.js — CLEAN + FIX PATH (giữ nguyên logic)
+// main.js — VERSION: AUTO EXT FALLBACK
 
 import { appData } from './data.js';
 
@@ -6,31 +6,31 @@ let currentLang = 'vi';
 let totalFiles = 0;
 let loadedFiles = 0;
 
-// ✔ FIX: dùng relative chuẩn
 const opfsWorker = new Worker('./assets/js/opfs-worker.js');
 
 /**
- * 1. SERVICE WORKER
+ * 1. SERVICE WORKER (clean)
  */
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js')
-            .then(reg => {
-                reg.addEventListener('updatefound', () => {
-                    const newWorker = reg.installing;
-                    newWorker.addEventListener('statechange', () => {
-                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                            const banner = document.getElementById('update-banner');
-                            if (banner) banner.style.display = 'block';
-                        }
-                    });
+function initServiceWorker() {
+    if (!('serviceWorker' in navigator)) return;
+
+    navigator.serviceWorker.register('./service-worker.js')
+        .then(reg => {
+            reg.addEventListener('updatefound', () => {
+                const newWorker = reg.installing;
+                newWorker.addEventListener('statechange', () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                        const banner = document.getElementById('update-banner');
+                        if (banner) banner.style.display = 'block';
+                    }
                 });
-            })
-            .catch(err => console.error('❌ SW Registration Error:', err));
-    });
+            });
+        })
+        .catch(err => console.error('❌ SW Registration Error:', err));
 
     navigator.serviceWorker.addEventListener('controllerchange', () => {
         console.log("🔄 Service Worker mới đã kích hoạt.");
+        location.reload(); // auto update
     });
 }
 
@@ -94,7 +94,6 @@ async function syncMedia() {
 
     await navigator.locks.request('sync_assets_lock', async () => {
         try {
-            // ✔ FIX: relative path
             const response = await fetch('./media-list.json');
             if (!response.ok) throw new Error("Không tìm thấy media-list.json");
 
@@ -113,7 +112,7 @@ async function syncMedia() {
                 fileList.forEach(file => {
                     opfsWorker.postMessage({
                         action: 'readFile',
-                        path: file.path, // giữ nguyên logic
+                        path: file.path,
                         isSync: true
                     });
                 });
@@ -131,7 +130,33 @@ async function syncMedia() {
 }
 
 /**
- * 4. UI LOGIC
+ * 4. IMAGE FALLBACK (🔥 PHẦN QUAN TRỌNG)
+ */
+function createImage(categoryId, itemId, display) {
+    const img = document.createElement('img');
+
+    const exts = ['svg', 'png', 'jpg', 'webp'];
+    let index = 0;
+
+    function tryNext() {
+        if (index >= exts.length) {
+            console.warn(`⚠️ Không tìm thấy ảnh cho: ${itemId}`);
+            return;
+        }
+        img.src = `./assets/media/image/${categoryId}/${itemId}.${exts[index++]}`;
+    }
+
+    img.loading = 'lazy';
+    img.alt = display;
+    img.onerror = tryNext;
+
+    tryNext();
+
+    return img;
+}
+
+/**
+ * 5. UI LOGIC
  */
 function initAccordion() {
     document.querySelectorAll('.acc-btn').forEach(btn => {
@@ -161,17 +186,16 @@ function renderGrid(categoryId) {
         const card = document.createElement('div');
         card.className = 'card';
 
-        const ext = item.ext || 'svg';
+        const img = createImage(categoryId, item.id, item.display);
 
-        // ✔ FIX: relative
-        const imgPath = `./assets/media/image/${categoryId}/${item.id}.${ext}`;
+        const p = document.createElement('p');
+        p.textContent = item.display;
 
-        card.innerHTML = `
-            <img src="${imgPath}" alt="${item.display}" loading="lazy">
-            <p>${item.display}</p>
-        `;
+        card.appendChild(img);
+        card.appendChild(p);
 
         card.onclick = () => playSound(categoryId, item.id);
+
         fragment.appendChild(card);
     });
 
@@ -185,8 +209,10 @@ window.setLang = (lang) => {
     });
 };
 
+/**
+ * AUDIO
+ */
 function playSound(categoryId, itemId) {
-    // ✔ FIX: relative
     const filePath = `./assets/media/audio/${categoryId}/${currentLang}/${itemId}.mp3`;
 
     if (/\.(html|js|css)$/i.test(filePath)) return;
@@ -199,10 +225,11 @@ function playSound(categoryId, itemId) {
 }
 
 /**
- * 5. INIT
+ * INIT
  */
 window.addEventListener('load', () => {
     initAccordion();
+    initServiceWorker();
 
     if (navigator.storage && navigator.storage.persist) {
         navigator.storage.persist();

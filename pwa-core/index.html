@@ -115,35 +115,6 @@
     <!-- Main JS -->
     <script type="module" src="./assets/js/main.js"></script>
 
-    <!-- Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./service-worker.js')
-                    .then(reg => {
-                        reg.addEventListener('updatefound', () => {
-                            const newWorker = reg.installing;
-                            newWorker.addEventListener('statechange', () => {
-                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                    document.getElementById('update-banner').style.display = 'block';
-                                }
-                            });
-                        });
-                    })
-                    .catch(err => console.error('SW Error:', err));
-            });
-        }
-
-        // Persistent storage
-        if (navigator.storage && navigator.storage.persist) {
-            navigator.storage.persist().then(granted => {
-                if (granted) {
-                    console.log("✅ Dữ liệu lưu trữ bền vững đã được kích hoạt.");
-                }
-            });
-        }
-    </script>
-
     <!-- Animation -->
     <style>
         @keyframes slideUp {
