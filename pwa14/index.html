@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PWA Core</title>
+
+    <meta name="theme-color" content="#FDFDFA">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Icons -->
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.webmanifest">   
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ABC</h1>
+    </header>
+
+    <!-- Sync Progress -->
+    <div id="sync-container" style="display: none;">
+        <div class="sync-info">
+            <span id="sync-status">Đang đồng bộ dữ liệu...</span>
+            <span id="sync-percentage">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- Language Switch -->
+    <div class="lang-switch">
+        <button id="btn-vi" class="active" onclick="setLang('vi')">🔊 Tiếng Việt</button>
+        <button id="btn-en" onclick="setLang('en')">🔊 English</button>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+
+<section class="continent">
+<button class="acc-btn">👤 Body</button>
+<div class="acc-content"><div class="grid" id="body"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">📐 Shapes</button>
+<div class="acc-content"><div class="grid" id="shapes"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🎨 Colors</button>
+<div class="acc-content"><div class="grid" id="colors"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🚗 Vehicles</button>
+<div class="acc-content"><div class="grid" id="vehicles"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🐞 Insects</button>
+<div class="acc-content"><div class="grid" id="insects"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">👨‍🏫 Jobs</button>
+<div class="acc-content"><div class="grid" id="jobs"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🔤 Alphabet</button>
+<div class="acc-content"><div class="grid" id="alphabet"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🔢 Numbers</button>
+<div class="acc-content"><div class="grid" id="numbers"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🍎 Fruits</button>
+<div class="acc-content"><div class="grid" id="fruits"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🥦 Vegetables</button>
+<div class="acc-content"><div class="grid" id="vegetables"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🌻 Flowers</button>
+<div class="acc-content"><div class="grid" id="flowers"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🌊 Sea</button>
+<div class="acc-content"><div class="grid" id="sea"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🦁 Wild</button>
+<div class="acc-content"><div class="grid" id="wild"></div></div>
+</section>
+
+<section class="continent">
+<button class="acc-btn">🐶 Pets</button>
+<div class="acc-content"><div class="grid" id="pets"></div></div>
+</section>
+
+    </main>
+
+    <!-- Guide -->
+    <div class="guide">
+        <span>👉 Bấm tiêu đề để mở / đóng</span>
+        <span>🔊 Bấm lá cờ để nghe phát âm</span>
+    </div> 
+
+    <!-- Footer -->
+    <footer class="footer-nav">
+        <a href="./pwa-install-guide.html" class="install-link">
+            Hướng dẫn cài đặt <span>➔</span>
+        </a>
+    </footer>
+
+    <!-- Update Banner -->
+    <div id="update-banner" style="
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(51, 51, 51, 0.95);
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-size: 14px;
+        display: none;
+        z-index: 10000;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255,255,255,0.1);
+    ">
+        🚀 Đã có phiên bản mới. Làm mới trang để cập nhật.
+    </div>
+
+    <!-- Main JS -->
+    <script type="module" src="./assets/js/main.js"></script>
+
+    <!-- Animation -->
+    <style>
+        @keyframes slideUp {
+            from { bottom: -50px; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+
+        main {
+            padding-bottom: 80px;
+        }
+    </style>
+
+</body>
+</html>
