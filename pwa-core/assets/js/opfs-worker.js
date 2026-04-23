@@ -1,21 +1,31 @@
-// opfs-worker.js - Trình quản lý kho dữ liệu OPFS chuyên nghiệp
+// opfs-worker.js - Trình quản lý kho dữ liệu OPFS chuyên nghiệp (Updated)
 
 self.onmessage = async (e) => {
     const { action, path, isSync, forceUpdate, manifestList } = e.data;
 
-    // KẾT NỐI HỆ THỐNG LƯU TRỮ
     if (!navigator.storage || !navigator.storage.getDirectory) {
         self.postMessage({ action: 'error', message: "OPFS không hỗ trợ trình duyệt này." });
         return;
     }
     const root = await navigator.storage.getDirectory();
 
-    // HÀNH ĐỘNG 1: ĐỌC VÀ CẬP NHẬT FILE (Ghi đè nếu forceUpdate = true)
     if (action === 'readFile') {
         try {
-            const parts = path.split('/');
+            // 1. BỘ LỌC CHẶN APP SHELL: Chỉ cho phép Media (âm thanh, hình ảnh)
+            // Không đưa các file hệ thống vào OPFS để tránh xung đột và lỗi 404
+            const isAppShell = /\.(html|css|js|json|webmanifest)$/i.test(path);
+            if (isAppShell) return; 
+
+            // 2. CHUẨN HÓA ĐƯỜNG DẪN FETCH (Sửa lỗi 404)
+            // Ép đường dẫn về tuyệt đối dựa trên vị trí gốc của website
+            const fetchUrl = new URL(path, self.location.origin).href;
+
+            // Chuẩn hóa đường dẫn lưu trữ trong OPFS: xóa dấu / ở đầu nếu có
+            const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+            const parts = cleanPath.split('/');
             let currentDir = root;
             
+            // Duyệt tạo thư mục
             for (let i = 0; i < parts.length - 1; i++) {
                 if (parts[i] === '.' || parts[i] === '') continue;
                 currentDir = await currentDir.getDirectoryHandle(parts[i], { create: true });
@@ -30,25 +40,28 @@ self.onmessage = async (e) => {
                 exists = true;
             } catch (err) { exists = false; }
 
-            // QUYẾT ĐỊNH: Tải mới nếu chưa có HOẶC bị ép buộc cập nhật (forceUpdate)
             if (!exists || forceUpdate) {
-                if (!isSync) console.warn(`🔄 ${forceUpdate ? 'Ghi đè' : 'Tải mới'}: ${path}`);
+                if (!isSync) console.warn(`🔄 ${forceUpdate ? 'Ghi đè' : 'Tải mới'}: ${cleanPath}`);
                 
-                const response = await fetch(path);
-                if (!response.ok) throw new Error(`Lỗi tải: ${response.statusText}`);
+                // Fetch bằng URL đã được chuẩn hóa tuyệt đối
+                const response = await fetch(fetchUrl); 
+                if (!response.ok) throw new Error(`Lỗi tải: ${response.statusText} (${fetchUrl})`);
+                
                 const arrayBuffer = await response.arrayBuffer();
 
                 const newFileHandle = await currentDir.getFileHandle(fileName, { create: true });
                 const accessHandle = await newFileHandle.createSyncAccessHandle();
                 
-                accessHandle.truncate(0); // Xóa sạch nội dung cũ trước khi ghi đè
-                accessHandle.write(new Uint8Array(arrayBuffer));
-                accessHandle.flush();
-                accessHandle.close();
+                try {
+                    accessHandle.truncate(0); 
+                    accessHandle.write(new Uint8Array(arrayBuffer));
+                    accessHandle.flush();
+                } finally {
+                    accessHandle.close(); 
+                }
 
                 self.postMessage({ action: 'audioBuffer', buffer: arrayBuffer, path, isSync }, [arrayBuffer]);
             } else {
-                // Nếu file đã có và không yêu cầu update, lấy từ kho
                 const file = await fileHandle.getFile();
                 const arrayBuffer = await file.arrayBuffer();
                 self.postMessage({ action: 'audioBuffer', buffer: arrayBuffer, path, isSync }, [arrayBuffer]);
@@ -58,42 +71,31 @@ self.onmessage = async (e) => {
         }
     }
 
-    // HÀNH ĐỘNG 2: DỌN RÁC (CLEANUP) - Xóa file thừa không có trong Manifest
     if (action === 'cleanup') {
-        console.log("🧹 SW: Bắt đầu quy trình dọn dẹp hệ thống...");
         try {
-            const filesDeleted = await cleanupFolder(root, "", manifestList);
-            console.log(`✨ SW: Đã dọn dẹp xong. Xóa ${filesDeleted} tệp thừa.`);
+            const manifestSet = new Set(manifestList);
+            const filesDeleted = await cleanupFolder(root, "", manifestSet);
+            if (filesDeleted > 0) console.log(`✨ OPFS Cleanup: Đã xóa ${filesDeleted} tệp thừa.`);
         } catch (error) {
-            console.error("❌ Lỗi dọn dẹp:", error);
+            console.error("❌ Lỗi dọn dẹp OPFS:", error);
         }
     }
 };
 
-/**
- * Hàm quét và dọn dẹp đệ quy (Recursive Cleanup)
- * @param {FileSystemDirectoryHandle} dirHandle - Thư mục hiện tại
- * @param {string} relativePath - Đường dẫn tương đối
- * @param {Array} manifestList - Danh sách file chuẩn từ manifest.json
- */
-async function cleanupFolder(dirHandle, relativePath, manifestList) {
+async function cleanupFolder(dirHandle, relativePath, manifestSet) {
     let count = 0;
     for await (const [name, handle] of dirHandle.entries()) {
         const fullPath = relativePath ? `${relativePath}/${name}` : name;
+        const webPath = "/" + fullPath;
 
         if (handle.kind === 'directory') {
-            // Nếu là thư mục, tiếp tục quét sâu vào trong
-            count += await cleanupFolder(handle, fullPath, manifestList);
-            
-            // Nếu thư mục rỗng sau khi dọn file, có thể xóa luôn thư mục (tùy chọn)
-            // if ((await handle.keys().next()).done) await dirHandle.removeEntry(name);
+            count += await cleanupFolder(handle, fullPath, manifestSet);
+            const iter = await handle.keys();
+            const { done } = await iter.next();
+            if (done) await dirHandle.removeEntry(name, { recursive: true });
         } else {
-            // Nếu là file, kiểm tra xem nó có trong manifest không
-            // Lưu ý: So sánh fullPath với danh sách đường dẫn trong manifest của bạn
-            const isInManifest = manifestList.some(p => p.endsWith(fullPath));
-            
-            if (!isInManifest) {
-                console.log(`🗑️ Xóa rác: ${fullPath}`);
+            // Kiểm tra file có trong manifest không (kiểm tra cả path có / và không /)
+            if (!manifestSet.has(fullPath) && !manifestSet.has(webPath)) {
                 await dirHandle.removeEntry(name);
                 count++;
             }

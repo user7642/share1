@@ -1,129 +1,147 @@
-// main.js - Hệ thống quản lý PWA Generic Core v3.2 (Updated Paths)
+// main.js - Hệ thống quản lý PWA Generic Core v3.2 (Updated)
 import { appData } from './data.js';
 
 let currentLang = 'vi';
-
-// Cập nhật đường dẫn đến Worker do main.js đã chuyển vào assets/js/
-const opfsWorker = new Worker('assets/js/opfs-worker.js');
-
 let totalFiles = 0;
 let loadedFiles = 0;
+
+// Sử dụng đường dẫn tuyệt đối từ Root để đảm bảo chính xác trên mọi môi trường
+const opfsWorker = new Worker('/assets/js/opfs-worker.js');
 
 /**
  * 1. XỬ LÝ PHẢN HỒI TỪ WORKER
  */
 opfsWorker.onmessage = (e) => {
-    const { action, buffer, isSync, path } = e.data;
+    const { action, buffer, isSync, path, message } = e.data;
 
     if (action === 'audioBuffer') {
         if (isSync) {
             updateProgress();
         } else if (buffer) {
+            // Phát âm thanh từ ArrayBuffer nhận được từ OPFS
             const blob = new Blob([buffer], { type: 'audio/mpeg' });
             const url = URL.createObjectURL(blob);
             const audio = new Audio(url);
-            audio.play().catch(console.warn);
+            audio.play().catch(err => console.warn("🔇 Lỗi phát âm thanh:", err));
             audio.onended = () => URL.revokeObjectURL(url);
         }
-    } else if (action === 'error' && isSync) {
-        updateProgress(); 
+    } else if (action === 'error') {
+        console.error(`❌ OPFS Worker Error [${path}]:`, message);
+        if (isSync) updateProgress(); 
     }
 };
 
 function updateProgress() {
     loadedFiles++;
     if (totalFiles === 0) return;
-    const percent = Math.round((loadedFiles / totalFiles) * 100);
+
+    const percent = Math.min(Math.round((loadedFiles / totalFiles) * 100), 100);
     const progressFill = document.getElementById('progress-fill');
-    if (progressFill) progressFill.style.width = `${percent}%`;
     const percentText = document.getElementById('sync-percentage');
+    const statusText = document.getElementById('sync-status');
+    const container = document.getElementById('sync-container');
+
+    if (progressFill) progressFill.style.width = `${percent}%`;
     if (percentText) percentText.textContent = `${percent}%`;
     
     if (loadedFiles >= totalFiles) {
-        const statusText = document.getElementById('sync-status');
-        if (statusText) statusText.textContent = "✅ Đã đồng bộ xong!";
-        const container = document.getElementById('sync-container');
-        if (container) {
-            setTimeout(() => {
+        if (statusText) statusText.textContent = "✅ Đã đồng bộ xong tài nguyên!";
+        setTimeout(() => {
+            if (container) {
                 container.style.opacity = '0';
                 setTimeout(() => container.style.display = 'none', 1000);
-            }, 2000);
-        }
+            }
+        }, 2000);
     }
 }
 
 /**
- * 2. ĐỒNG BỘ DỮ LIỆU
+ * 2. ĐỒNG BỘ DỮ LIỆU (OPFS)
  */
 async function syncMedia() {
-    const syncContainer = document.getElementById('sync-container');
-    if (!navigator.locks) return; 
+    if (!navigator.locks) return;
 
-    await navigator.locks.request('sync_assets_lock', async (lock) => {
+    await navigator.locks.request('sync_assets_lock', async () => {
         try {
-            // Đảm bảo manifest.json nằm ở gốc của website
-            const response = await fetch('manifest.json'); 
+            // Fetch manifest chứa danh sách media đã được lọc bởi generate_manifest.py
+            const response = await fetch('/manifest.json'); 
             if (!response.ok) throw new Error("Không tìm thấy manifest.json");
+            
             const manifest = await response.json();
-            totalFiles = manifest.files.length;
+            const fileList = manifest.files || [];
+            
+            totalFiles = fileList.length;
             loadedFiles = 0;
 
+            const syncContainer = document.getElementById('sync-container');
             if (totalFiles > 0 && syncContainer) {
                 syncContainer.style.display = 'block';
                 syncContainer.style.opacity = '1';
+                
+                // Gửi lệnh tải từng file media
+                fileList.forEach(file => {
+                    opfsWorker.postMessage({ 
+                        action: 'readFile', 
+                        path: file.path, 
+                        isSync: true 
+                    });
+                });
+
+                // Gửi lệnh Cleanup để xóa file thừa (cũ) trong kho OPFS
+                opfsWorker.postMessage({ 
+                    action: 'cleanup', 
+                    manifestList: fileList.map(f => f.path) 
+                });
             }
 
-            manifest.files.forEach(file => {
-                opfsWorker.postMessage({ action: 'readFile', path: file.path, isSync: true });
-            });
         } catch (err) {
-            console.error("❌ Lỗi đồng bộ:", err);
+            console.error("❌ Lỗi đồng bộ tài nguyên:", err);
         }
     });
 }
 
-window.addEventListener('load', () => {
-    setTimeout(syncMedia, 2000);
-});
-
 /**
- * 3. LOGIC GIAO DIỆN
+ * 3. LOGIC GIAO DIỆN & RENDER
  */
-document.querySelectorAll('.acc-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        const content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-            const grid = content.querySelector('.grid');
-            if (grid) renderGrid(grid.id);
-        }
+function initAccordion() {
+    document.querySelectorAll('.acc-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            const isOpen = content.style.display === "block";
+            
+            content.style.display = isOpen ? "none" : "block";
+            if (!isOpen) {
+                const grid = content.querySelector('.grid');
+                if (grid) renderGrid(grid.id);
+            }
+        });
     });
-});
+}
 
 function renderGrid(categoryId) {
     const grid = document.getElementById(categoryId);
-    
+    // Tránh render lại nếu đã có nội dung
     if (!grid || grid.children.length > 0 || !appData[categoryId]) return;
 
+    const fragment = document.createDocumentFragment();
     appData[categoryId].forEach(item => {
         const card = document.createElement('div');
         card.className = 'card';
         
-        const extension = item.ext || 'svg';
-        // Đường dẫn ảnh (assets/media/image/...)
-        const imgPath = `assets/media/image/${categoryId}/${item.id}.${extension}`;
+        const ext = item.ext || 'svg';
+        const imgPath = `/assets/media/image/${categoryId}/${item.id}.${ext}`;
         
         card.innerHTML = `
             <img src="${imgPath}" alt="${item.display}" loading="lazy">
             <p>${item.display}</p>
         `;
         
+        // Gán sự kiện click để phát âm thanh
         card.onclick = () => playSound(categoryId, item.id);
-        grid.appendChild(card);
+        fragment.appendChild(card);
     });
+    grid.appendChild(fragment);
 }
 
 window.setLang = (lang) => {
@@ -134,11 +152,22 @@ window.setLang = (lang) => {
 };
 
 function playSound(categoryId, itemId) {
-    // Đường dẫn âm thanh (assets/media/audio/...)
-    const filePath = `assets/media/audio/${categoryId}/${currentLang}/${itemId}.mp3`;
+    // Luôn đảm bảo đường dẫn bắt đầu bằng / để Worker fetch chính xác từ Root
+    const filePath = `/assets/media/audio/${categoryId}/${currentLang}/${itemId}.mp3`;
+    
+    // Kiểm tra nhanh: Nếu là file hệ thống (vô tình lọt vào) thì không gửi
+    if (/\.(html|js|css)$/i.test(filePath)) return;
+
     opfsWorker.postMessage({
         action: 'readFile',
         path: filePath,
         isSync: false 
     });
 }
+
+// Khởi chạy hệ thống
+window.addEventListener('load', () => {
+    initAccordion();
+    // Chạy đồng bộ sau khi trang load 1.5s để ưu tiên hiển thị UI
+    setTimeout(syncMedia, 1500);
+});
