@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
     <link rel="manifest" href="site.webmanifest">
 
@@ -92,8 +92,8 @@
         // Quản lý Service Worker & Cập nhật
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
+                // ĐÃ SỬA: Đăng ký SW dùng đường dẫn tương đối để tự nhận diện Scope
                 navigator.serviceWorker.register('service-worker.js').then(reg => {
-                    // Kiểm tra trạng thái cập nhật
                     reg.addEventListener('updatefound', () => {
                         const newWorker = reg.installing;
                         newWorker.addEventListener('statechange', () => {
@@ -106,7 +106,7 @@
             });
         }
 
-        // Quyền lưu trữ bền vững (Persistent Storage)
+        // Quyền lưu trữ bền vững
         if (navigator.storage && navigator.storage.persist) {
             navigator.storage.persist().then(granted => {
                 if (granted) console.log("✅ Dữ liệu sẽ được lưu trữ bền vững.");
@@ -115,12 +115,11 @@
     </script>
 
     <style>
-        /* Hiệu ứng trượt nhẹ cho banner cập nhật */
         @keyframes slideUp {
             from { bottom: -50px; opacity: 0; }
             to { bottom: 30px; opacity: 1; }
         }
-        main { padding-bottom: 80px; } /* Tránh bị footer đè */
+        main { padding-bottom: 80px; }
     </style>
 
 </body>

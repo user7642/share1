@@ -5,20 +5,19 @@ let currentLang = 'vi';
 let totalFiles = 0;
 let loadedFiles = 0;
 
-// Sử dụng đường dẫn tuyệt đối từ Root để đảm bảo chính xác trên mọi môi trường
-const opfsWorker = new Worker('/assets/js/opfs-worker.js');
+// FIX 1: Loại bỏ dấu / ở đầu để Worker tìm đúng file trong thư mục assets/js
+const opfsWorker = new Worker('assets/js/opfs-worker.js');
 
 /**
  * 1. QUẢN LÝ SERVICE WORKER & THÔNG BÁO CẬP NHẬT
  */
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js').then(reg => {
-            // Lắng nghe sự kiện tìm thấy bản cập nhật mới
+        // FIX 2: Loại bỏ dấu / ở đầu để đăng ký SW tại thư mục hiện tại
+        navigator.serviceWorker.register('service-worker.js').then(reg => {
             reg.addEventListener('updatefound', () => {
                 const newWorker = reg.installing;
                 newWorker.addEventListener('statechange', () => {
-                    // Khi SW mới đã tải xong (installed) và đang chờ kích hoạt
                     if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                         const banner = document.getElementById('update-banner');
                         if (banner) banner.style.display = 'block';
@@ -28,7 +27,6 @@ if ('serviceWorker' in navigator) {
         }).catch(err => console.error('❌ SW Registration Error:', err));
     });
 
-    // Phát hiện khi Service Worker mới chính thức chiếm quyền điều khiển
     navigator.serviceWorker.addEventListener('controllerchange', () => {
         console.log("🔄 Service Worker mới đã kích hoạt thành công.");
     });
@@ -44,7 +42,6 @@ opfsWorker.onmessage = (e) => {
         if (isSync) {
             updateProgress();
         } else if (buffer) {
-            // Phát âm thanh từ ArrayBuffer nhận được từ OPFS
             const blob = new Blob([buffer], { type: 'audio/mpeg' });
             const url = URL.createObjectURL(blob);
             const audio = new Audio(url);
@@ -89,7 +86,8 @@ async function syncMedia() {
 
     await navigator.locks.request('sync_assets_lock', async () => {
         try {
-            const response = await fetch('/manifest.json'); 
+            // FIX 3: Fetch manifest.json từ thư mục hiện tại
+            const response = await fetch('manifest.json'); 
             if (!response.ok) throw new Error("Không tìm thấy manifest.json");
             
             const manifest = await response.json();
@@ -106,6 +104,7 @@ async function syncMedia() {
                 fileList.forEach(file => {
                     opfsWorker.postMessage({ 
                         action: 'readFile', 
+                        // Dữ liệu trong manifest.json nên là đường dẫn tương đối (không có / đầu)
                         path: file.path, 
                         isSync: true 
                     });
@@ -150,7 +149,8 @@ function renderGrid(categoryId) {
         const card = document.createElement('div');
         card.className = 'card';
         const ext = item.ext || 'svg';
-        const imgPath = `/assets/media/image/${categoryId}/${item.id}.${ext}`;
+        // FIX 4: Đường dẫn ảnh tương đối
+        const imgPath = `assets/media/image/${categoryId}/${item.id}.${ext}`;
         
         card.innerHTML = `
             <img src="${imgPath}" alt="${item.display}" loading="lazy">
@@ -171,7 +171,8 @@ window.setLang = (lang) => {
 };
 
 function playSound(categoryId, itemId) {
-    const filePath = `/assets/media/audio/${categoryId}/${currentLang}/${itemId}.mp3`;
+    // FIX 5: Đường dẫn audio tương đối
+    const filePath = `assets/media/audio/${categoryId}/${currentLang}/${itemId}.mp3`;
     if (/\.(html|js|css)$/i.test(filePath)) return;
 
     opfsWorker.postMessage({
@@ -186,10 +187,8 @@ function playSound(categoryId, itemId) {
  */
 window.addEventListener('load', () => {
     initAccordion();
-    // Yêu cầu quyền lưu trữ bền vững
     if (navigator.storage && navigator.storage.persist) {
         navigator.storage.persist();
     }
-    // Chạy đồng bộ media sau 1.5s
     setTimeout(syncMedia, 1500);
 });
