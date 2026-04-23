@@ -2,23 +2,23 @@
 
 const APP_VERSION = '1.2.1';
 const CACHE_NAME = `flag-core-v${APP_VERSION}`;
+const APP_SCOPE = self.registration.scope;
 
-// ✔ dùng path nhất quán (không ./)
+function resolveInScope(path) {
+  return new URL(path, APP_SCOPE).href;
+}
+
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/install.html',
-
-  '/assets/css/style.css',
-
-  '/assets/js/main.js',
-  '/assets/js/data.js',
-  '/assets/js/storage-manager.js',
-  '/assets/js/opfs-worker.js',
-
-  '/manifest.webmanifest',
-  '/favicon.ico'
-];
+  './',
+  './index.html',
+  './assets/css/style.css',
+  './assets/js/main.js',
+  './assets/js/data.js',
+  './assets/js/storage-manager.js',
+  './assets/js/opfs-worker.js',
+  './manifest.webmanifest',
+  './favicon.ico'
+].map(resolveInScope);
 
 // ================= INSTALL =================
 self.addEventListener('install', (event) => {
@@ -83,9 +83,9 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          // ✔ fallback chuẩn
+          // Fallback theo scope để chạy đúng trên GitHub Pages subpath
           if (request.mode === 'navigate') {
-            return caches.match('/index.html');
+            return caches.match(resolveInScope('./index.html'));
           }
         });
 

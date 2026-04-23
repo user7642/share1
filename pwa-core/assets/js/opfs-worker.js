@@ -2,7 +2,7 @@
 // opfs-worker.js — FIXED PATH VERSION
 
 self.onmessage = async (e) => {
-    const { action, path, isSync, forceUpdate, manifestList } = e.data;
+    const { action, path, isSync, forceUpdate, manifestList, baseUrl } = e.data;
 
     if (!navigator.storage || !navigator.storage.getDirectory) {
         self.postMessage({ action: 'error', message: "OPFS không hỗ trợ trình duyệt này." });
@@ -21,9 +21,8 @@ self.onmessage = async (e) => {
             let cleanPath = path.replace(/^\.\//, '');   // bỏ "./" ở đầu
             cleanPath = cleanPath.replace(/^\/+/, '');   // bỏ "/" ở đầu
 
-            // 3. XÁC ĐỊNH APP ROOT TỰ ĐỘNG (FIX LỖI 404)
-            // Lấy URL của worker và cắt bỏ phần folder để tìm ra thư mục gốc dự án
-            const appRoot = self.location.href.split('/assets/')[0] + '/';
+            // 3. Resolve URL theo baseUrl gửi từ main thread để đúng cả localhost và subpath deploy
+            const appRoot = baseUrl || `${self.location.origin}/`;
             const fetchUrl = new URL(cleanPath, appRoot).href;
 
             // 4. XỬ LÝ CẤU TRÚC THƯ MỤC TRONG OPFS

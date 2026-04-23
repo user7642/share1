@@ -5,6 +5,7 @@ import { appData } from './data.js';
 let currentLang = 'vi';
 let totalFiles = 0;
 let loadedFiles = 0;
+const appBaseUrl = new URL('./', window.location.href).href;
 
 const opfsWorker = new Worker('./assets/js/opfs-worker.js');
 
@@ -113,7 +114,8 @@ async function syncMedia() {
                     opfsWorker.postMessage({
                         action: 'readFile',
                         path: file.path,
-                        isSync: true
+                        isSync: true,
+                        baseUrl: appBaseUrl
                     });
                 });
 
@@ -220,7 +222,8 @@ function playSound(categoryId, itemId) {
     opfsWorker.postMessage({
         action: 'readFile',
         path: filePath,
-        isSync: false
+        isSync: false,
+        baseUrl: appBaseUrl
     });
 }
 

@@ -1,7 +1,8 @@
-// opfs-worker.js — CLEAN + FIX PATH (giữ nguyên logic)
+
+// opfs-worker.js — FIXED PATH VERSION
 
 self.onmessage = async (e) => {
-    const { action, path, isSync, forceUpdate, manifestList } = e.data;
+    const { action, path, isSync, forceUpdate, manifestList, baseUrl } = e.data;
 
     if (!navigator.storage || !navigator.storage.getDirectory) {
         self.postMessage({ action: 'error', message: "OPFS không hỗ trợ trình duyệt này." });
@@ -12,28 +13,29 @@ self.onmessage = async (e) => {
 
     if (action === 'readFile') {
         try {
-            // 1. CHẶN APP SHELL
+            // 1. CHẶN CÁC FILE HỆ THỐNG (APP SHELL)
             const isAppShell = /\.(html|css|js|json|webmanifest)$/i.test(path);
             if (isAppShell) return;
 
-            // 2. NORMALIZE PATH (QUAN TRỌNG)
-            let cleanPath = path.replace(/^\.\//, '');   // bỏ "./"
-            cleanPath = cleanPath.replace(/^\/+/, '');   // bỏ "/"
+            // 2. CHUẨN HÓA ĐƯỜNG DẪN (Nên dùng path tương đối từ root app)
+            let cleanPath = path.replace(/^\.\//, '');   // bỏ "./" ở đầu
+            cleanPath = cleanPath.replace(/^\/+/, '');   // bỏ "/" ở đầu
 
-            // 3. BUILD URL FETCH (ổn định hơn)
-            const fetchUrl = new URL(cleanPath, self.location.origin).href;
+            // 3. Resolve URL theo baseUrl gửi từ main thread để đúng cả localhost và subpath deploy
+            const appRoot = baseUrl || `${self.location.origin}/`;
+            const fetchUrl = new URL(cleanPath, appRoot).href;
 
-            // 4. TẠO PATH TRONG OPFS
+            // 4. XỬ LÝ CẤU TRÚC THƯ MỤC TRONG OPFS
             const parts = cleanPath.split('/');
             let currentDir = root;
 
+            // Tạo các thư mục con nếu chưa có
             for (let i = 0; i < parts.length - 1; i++) {
                 if (!parts[i]) continue;
                 currentDir = await currentDir.getDirectoryHandle(parts[i], { create: true });
             }
 
             const fileName = parts[parts.length - 1];
-
             let fileHandle;
             let exists = false;
 
@@ -44,20 +46,23 @@ self.onmessage = async (e) => {
                 exists = false;
             }
 
-            // 5. FETCH + SAVE
+            // 5. FETCH VÀ LƯU VÀO OPFS
             if (!exists || forceUpdate) {
-                if (!isSync) console.warn(`🔄 Fetch: ${fetchUrl}`);
+                if (!isSync) console.warn(`🔄 Fetching: ${fetchUrl}`);
 
                 const response = await fetch(fetchUrl);
-                if (!response.ok) throw new Error(`Fetch fail ${response.status}: ${fetchUrl}`);
+                if (!response.ok) {
+                    throw new Error(`Fetch fail ${response.status}: ${fetchUrl}`);
+                }
 
                 const arrayBuffer = await response.arrayBuffer();
 
+                // Ghi dữ liệu vào OPFS sử dụng SyncAccessHandle để có hiệu năng tốt nhất
                 const newFileHandle = await currentDir.getFileHandle(fileName, { create: true });
                 const accessHandle = await newFileHandle.createSyncAccessHandle();
 
                 try {
-                    accessHandle.truncate(0);
+                    accessHandle.truncate(0); // Xóa dữ liệu cũ nếu có
                     accessHandle.write(new Uint8Array(arrayBuffer));
                     accessHandle.flush();
                 } finally {
@@ -67,6 +72,7 @@ self.onmessage = async (e) => {
                 self.postMessage({ action: 'audioBuffer', buffer: arrayBuffer, path, isSync }, [arrayBuffer]);
 
             } else {
+                // Nếu file đã tồn tại, đọc từ OPFS thay vì fetch lại
                 const file = await fileHandle.getFile();
                 const arrayBuffer = await file.arrayBuffer();
 
@@ -80,13 +86,14 @@ self.onmessage = async (e) => {
 
     if (action === 'cleanup') {
         try {
+            // Chuẩn hóa danh sách manifest để so sánh chính xác
             const normalized = manifestList.map(p => p.replace(/^\.\//, '').replace(/^\/+/, ''));
             const manifestSet = new Set(normalized);
 
             const filesDeleted = await cleanupFolder(root, "", manifestSet);
 
             if (filesDeleted > 0) {
-                console.log(`✨ OPFS Cleanup: Đã xóa ${filesDeleted} file.`);
+                console.log(`✨ OPFS Cleanup: Đã dọn dẹp ${filesDeleted} file cũ.`);
             }
 
         } catch (error) {
@@ -95,7 +102,9 @@ self.onmessage = async (e) => {
     }
 };
 
-// CLEANUP
+/**
+ * Hàm đệ quy dọn dẹp các file không có trong manifest
+ */
 async function cleanupFolder(dirHandle, relativePath, manifestSet) {
     let count = 0;
 
@@ -103,16 +112,18 @@ async function cleanupFolder(dirHandle, relativePath, manifestSet) {
         const fullPath = relativePath ? `${relativePath}/${name}` : name;
 
         if (handle.kind === 'directory') {
+            // Đệ quy vào thư mục con
             count += await cleanupFolder(handle, fullPath, manifestSet);
 
+            // Nếu thư mục trống sau khi dọn dẹp, xóa luôn thư mục đó
             const iter = await handle.keys();
             const { done } = await iter.next();
-
             if (done) {
                 await dirHandle.removeEntry(name, { recursive: true });
             }
 
         } else {
+            // Nếu file không có trong danh sách cần giữ, thực hiện xóa
             if (!manifestSet.has(fullPath)) {
                 await dirHandle.removeEntry(name);
                 count++;
