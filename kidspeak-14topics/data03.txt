@@ -1,7 +1,7 @@
 tilapia|Tilapia|Cá rô phi
-mud-carp|Mud carp|Cá mè bùn
+mud-carp|Mud carp|Cá trôi
 swordfish|Swordfish|Cá kiếm
-silver-carp|Silver carp|Cá mè trắng
+silver-carp|Silver carp|Cá mè 
 dolphin|Dolphin|Cá heo
 jellyfish|Jellyfish|Con sứa
 turtle|Turtle|Con rùa
@@ -14,8 +14,8 @@ snail|Snail|Con ốc
 starfish|Starfish|Sao biển
 whale|Whale|Cá voi
 seahorse|Seahorse|Cá ngựa
-clam|Clam|Con ngao
-snakehead-fish|Snakehead fish|Cá lóc
+clam|Clam|Con trai
+snakehead-fish|Snakehead fish|Cá quả
 catfish|Catfish|Cá trê
 carp|Carp|Cá chép
 goldfish|Goldfish|Cá vàng

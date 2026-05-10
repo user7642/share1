@@ -14,7 +14,7 @@ grasshopper|Grasshopper|Con châu chấu
 ladybug|Ladybug|Bọ rùa
 mayfly|Mayfly|Con thiêu thân
 mosquito|Mosquito|Con muỗi
-moth|Moth|Con thiêu thân
+moth|Mayfly|Con thiêu thân
 praying-mantis|Praying mantis|Con bọ ngựa
 stick-insect|Stick insect|Con bọ que
 stink-bug|Stink bug|Bọ xít

@@ -4,14 +4,14 @@ sweet-potato|Sweet potato|Khoai lang
 tomato|Tomato|Cà chua
 potato|Potato|Khoai tây
 sweet-leaf|Sweet leaf|Rau ngót
-onion|Onion|Củ hành
+onion|Onion| Hành tây
 perilla-leaf|Perilla leaf|Lá tía tô
 lettuce|Lettuce|Rau xà lách
 mustard-greens|Mustard greens|Rau cải xanh
 kohlrabi|Kohlrabi|Su hào
-lemongrass|Lemongrass|Sả
-garlic|Garlic|Tỏi
-ginger|Ginger|Gừng
+lemongrass|Lemongrass|Cây sả
+garlic|Garlic|Củ tỏi
+ginger|Ginger|Củ gừng
 eggplant|Eggplant|Cà tím
 fish-mint|Fish mint|Rau diếp cá
 cucumber|Cucumber|Dưa leo

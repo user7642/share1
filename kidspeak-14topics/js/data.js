@@ -152,13 +152,12 @@ fruits: [
   { key: "guava", label: "Guava" },
   { key: "longan", label: "Longan" },
 
-  { key: "custard-apple", label: "Custard apple" },
+  { key: "custard-apple", label: "Sugar apple" },
   { key: "dragon-fruit", label: "Dragon fruit" },
   { key: "durian", label: "Durian" },
 
   { key: "cherry", label: "Cherry" },
-  { key: "banana", label: "Banana" },
-  { key: "bayberry", label: "Bayberry" }
+  { key: "banana", label: "Banana" }
 ],
 
 body: [
@@ -335,7 +334,7 @@ insects: [
   { key: "mayfly", label: "Mayfly" },
 
   { key: "mosquito", label: "Mosquito" },
-  { key: "moth", label: "Moth" },
+  { key: "moth", label: "Mayfly" },
   { key: "praying-mantis", label: "Praying mantis" },
 
   { key: "stick-insect", label: "Stick insect" },

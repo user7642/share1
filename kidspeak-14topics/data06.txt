@@ -1,21 +1,20 @@
-watermelon|Watermelon|Dưa hấu
-grape|Grape|Nho
-strawberry|Strawberry|Dâu tây
-sapodilla|Sapodilla|Hồng xiêm
-star-fruit|Star fruit|Khế
-pomelo|Pomelo|Bưởi
-rambutan|Rambutan|Chôm chôm
-papaya|Papaya|Đu đủ
-pineapple|Pineapple|Dứa
-mangosteen|Mangosteen|Măng cụt
-orange|Orange|Cam
-lychee|Lychee|Vải
-mango|Mango|Xoài
-guava|Guava|Ổi
-longan|Longan|Nhãn
-custard-apple|Custard apple|Na
-dragon-fruit|Dragon fruit|Thanh long
-durian|Durian|Sầu riêng
-cherry|Cherry|Cherry
-banana|Banana|Chuối
-bayberry|Bayberry|Dương mai
+watermelon|Watermelon|Quả dưa hấu
+grape|Grape|Quả nho
+strawberry|Strawberry|Quả dâu tây
+sapodilla|Sapodilla|Quả hồng xiêm
+star-fruit|Starfruit|Quả khế
+pomelo|Pomelo|Quả bưởi
+rambutan|Rambutan|Quả chôm chôm
+papaya|Papaya|Quả đu đủ
+pineapple|Pineapple|Quả dứa
+mangosteen|Mangosteen|Quả măng cụt
+orange|Orange|Quả cam
+lychee|Lychee|Quả vải
+mango|Mango|Quả xoài
+guava|Guava|Quả ổi
+longan|Longan|Quả nhãn
+custard-apple|Sugar apple|Quả mãng cầu
+dragon-fruit|Dragon fruit|Quả thanh long
+durian|Durian|Quả sầu riêng
+cherry|Cherry|Quả cherry
+banana|Banana|Quả chuối
