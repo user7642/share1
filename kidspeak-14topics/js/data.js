@@ -334,7 +334,6 @@ insects: [
   { key: "mayfly", label: "Mayfly" },
 
   { key: "mosquito", label: "Mosquito" },
-  { key: "moth", label: "Mayfly" },
   { key: "praying-mantis", label: "Praying mantis" },
 
   { key: "stick-insect", label: "Stick insect" },
