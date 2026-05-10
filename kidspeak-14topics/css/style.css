@@ -141,6 +141,92 @@ h1 {
   gap: 4px;
 }
 
+/* ===== FOOTER NAVIGATION ===== */
+
+.footer-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: #FDFDFA;
+
+  border-top: 1px solid #ddd;
+
+  padding: 10px 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+}
+
+/* LEFT */
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+
+  color: #777;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.brand-link:hover {
+  color: #ff9800;
+}
+
+.footer-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* RIGHT */
+
+.install-link {
+  text-decoration: none;
+
+  color: #666;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: 0.2s;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.install-link:hover {
+  color: #ff9800;
+}
+
+.install-link span {
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+/* BODY SPACE */
+
+body {
+  padding-bottom: 60px;
+}
+
+
+
 /* ===============================
    TABLET
 ================================= */
